@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Eblacorp_internal.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,16 @@ namespace Eblacorp_internal
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void EmployeeButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new EmployeeViewModel();
+        }
+
+        private void CompanyButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            DataContext = new CompanyViewModel();
         }
     }
 }

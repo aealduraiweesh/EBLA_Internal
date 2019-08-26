@@ -4,9 +4,51 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Eblacorp_internal"
+        xmlns:viewmodels="clr-namespace:Eblacorp_internal.ViewModel"
+        xmlns:views="clr-namespace:Eblacorp_internal.Views"
+
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    
+    <Window.Resources>
+        <DataTemplate x:Name="EmployeeTemplate" DataType="{x:Type viewmodels:EmployeeViewModel}">
+            <views:EmployeeView DataContext ="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="CompanyTemplate" DataType="{x:Type viewmodels:CompanyViewModel}">
+            <views:CompanyView DataContext ="{Binding}"/>
+        </DataTemplate>
+    </Window.Resources>
+    
     <Grid>
+        <!--5 columns-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MaxWidth="100"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <!--5 rows-->
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
         
+        <!--Menue Bar-->
+        <DockPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" Background="Beige">
+            <StackPanel Grid.RowSpan="3">
+                <Image Height="45" Source="assets\EBLA_corp_logo_211x141.png"/>
+                <Button Content="Home" />
+                <Button Content="Employee" Click="EmployeeButton_Click" />
+                <Button Content="Company" Click="CompanyButton_Click_1" />
+            </StackPanel>
+        </DockPanel>
+
+        <ContentControl Content="{Binding}" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="5">
+           
+        </ContentControl>
     </Grid>
 </Window>

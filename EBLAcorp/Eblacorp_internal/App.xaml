@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:Eblacorp_internal"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <BitmapImage x:Key="ebla_logo" UriSource="assets\EBLA_corp_logo_211x141.png"></BitmapImage>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
