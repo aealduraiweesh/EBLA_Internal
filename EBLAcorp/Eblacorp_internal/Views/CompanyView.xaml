@@ -5,95 +5,160 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Eblacorp_internal.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="Bisque">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition MaxWidth="100" Width="100*"></ColumnDefinition>
-            <ColumnDefinition Width="87*"></ColumnDefinition>
-            <ColumnDefinition Width="87*"/>
-            <ColumnDefinition Width="88*"></ColumnDefinition>
-            <ColumnDefinition Width="87*"/>
-            <ColumnDefinition Width="88*"></ColumnDefinition>
-            <ColumnDefinition Width="87*"/>
-            <ColumnDefinition Width="88*"></ColumnDefinition>
-            <ColumnDefinition Width="87*"/>
-        </Grid.ColumnDefinitions>
-        <!--5 rows-->
-        <Grid.RowDefinitions>
-            <RowDefinition Height="87*"></RowDefinition>
-            <RowDefinition Height="88*"></RowDefinition>
-            <RowDefinition Height="33.6"></RowDefinition>
-            <RowDefinition Height="34.4"/>
-            <RowDefinition Height="33.6"/>
-            <RowDefinition Height="35"></RowDefinition>
-            <RowDefinition Height="35.2"/>
-            <RowDefinition Height="34.4"></RowDefinition>
-            <RowDefinition Height="68*"/>
-        </Grid.RowDefinitions>
+             d:DesignHeight="700" d:DesignWidth="1460">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Eblacorp_internal;component/assets/triangles.png" Opacity="0.33"/>
+        </Grid.Background>
 
-        <DataGrid HorizontalAlignment="Left" Height="85" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="8" Margin="99,0.8,0,0" Grid.RowSpan="1" Width="11" />
-        <Grid Grid.Column="3" Margin="23.6,34,0.6,9.2" Grid.ColumnSpan="2">
-            <TextBox HorizontalAlignment="Left" Height="22" Margin="2,24,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="260"/>
-            <Label Content="Search By Comany Name" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        </Grid>
-        <Grid Grid.Column="5" Margin="23.4,34,0.8,9.2" Grid.ColumnSpan="2">
-            <Label Content="Search By Delegate" HorizontalAlignment="Left" VerticalAlignment="Top" Width="116"/>
-            <TextBox HorizontalAlignment="Left" Height="22" Margin="1,24,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="260"/>
-        </Grid>
-        <Grid Grid.ColumnSpan="3" Grid.Column="1" Margin="18,6.8,33.4,67.6" Grid.Row="2" Grid.RowSpan="7" HorizontalAlignment="Left">
-            <TextBox HorizontalAlignment="Left" Height="25" Margin="69,5,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="260"/>
-            <TextBox HorizontalAlignment="Left" Height="25" Margin="69,39,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="260"/>
-            <TextBox HorizontalAlignment="Left" Height="25" Margin="69,72,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="260"/>
-            <TextBox HorizontalAlignment="Left" Height="25" Margin="69,106,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="260"/>
-            <TextBox HorizontalAlignment="Left" Height="26" Margin="69,141,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="260"/>
-            <TextBox HorizontalAlignment="Left" Height="25" Margin="69,175,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="260"/>
-            <Label Content="Governate" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="64" Margin="0,4,0,0"/>
-            <Label Content="City" HorizontalAlignment="Left" Margin="0,38,0,0" VerticalAlignment="Top" Height="26" Width="64"/>
-            <Label Content="Block" HorizontalAlignment="Left" Margin="0,70,0,0" VerticalAlignment="Top" Height="25" Width="64"/>
-            <Label Content="Street" HorizontalAlignment="Left" Margin="0,104,0,0" VerticalAlignment="Top" Height="25" Width="64"/>
-            <Label Content="Phone" HorizontalAlignment="Left" Margin="0,139,0,0" VerticalAlignment="Top" Height="26" Width="64"/>
-            <Label Content="File#" HorizontalAlignment="Left" Margin="0,172,0,0" VerticalAlignment="Top" Height="25" Width="64"/>
+        <StackPanel Margin="8">
+
+            <!--Search Box and lables-->
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <!--Search by Company Name-->
+                <Grid Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="4*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock x:Name="SearchByCompanyTextBlock" TextAlignment="Center" Grid.Column="0" Text="Search by Company Name"></TextBlock>
+                    <TextBox x:Name="SearchByCompanyTextBox" Grid.Column="1" ></TextBox>
+                </Grid>
+
+                <!--Search by Delegate-->
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="4*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock x:Name="SearchByDelegateTextBlock" TextAlignment="Center" Grid.Column="0" Text="Search by Delegate"></TextBlock>
+                    <TextBox x:Name="SearchByDelegateTextBox" Grid.Column="1" ></TextBox>
+                </Grid>
 
 
 
+            </Grid>
 
-        </Grid>
-        <Grid Grid.ColumnSpan="4" Grid.Column="3" Margin="87.6,6.8,51.8,67.6" Grid.Row="2" Grid.RowSpan="7" HorizontalAlignment="Center">
-            <TextBox HorizontalAlignment="Left" Height="25" Margin="69,5,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="260"/>
-            <TextBox HorizontalAlignment="Left" Height="25" Margin="69,39,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="260"/>
-            <TextBox HorizontalAlignment="Left" Height="25" Margin="69,72,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="260"/>
-            <TextBox HorizontalAlignment="Left" Height="25" Margin="69,106,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="260"/>
-            <TextBox HorizontalAlignment="Left" Height="26" Margin="69,141,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="260"/>
-            <TextBox HorizontalAlignment="Left" Height="25" Margin="69,175,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="260"/>
-            <Label Content="Name of Employee On Signature" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="191" Margin="-127,0,0,0"/>
-            <Label Content="Reference#" HorizontalAlignment="Left" Margin="-127,35,0,0" VerticalAlignment="Top" Height="26" Width="191"/>
-            <Label Content="Automated#" HorizontalAlignment="Left" Margin="-127,67,0,0" VerticalAlignment="Top" Height="26" Width="191"/>
-            <Label Content="Contact#" HorizontalAlignment="Left" Margin="-127,102,0,0" VerticalAlignment="Top" Height="26" Width="191"/>
-            <Label Content="License#" HorizontalAlignment="Left" Margin="-127,138,0,0" VerticalAlignment="Top" Height="26" Width="191"/>
-            <Label Content="Civil#" HorizontalAlignment="Left" Margin="-127,171,0,0" VerticalAlignment="Top" Height="26" Width="191"/>
+            <!--DataGrid-->
+            <DataGrid x:Name="EmployeeDataGrid" Margin="8 8 8 8" Height="150"></DataGrid>
 
+            <!--Employee Form Grid -->
+            <Grid Height="400"  >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
 
+                <StackPanel Grid.Column="0" Orientation="Vertical">
+                    <!--Column 0 Form section-->
+                    <TextBlock  Margin="0 5 0 0" Text="Governate"></TextBlock>
+                    <TextBox x:Name="GovernateTextBox"></TextBox>
 
+                    <TextBlock  Margin="0 5 0 0" Text="City"></TextBlock>
+                    <TextBox x:Name="CityTextBox"></TextBox>
 
-        </Grid>
-        <Grid Grid.ColumnSpan="3" Grid.Column="6" Margin="41.4,9.8,10,64.6" Grid.Row="2" Grid.RowSpan="7" HorizontalAlignment="Right">
-            <TextBox HorizontalAlignment="Left" Height="25" Margin="69,5,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="260"/>
-            <TextBox HorizontalAlignment="Left" Height="25" Margin="69,39,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="260"/>
-            <TextBox HorizontalAlignment="Left" Height="25" Margin="69,72,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="260"/>
-            <TextBox HorizontalAlignment="Left" Height="25" Margin="69,106,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="260"/>
-            <TextBox HorizontalAlignment="Left" Height="26" Margin="69,141,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="260"/>
-            <TextBox HorizontalAlignment="Left" Height="25" Margin="69,175,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="260"/>
-            <Label Content="Manager" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="134" Margin="-70,0,0,0"/>
-            <Label Content="Manager Eng" HorizontalAlignment="Left" Margin="-70,35,0,0" VerticalAlignment="Top" Height="26" Width="134"/>
-            <Label Content="BusinessField" HorizontalAlignment="Left" Margin="-70,67,0,0" VerticalAlignment="Top" Height="26" Width="134"/>
-            <Label Content="BusinessField Eng" HorizontalAlignment="Left" Margin="-70,102,0,0" VerticalAlignment="Top" Height="26" Width="134"/>
-            <Label Content="Company Name" HorizontalAlignment="Left" Margin="-70,138,0,0" VerticalAlignment="Top" Height="26" Width="134"/>
-            <Label Content="Company Name Eng" HorizontalAlignment="Left" Margin="-70,171,0,0" VerticalAlignment="Top" Height="26" Width="134"/>
+                    <TextBlock  Margin="0 5 0 0" Text="Block"></TextBlock>
+                    <TextBox x:Name="BlockTextBox"></TextBox>
 
+                    <TextBlock  Margin="0 5 0 0" Text="Street"></TextBlock>
+                    <TextBox x:Name="StreetTextBox"></TextBox>
+
+                    <TextBlock  Margin="0 5 0 0" Text="Phone"></TextBlock>
+                    <TextBox x:Name="PhoneTextBox"></TextBox>
+
+                    <TextBlock  Margin="0 5 0 0" Text="File Number"></TextBlock>
+                    <TextBox x:Name="FileNumberTextBox"></TextBox>
 
 
+                </StackPanel>
 
-        </Grid>
+                <!-- Column 1 Form Section-->
+                <Grid Grid.Column="1" Margin="5 0 5 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="4*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="4*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="4*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Text="File Number View"></TextBlock>
+                    <ListBox Grid.Row="1">
+
+                    </ListBox>
+
+
+                    <TextBlock Grid.Row="2" Text="File Number View"></TextBlock>
+                    <ListBox Grid.Row="3">
+
+                    </ListBox>
+
+
+                    <TextBlock Grid.Row="4" Text="File Number View"></TextBlock>
+                    <ListBox  Grid.Row="5">
+
+                    </ListBox>
+
+                </Grid>
+
+
+
+                <StackPanel Grid.Column="2" Orientation="Vertical">
+                    <!--Column 2 Form section-->
+                    <TextBlock  Text="Manager"></TextBlock>
+                    <TextBox x:Name="ManagerTextBox"></TextBox>
+
+                    <TextBlock Margin="0 5 0 0" Text="Manager (English)"></TextBlock>
+                    <TextBox x:Name="ManagerEnglishTextBox"></TextBox>
+
+                    <TextBlock Margin="0 5 0 0" Text="Business Field"></TextBlock>
+                    <TextBox x:Name="BusinessFieldTextBox"></TextBox>
+
+                    <TextBlock Margin="0 5 0 0" Text="Business Field (English)"></TextBlock>
+                    <TextBox x:Name="BusinessFieldEnglishTextBox"></TextBox>
+
+                    <TextBlock  Margin="0 5 0 0" Text="Company Name"></TextBlock>
+                    <TextBox x:Name="CompanyNameTextBox"></TextBox>
+
+                    <TextBlock Margin="0 5 0 0" Text="Company Name (English)"></TextBlock>
+                    <TextBox x:Name="CompanyNameEnglishTextBox"></TextBox>
+
+
+
+                </StackPanel>
+
+            </Grid>
+
+            <!--Bottom Buttons Grid-->
+            <Grid Margin="0 10 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="SaveButton" Margin="5" Height="30" Content="Save" Grid.Column="0"></Button>
+
+                <Button x:Name="UpdateButton" Margin="5" Height="30" Content="Update" Grid.Column="1"></Button>
+
+                <Button x:Name="DeleteButton" Margin="5" Height="30" Content="Delete" Grid.Column="2"></Button>
+
+                <Button x:Name="ResetButton" Margin="5" Height="30" Content="Reset" Grid.Column="3"></Button>
+            </Grid>
+
+        </StackPanel>
+
+
 
 
 

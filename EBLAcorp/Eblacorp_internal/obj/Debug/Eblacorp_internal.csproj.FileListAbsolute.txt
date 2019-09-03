@@ -18,4 +18,3 @@ C:\Users\AEALDURAIWEESH\Desktop\Work Space\EBLA\repos\EBLA_Internal\EBLAcorp\Ebl
 C:\Users\AEALDURAIWEESH\Desktop\Work Space\EBLA\repos\EBLA_Internal\EBLAcorp\Eblacorp_internal\obj\Debug\Views\CompanyView.baml
 C:\Users\AEALDURAIWEESH\Desktop\Work Space\EBLA\repos\EBLA_Internal\EBLAcorp\Eblacorp_internal\obj\Debug\Views\EmployeeView.baml
 C:\Users\AEALDURAIWEESH\Desktop\Work Space\EBLA\repos\EBLA_Internal\EBLAcorp\Eblacorp_internal\obj\Debug\GeneratedInternalTypeHelper.g.cs
-C:\Users\AEALDURAIWEESH\Desktop\Work Space\EBLA\repos\EBLA_Internal\EBLAcorp\Eblacorp_internal\obj\Debug\Eblacorp_internal.csprojAssemblyReference.cache

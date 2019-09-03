@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Eblacorp_internal.ViewModel
+namespace Eblacorp_internal.Models
 {
-    public class CompanyViewModel
+    class User
     {
-
     }
 }

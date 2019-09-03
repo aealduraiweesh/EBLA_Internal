@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\Deletgate.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="ViewModel\CompanyViewModel.cs" />
     <Compile Include="ViewModel\EmployeeViewModel.cs" />
     <Compile Include="Views\CompanyView.xaml.cs">
@@ -76,8 +79,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\CompanyView.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\EmployeeView.xaml">
       <SubType>Designer</SubType>
@@ -111,11 +114,23 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Resource Include="assets\map_of_world.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="assets\EBLA_corp_logo_211x141.png" />
     <Resource Include="assets\ebla_logo_480.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\triangles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\spectrum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\glass.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\glass.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

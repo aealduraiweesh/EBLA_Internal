@@ -8,7 +8,7 @@
         xmlns:views="clr-namespace:Eblacorp_internal.Views"
 
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="700" Width="1024" >
     
     <Window.Resources>
         <DataTemplate x:Name="EmployeeTemplate" DataType="{x:Type viewmodels:EmployeeViewModel}">
@@ -18,37 +18,73 @@
             <views:CompanyView DataContext ="{Binding}"/>
         </DataTemplate>
     </Window.Resources>
-    
-    <Grid>
-        <!--5 columns-->
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition MaxWidth="100"></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <!--5 rows-->
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
-        
-        <!--Menue Bar-->
-        <DockPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" Background="Beige">
-            <StackPanel Grid.RowSpan="3">
-                <Image Height="45" Source="assets\EBLA_corp_logo_211x141.png"/>
-                <Button Content="Home" />
-                <Button Content="Employee" Click="EmployeeButton_Click" />
-                <Button Content="Company" Click="CompanyButton_Click_1" />
-            </StackPanel>
-        </DockPanel>
 
-        <ContentControl Content="{Binding}" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="5">
-           
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border>
+            <StackPanel Grid.Column="0">
+             
+                <!--Ebla Logo-->
+                <Image Margin="20 0 0 0" Source="Assets/EBLA_Logo_noBG.png"></Image>
+
+                <!--Buttons-->
+                <Button Click="HomeButton_Click" Background="Tan" x:Name="HomeBtn" Content="Home" Margin="20"></Button>
+                <Button Click="EmployeeButton_Click" Background="Tan" x:Name="EmployeeBtn" Content="Employee" Margin="20"></Button>
+                <Button Click="CompanyButton_Click" Background="Tan" x:Name="CompanyBtn" Content="Company" Margin="20"></Button>
+                <Button Click="BranchButton_Click" Background="Tan" x:Name="BranchBtn" Content="Branch" Margin="20"></Button>
+
+                <!--Close Button-->
+                <Button Background="#FFDAA155" x:Name="CloseBtn" Content="Close" Margin="20 240 20 20" Click="CloseBtn_Click"></Button>
+
+
+
+
+            </StackPanel>
+
+
+        </Border>
+
+        <ContentControl Content="{Binding}"  Grid.Column="1">
+
         </ContentControl>
+
     </Grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
 </Window>

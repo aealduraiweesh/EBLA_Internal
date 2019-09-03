@@ -31,9 +31,23 @@ namespace Eblacorp_internal
             DataContext = new EmployeeViewModel();
         }
 
-        private void CompanyButton_Click_1(object sender, RoutedEventArgs e)
+        private void CompanyButton_Click(object sender, RoutedEventArgs e)
         {
             DataContext = new CompanyViewModel();
+        }
+
+        private void HomeButton_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void CloseBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void BranchButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
