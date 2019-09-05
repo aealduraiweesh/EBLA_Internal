@@ -8,5 +8,6 @@ namespace Eblacorp_internal.ViewModel
 {
     public class EmployeeViewModel
     {
+        
     }
 }

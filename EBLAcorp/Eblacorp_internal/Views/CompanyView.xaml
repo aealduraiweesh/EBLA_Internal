@@ -90,21 +90,26 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="4*"/>
                     </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                     
 
                     <TextBlock Grid.Row="0" Text="File Number View"></TextBlock>
-                    <ListBox Grid.Row="1">
+                    <ListBox Grid.Column="1" Grid.Row="1">
 
                     </ListBox>
 
 
                     <TextBlock Grid.Row="2" Text="File Number View"></TextBlock>
-                    <ListBox Grid.Row="3">
+                    <ListBox Grid.Column="1" Grid.Row="3">
 
                     </ListBox>
 
 
                     <TextBlock Grid.Row="4" Text="File Number View"></TextBlock>
-                    <ListBox  Grid.Row="5">
+                    <ListBox Grid.Column="1" Grid.Row="5">
 
                     </ListBox>
 

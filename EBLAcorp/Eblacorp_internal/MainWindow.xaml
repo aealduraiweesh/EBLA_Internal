@@ -11,12 +11,15 @@
         Title="MainWindow" Height="700" Width="1024" >
     
     <Window.Resources>
+        
         <DataTemplate x:Name="EmployeeTemplate" DataType="{x:Type viewmodels:EmployeeViewModel}">
             <views:EmployeeView DataContext ="{Binding}"/>
         </DataTemplate>
+        
         <DataTemplate x:Name="CompanyTemplate" DataType="{x:Type viewmodels:CompanyViewModel}">
             <views:CompanyView DataContext ="{Binding}"/>
         </DataTemplate>
+        
     </Window.Resources>
 
 
