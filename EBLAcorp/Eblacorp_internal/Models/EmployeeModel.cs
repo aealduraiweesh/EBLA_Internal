@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Eblacorp_internal.Models
 {
-    class Employee
+    class EmployeeModel 
     {
 
         public int ID { get; set; }
@@ -44,26 +44,9 @@ namespace Eblacorp_internal.Models
 
 
 
+     }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
 }

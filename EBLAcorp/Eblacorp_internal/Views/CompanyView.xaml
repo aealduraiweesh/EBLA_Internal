@@ -7,9 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="700" d:DesignWidth="1460">
     <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/Eblacorp_internal;component/assets/triangles.png" Opacity="0.33"/>
-        </Grid.Background>
 
         <StackPanel Margin="8">
 
