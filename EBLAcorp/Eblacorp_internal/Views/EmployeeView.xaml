@@ -3,9 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Eblacorp_internal.Views"
+             xmlns:viewmodel="clr-namespace:Eblacorp_internal.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="700" d:DesignWidth="1460">
+
+    <UserControl.DataContext>
+        <viewmodel:EmployeeViewModel/>
+    </UserControl.DataContext>
+
     <Grid>
         <StackPanel Margin="8">
 
@@ -46,7 +51,7 @@
             </Grid>
 
             <!--Employee DataGrid-->
-            <DataGrid Margin="8" Height="150"></DataGrid>
+            <DataGrid CanUserAddRows="True"  x:Name="EmployeeDataGrid" ItemsSource="{Binding Employee}" Margin="8" Height="150"></DataGrid>
 
             <!--Name Grid-->
             <Grid>
@@ -58,12 +63,29 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Text="Name: "/>
-                <TextBox x:Name="FirstNameTextBox" Margin="5 0 5 0" Grid.Column="1"/>
-                <TextBox Name="SecondNameTextBox" Margin="5 0 5 0" Grid.Column="2"/>
-                <TextBox Name="ThirdNameTextBox" Margin="5 0 5 0" Grid.Column="3"/>
-                <TextBox Name="FourthNameTextBox" Margin="5 0 5 0" Grid.Column="4"/>
-                <TextBox Name="LastNameTextBox" Margin="5 0 5 0" Grid.Column="5"/>
+              
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Text="Name: "/>
+               
+                <StackPanel Grid.Column="1">
+                    <TextBlock Margin="5 0 5 0" Text="First Name"></TextBlock>
+                    <TextBox x:Name="FirstNameTextBox" Margin="5 0 5 0" Grid.Column="1"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2">
+                    <TextBlock Margin="5 0 5 0" Text="Second Name"></TextBlock>
+                    <TextBox Name="SecondNameTextBox" Margin="5 0 5 0" Grid.Column="2"/>
+                </StackPanel>
+                <StackPanel Grid.Column="3">
+                    <TextBlock Margin="5 0 5 0" Text="Third Name"></TextBlock>
+                    <TextBox Name="ThirdNameTextBox" Margin="5 0 5 0" Grid.Column="3"/>
+                </StackPanel>
+                <StackPanel Grid.Column="4">
+                    <TextBlock Margin="5 0 5 0" Text="Fourth Name"></TextBlock>
+                    <TextBox Name="FourthNameTextBox" Margin="5 0 5 0" Grid.Column="4"/>
+                </StackPanel>
+                <StackPanel Grid.Column="5">
+                    <TextBlock Margin="5 0 5 0" Text="Family Name"></TextBlock>
+                    <TextBox Name="FamilyNameTextBox" Margin="5 0 5 0" Grid.Column="5"/>
+                </StackPanel>
             </Grid>
 
             <Grid>

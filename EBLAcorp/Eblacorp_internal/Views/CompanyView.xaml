@@ -94,21 +94,24 @@
                      
 
                     <TextBlock Grid.Row="0" Text="File Number View"></TextBlock>
-                    <ListBox Grid.Column="1" Grid.Row="1">
+                    <ListBox Background="Gray" Grid.Column="1" Grid.Row="1">
 
                     </ListBox>
+                    <TextBox Grid.Row="1" Margin="5 30 5 30"></TextBox>
 
 
                     <TextBlock Grid.Row="2" Text="File Number View"></TextBlock>
-                    <ListBox Grid.Column="1" Grid.Row="3">
+                    <ListBox Background="Gray" Grid.Column="1" Grid.Row="3">
 
                     </ListBox>
+                    <TextBox Grid.Row="3" Margin="5 30 5 30"></TextBox>
 
 
                     <TextBlock Grid.Row="4" Text="File Number View"></TextBlock>
-                    <ListBox Grid.Column="1" Grid.Row="5">
+                    <ListBox Background="Gray" Grid.Column="1" Grid.Row="5">
 
                     </ListBox>
+                    <TextBox Grid.Row="5" Margin="5 30 5 30"></TextBox>
 
                 </Grid>
 
