@@ -51,7 +51,7 @@
             </Grid>
 
             <!--Employee DataGrid-->
-            <DataGrid CanUserAddRows="True"  x:Name="EmployeeDataGrid" ItemsSource="{Binding Employee}" Margin="8" Height="150"></DataGrid>
+            <DataGrid CanUserAddRows="True"  x:Name="EmployeeDataGrid" ItemsSource="{Binding Employee}" Margin="8" Height="150" SelectedItem="{Binding SelectedEmployeeDataGrid}"></DataGrid>
 
             <!--Name Grid-->
             <Grid>
@@ -68,23 +68,23 @@
                
                 <StackPanel Grid.Column="1">
                     <TextBlock Margin="5 0 5 0" Text="First Name"></TextBlock>
-                    <TextBox x:Name="FirstNameTextBox" Margin="5 0 5 0" Grid.Column="1"/>
+                    <TextBox x:Name="FirstNameTextBox" Margin="5 0 5 0" Grid.Column="1" Text="{Binding FirstName}"/>
                 </StackPanel>
                 <StackPanel Grid.Column="2">
                     <TextBlock Margin="5 0 5 0" Text="Second Name"></TextBlock>
-                    <TextBox Name="SecondNameTextBox" Margin="5 0 5 0" Grid.Column="2"/>
+                    <TextBox Name="SecondNameTextBox" Margin="5 0 5 0" Grid.Column="2" Text="{Binding SecondName}"/>
                 </StackPanel>
                 <StackPanel Grid.Column="3">
                     <TextBlock Margin="5 0 5 0" Text="Third Name"></TextBlock>
-                    <TextBox Name="ThirdNameTextBox" Margin="5 0 5 0" Grid.Column="3"/>
+                    <TextBox Name="ThirdNameTextBox" Margin="5 0 5 0" Grid.Column="3" Text="{Binding ThirdName}"/>
                 </StackPanel>
                 <StackPanel Grid.Column="4">
                     <TextBlock Margin="5 0 5 0" Text="Fourth Name"></TextBlock>
-                    <TextBox Name="FourthNameTextBox" Margin="5 0 5 0" Grid.Column="4"/>
+                    <TextBox Name="FourthNameTextBox" Margin="5 0 5 0" Grid.Column="4" Text="{Binding FourthName}"/>
                 </StackPanel>
                 <StackPanel Grid.Column="5">
                     <TextBlock Margin="5 0 5 0" Text="Family Name"></TextBlock>
-                    <TextBox Name="FamilyNameTextBox" Margin="5 0 5 0" Grid.Column="5"/>
+                    <TextBox Name="FamilyNameTextBox" Margin="5 0 5 0" Grid.Column="5" Text="{Binding FamilyName}"/>
                 </StackPanel>
             </Grid>
 
@@ -98,56 +98,56 @@
                 <!--Left Column Textbox stack-->
                 <StackPanel Grid.Column="0">
                     <TextBlock  Margin="0 5 0 0" Text="Name in Native Language"></TextBlock>
-                    <TextBox x:Name="NameInNativeLanguage"></TextBox>
+                    <TextBox x:Name="NameInNativeLanguage" Text="{Binding LatinName}"></TextBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Career"></TextBlock>
-                    <ComboBox x:Name="CareerComboBox"></ComboBox>
+                    <ComboBox x:Name="CareerComboBox" Text="{Binding Career}"></ComboBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Career in English"></TextBlock>
-                    <TextBox x:Name="CareerEnglishComboBox"></TextBox>
+                    <TextBox x:Name="CareerEnglishComboBox" Text="{Binding CareerEng}"></TextBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Residency Number"></TextBlock>
-                    <TextBox x:Name="ResidencyNumberTextBox"></TextBox>
+                    <TextBox x:Name="ResidencyNumberTextBox" Text="{Binding ResidencyNum}"></TextBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Residency End Date"></TextBlock>
-                    <DatePicker x:Name="ResidencyEndDateDatePickerTextBox"></DatePicker>
+                    <DatePicker x:Name="ResidencyEndDateDatePickerTextBox" Text="{Binding ResidencyEndDate}"></DatePicker>
 
                     <TextBlock  Margin="0 5 0 0" Text="Residency Start Date"></TextBlock>
-                    <DatePicker x:Name="ResidencyStartDateDatePickerTextBox"></DatePicker>
+                    <DatePicker x:Name="ResidencyStartDateDatePickerTextBox" Text="{Binding StartDate}"></DatePicker>
 
                     <TextBlock  Margin="0 5 0 0" Text="Notes"></TextBlock>
-                    <TextBox MinLines="5" AcceptsReturn="True" AcceptsTab="True"  x:Name="NotesTextBox"></TextBox>
+                    <TextBox MinLines="5" AcceptsReturn="True" AcceptsTab="True"  x:Name="NotesTextBox" Text="{Binding Note}"></TextBox>
                 </StackPanel>
 
 
                 <!--Center Column Textbox stack-->
                 <StackPanel Margin="5 0 5 0" Grid.Column="1">
                     <TextBlock  Margin="0 5 0 0" Text="Civil Number"></TextBlock>
-                    <TextBox x:Name="CivilNumberTextBox"></TextBox>
+                    <TextBox x:Name="CivilNumberTextBox" Text="{Binding CivilNum}"></TextBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Passport Number"></TextBlock>
-                    <TextBox x:Name="PassportNumberTextBox"></TextBox>
+                    <TextBox x:Name="PassportNumberTextBox" Text="{Binding PassportNum}"></TextBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="PassportType"></TextBlock>
-                    <ComboBox x:Name="PassportTypeComboBox"></ComboBox>
+                    <ComboBox x:Name="PassportTypeComboBox" Text="{Binding PassportType}"></ComboBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Passport Expirey Date"></TextBlock>
-                    <DatePicker x:Name="PassportExpireyDateDatePicker"></DatePicker>
+                    <DatePicker x:Name="PassportExpireyDateDatePicker" Text="{Binding PassportEndDate}"></DatePicker>
 
                     <TextBlock  Margin="0 5 0 0" Text="Passport Issue Date"></TextBlock>
-                    <DatePicker x:Name="PassPortIssueDateDatePicker"></DatePicker>
+                    <DatePicker x:Name="PassPortIssueDateDatePicker" Text="{Binding PassportIssueDate}"></DatePicker>
 
                     <TextBlock  Margin="0 5 0 0" Text="Salary (KWD)"></TextBlock>
-                    <TextBox x:Name="SalaryTextBox"></TextBox>
+                    <TextBox x:Name="SalaryTextBox" Text="{Binding Salary}"></TextBox>
+
+                    <TextBlock  Margin="0 5 0 0" Text="Duration"></TextBlock>
+                    <ComboBox x:Name="DurationEnglishComboBox" Text="{Binding Duration}"></ComboBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Duration (English)"></TextBlock>
-                    <ComboBox x:Name="DurationEnglishComboBox"></ComboBox>
-
-                    <TextBlock  Margin="0 5 0 0" Text="Duration (English)"></TextBlock>
-                    <ComboBox x:Name="DurationComboBox"></ComboBox>
+                    <ComboBox x:Name="DurationComboBox" Text="{Binding DurationEng}"></ComboBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="License"></TextBlock>
-                    <TextBox x:Name="LicenseTextBox"></TextBox>
+                    <TextBox x:Name="LicenseTextBox" Text="{Binding LicenseNumber}"></TextBox>
 
 
                 </StackPanel>
@@ -155,28 +155,28 @@
                 <!--Right Column Textbox stack-->
                 <StackPanel Margin="5 0 5 0" Grid.Column="2">
                     <TextBlock  Margin="0 5 0 0" Text="Natinality"></TextBlock>
-                    <ComboBox x:Name="NationalityComboBox"></ComboBox>
+                    <ComboBox x:Name="NationalityComboBox" Text="{Binding Nationality}"></ComboBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Nationality (English)"></TextBlock>
-                    <ComboBox x:Name="NationalityEnglishComboBox"></ComboBox>
+                    <ComboBox x:Name="NationalityEnglishComboBox" Text="{Binding NationalityEng}"></ComboBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Type Of Nationality"></TextBlock>
-                    <ComboBox x:Name="TypeOfNationalityComboBox"></ComboBox>
+                    <ComboBox x:Name="TypeOfNationalityComboBox" Text="{Binding PassportType}"></ComboBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Religion"></TextBlock>
-                    <ComboBox x:Name="ReligionComboBox"></ComboBox>
+                    <ComboBox x:Name="ReligionComboBox" Text="{Binding Religion}"></ComboBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Education"></TextBlock>
-                    <ComboBox x:Name="EducationTextBox"></ComboBox>
+                    <ComboBox x:Name="EducationTextBox" Text="{Binding Education}"></ComboBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Date Of Birth"></TextBlock>
-                    <DatePicker x:Name="DateOfBirthDatePicker"></DatePicker>
+                    <DatePicker x:Name="DateOfBirthDatePicker" Text="{Binding DOB}"></DatePicker>
 
                     <TextBlock  Margin="0 5 0 0" Text="Maritial Status"></TextBlock>
-                    <ComboBox x:Name="MaritialStatusComboBox"></ComboBox>
+                    <ComboBox x:Name="MaritialStatusComboBox" Text="{Binding MaritalStatus}"></ComboBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Place Of Birth"></TextBlock>
-                    <TextBox x:Name="PlaceOfBirthTextBox"></TextBox>
+                    <TextBox x:Name="PlaceOfBirthTextBox" Text="{Binding BirthPlace}"></TextBox>
 
                 </StackPanel>
 

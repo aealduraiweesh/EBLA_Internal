@@ -13,7 +13,7 @@ namespace Eblacorp_internal.Models
         public  string FirstName { get; set; }
         public string SecondName { get; set; }
         public string ThirdName { get; set; }
-        public string ForthName { get; set; }
+        public string FourthName { get; set; }
         public string FamilyName { get; set; }
         public string LatinName { get; set; }
         public long CivilNum { get; set; }
@@ -38,7 +38,7 @@ namespace Eblacorp_internal.Models
         public string NationalityEng { get; set; }
         public string CareerEng { get; set; }
         public string Note { get; set; }
-        public DateTime PassPortIssueDate { get; set; }
+        public DateTime PassportIssueDate { get; set; }
         public string LicenseNumber { get; set; }
         public DateTime LicenseEndDate { get; set; }
 

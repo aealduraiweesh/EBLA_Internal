@@ -55,7 +55,7 @@ namespace Eblacorp_internal.DAL
                     FirstName = dt.Rows[i]["FirstName"].ToString(),
                     SecondName = dt.Rows[i]["SecondName"].ToString(),
                     ThirdName = dt.Rows[i]["ThirdName"].ToString(),
-                    ForthName = dt.Rows[i]["ForthName"].ToString(),
+                    FourthName = dt.Rows[i]["ForthName"].ToString(),
                     FamilyName = dt.Rows[i]["FamilyName"].ToString(),
                     LatinName = dt.Rows[i]["LatinName"].ToString(),
                     CivilNum = (long)dt.Rows[i]["CivilNum"],
@@ -80,7 +80,7 @@ namespace Eblacorp_internal.DAL
                     NationalityEng = dt.Rows[i]["NationalityEng"].ToString(),
                     CareerEng = dt.Rows[i]["CareerEng"].ToString(),
                     Note = dt.Rows[i]["Note"].ToString(),
-                    PassPortIssueDate = (DateTime)dt.Rows[i]["PassPortIssueDate"],
+                    PassportIssueDate = (DateTime)dt.Rows[i]["PassPortIssueDate"],
                     LicenseNumber = dt.Rows[i]["LicenseNumber"].ToString(),
                     LicenseEndDate = (DateTime)dt.Rows[i]["LicenseEndDate"],
 
