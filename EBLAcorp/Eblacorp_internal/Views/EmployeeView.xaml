@@ -101,7 +101,15 @@
                     <TextBox x:Name="NameInNativeLanguage" Text="{Binding LatinName}"></TextBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Career"></TextBlock>
-                    <ComboBox x:Name="CareerComboBox" Text="{Binding Career}"></ComboBox>
+                    <ComboBox x:Name="CareerComboBox" IsTextSearchEnabled="True" TextSearch.TextPath="Career" IsEditable="True" ItemsSource="{Binding Employee}" Text="{Binding Career}">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel>
+                                    <Label Content="{Binding Career}"></Label>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Career in English"></TextBlock>
                     <TextBox x:Name="CareerEnglishComboBox" Text="{Binding CareerEng}"></TextBox>
@@ -129,7 +137,15 @@
                     <TextBox x:Name="PassportNumberTextBox" Text="{Binding PassportNum}"></TextBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="PassportType"></TextBlock>
-                    <ComboBox x:Name="PassportTypeComboBox" Text="{Binding PassportType}"></ComboBox>
+                    <ComboBox x:Name="PassportTypeComboBox" IsEditable="True" Text="{Binding PassportType}" ItemsSource="{Binding Employee}" IsTextSearchEnabled="True" TextSearch.TextPath="PassportType">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel>
+                                    <Label Content="{Binding PassportType}"></Label>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Passport Expirey Date"></TextBlock>
                     <DatePicker x:Name="PassportExpireyDateDatePicker" Text="{Binding PassportEndDate}"></DatePicker>
@@ -141,10 +157,26 @@
                     <TextBox x:Name="SalaryTextBox" Text="{Binding Salary}"></TextBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Duration"></TextBlock>
-                    <ComboBox x:Name="DurationEnglishComboBox" Text="{Binding Duration}"></ComboBox>
+                    <ComboBox x:Name="DurationEnglishComboBox" IsEditable="True" ItemsSource="{Binding Employee}" Text="{Binding Duration}" IsTextSearchEnabled="True" TextSearch.TextPath="Duration">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel>
+                                    <Label Content="{Binding Duration}"></Label>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Duration (English)"></TextBlock>
-                    <ComboBox x:Name="DurationComboBox" Text="{Binding DurationEng}"></ComboBox>
+                    <ComboBox x:Name="DurationComboBox" IsEditable="True" ItemsSource="{Binding Employee}" TextSearch.TextPath="Duration" Text="{Binding DurationEng}">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel>
+                                    <Label Content="{Binding Duration}"></Label>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="License"></TextBlock>
                     <TextBox x:Name="LicenseTextBox" Text="{Binding LicenseNumber}"></TextBox>
@@ -155,19 +187,59 @@
                 <!--Right Column Textbox stack-->
                 <StackPanel Margin="5 0 5 0" Grid.Column="2">
                     <TextBlock  Margin="0 5 0 0" Text="Natinality"></TextBlock>
-                    <ComboBox x:Name="NationalityComboBox" Text="{Binding Nationality}"></ComboBox>
+                    <ComboBox x:Name="NationalityComboBox" Text="{Binding Nationality}" IsEditable="True" ItemsSource="{Binding Employee}" TextSearch.TextPath="Nationality" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel>
+                                    <Label Content="{Binding Nationality}"></Label>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Nationality (English)"></TextBlock>
-                    <ComboBox x:Name="NationalityEnglishComboBox" Text="{Binding NationalityEng}"></ComboBox>
+                    <ComboBox x:Name="NationalityEnglishComboBox" Text="{Binding NationalityEng}" IsEditable="True" ItemsSource="{Binding Employee}" TextSearch.TextPath="NationalityEng" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel>
+                                    <Label Content="{Binding NationalityEng}"></Label>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Type Of Nationality"></TextBlock>
-                    <ComboBox x:Name="TypeOfNationalityComboBox" Text="{Binding PassportType}"></ComboBox>
+                    <ComboBox x:Name="TypeOfNationalityComboBox" Text="{Binding PassportType}" IsEditable="True" ItemsSource="{Binding Employee}" TextSearch.TextPath="PassportType" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel>
+                                    <Label Content="{Binding PassportType}"></Label>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Religion"></TextBlock>
-                    <ComboBox x:Name="ReligionComboBox" Text="{Binding Religion}"></ComboBox>
+                    <ComboBox x:Name="ReligionComboBox" Text="{Binding Religion}" IsEditable="True" ItemsSource="{Binding Employee}" TextSearch.TextPath="Religion" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel>
+                                    <Label Content="{Binding Religion}"></Label>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Education"></TextBlock>
-                    <ComboBox x:Name="EducationTextBox" Text="{Binding Education}"></ComboBox>
+                    <ComboBox x:Name="EducationTextBox" Text="{Binding Education}" IsEditable="True" ItemsSource="{Binding Employee}" TextSearch.TextPath="Education" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel>
+                                    <Label Content="{Binding Education}"></Label>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Date Of Birth"></TextBlock>
                     <DatePicker x:Name="DateOfBirthDatePicker" Text="{Binding DOB}"></DatePicker>

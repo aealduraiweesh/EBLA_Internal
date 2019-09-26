@@ -55,7 +55,7 @@ namespace Eblacorp_internal.DAL
                     FirstName = dt.Rows[i]["FirstName"].ToString(),
                     SecondName = dt.Rows[i]["SecondName"].ToString(),
                     ThirdName = dt.Rows[i]["ThirdName"].ToString(),
-                    FourthName = dt.Rows[i]["ForthName"].ToString(),
+                    FourthName = dt.Rows[i]["FourthName"].ToString(),
                     FamilyName = dt.Rows[i]["FamilyName"].ToString(),
                     LatinName = dt.Rows[i]["LatinName"].ToString(),
                     CivilNum = (long)dt.Rows[i]["CivilNum"],
