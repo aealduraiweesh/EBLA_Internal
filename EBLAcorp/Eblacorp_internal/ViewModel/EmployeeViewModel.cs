@@ -27,7 +27,7 @@ namespace Eblacorp_internal.ViewModel
         //instance of the employee DAL
         EmployeeDal employeeDb = new EmployeeDal();
 
-        //collection of the UserTable information
+        //collection of the Employee table information
         public ObservableCollection<Models.EmployeeModel> Employee { get; set; } = new ObservableCollection<Models.EmployeeModel>();
 
 
@@ -47,44 +47,47 @@ namespace Eblacorp_internal.ViewModel
 
         public void selectedEmployeeHelper()
         {
-            FirstName = selectedEmployeeDataGrid.FirstName;
-            SecondName = selectedEmployeeDataGrid.SecondName;
-            ThirdName = selectedEmployeeDataGrid.ThirdName;
-            FourthName = selectedEmployeeDataGrid.FourthName;
-            FamilyName = selectedEmployeeDataGrid.FamilyName;
-            LatinName = selectedEmployeeDataGrid.LatinName;
-            CivilNum = selectedEmployeeDataGrid.CivilNum;
-            BirthPlace = selectedEmployeeDataGrid.BirthPlace;
-            DOB = selectedEmployeeDataGrid.DOB;
-            Gender = selectedEmployeeDataGrid.Gender;
-            Religion = selectedEmployeeDataGrid.Religion;
-            Nationality = selectedEmployeeDataGrid.Nationality;
-            Career = selectedEmployeeDataGrid.Career;
-            PassportNum = selectedEmployeeDataGrid.PassportNum;
-            PassportEndDate = selectedEmployeeDataGrid.PassportEndDate;
-            PassportType = selectedEmployeeDataGrid.PassportType;
-            Education = selectedEmployeeDataGrid.Education;
-            MaritalStatus = selectedEmployeeDataGrid.MaritalStatus;
-            Salary = selectedEmployeeDataGrid.salary;
-            Declration = selectedEmployeeDataGrid.declration;
-            ResidencyNum = selectedEmployeeDataGrid.ResidencyNum;
-            ResidencyEndDate = selectedEmployeeDataGrid.ResidencyEndDate;
-            StartDate = selectedEmployeeDataGrid.StartDate;
-            Duration = selectedEmployeeDataGrid.Duration;
-            DurationEng = selectedEmployeeDataGrid.DurationEng;
-            NationalityEng = selectedEmployeeDataGrid.NationalityEng;
-            CareerEng = selectedEmployeeDataGrid.CareerEng;
-            Note = selectedEmployeeDataGrid.Note;
-            PassportIssueDate = selectedEmployeeDataGrid.PassportIssueDate;
-            LicenseNumber = selectedEmployeeDataGrid.LicenseNumber;
-            LicenseEndDate = selectedEmployeeDataGrid.LicenseEndDate;
+            if (SelectedEmployeeDataGrid != null) //This is required to avoic null reference after deleting
+            { 
+                //We load our fields from the selection
+                ID = selectedEmployeeDataGrid.ID;
+                FirstName = selectedEmployeeDataGrid.FirstName;
+                SecondName = selectedEmployeeDataGrid.SecondName;
+                ThirdName = selectedEmployeeDataGrid.ThirdName;
+                FourthName = selectedEmployeeDataGrid.FourthName;
+                FamilyName = selectedEmployeeDataGrid.FamilyName;
+                LatinName = selectedEmployeeDataGrid.LatinName;
+                CivilNum = selectedEmployeeDataGrid.CivilNum;
+                BirthPlace = selectedEmployeeDataGrid.BirthPlace;
+                DOB = selectedEmployeeDataGrid.DOB;
+                Gender = selectedEmployeeDataGrid.Gender;
+                Religion = selectedEmployeeDataGrid.Religion;
+                Nationality = selectedEmployeeDataGrid.Nationality;
+                Career = selectedEmployeeDataGrid.Career;
+                PassportNum = selectedEmployeeDataGrid.PassportNum;
+                PassportEndDate = selectedEmployeeDataGrid.PassportEndDate;
+                PassportType = selectedEmployeeDataGrid.PassportType;
+                Education = selectedEmployeeDataGrid.Education;
+                MaritalStatus = selectedEmployeeDataGrid.MaritalStatus;
+                Salary = selectedEmployeeDataGrid.salary;
+                Declration = selectedEmployeeDataGrid.declration;
+                ResidencyNum = selectedEmployeeDataGrid.ResidencyNum;
+                ResidencyEndDate = selectedEmployeeDataGrid.ResidencyEndDate;
+                StartDate = selectedEmployeeDataGrid.StartDate;
+                Duration = selectedEmployeeDataGrid.Duration;
+                DurationEng = selectedEmployeeDataGrid.DurationEng;
+                NationalityEng = selectedEmployeeDataGrid.NationalityEng;
+                CareerEng = selectedEmployeeDataGrid.CareerEng;
+                Note = selectedEmployeeDataGrid.Note;
+                PassportIssueDate = selectedEmployeeDataGrid.PassportIssueDate;
+                LicenseNumber = selectedEmployeeDataGrid.LicenseNumber;
+                LicenseEndDate = selectedEmployeeDataGrid.LicenseEndDate;
 
-
+            }
 
         }
 
         private int id;
-
         public int ID
         {
             get { return id; }
@@ -92,8 +95,6 @@ namespace Eblacorp_internal.ViewModel
         }
 
         private string firstName;
-
-
         public string FirstName
         {
             get { return firstName; }
@@ -495,11 +496,148 @@ namespace Eblacorp_internal.ViewModel
         #endregion
 
 
-        //RelayCommand
+        #region Relay Commands
+        //Adds Employee to Database
+        public RelayCommand addEmployeeButton { get; private set; }
+        //Deletes Employee from DB
+        public RelayCommand deleteEmployeeButton { get; private set; }
+        //Update selected Datagrid employee
+        public RelayCommand updateEmployeeButton { get; private set; }
+
+
+        public void addEmployeeCommand(object obj)
+        {
+          if(  employeeDb.addEmployee(FirstName, SecondName, ThirdName, FourthName, FamilyName, LatinName, CivilNum, BirthPlace, DOB, Gender, Religion, Nationality,
+                                    Career, PassportNum, PassportEndDate, PassportType, Education, MaritalStatus, Salary, declration, ResidencyNum, ResidencyEndDate, StartDate,
+                                    Duration, DurationEng, NationalityEng, CareerEng, Note, PassportIssueDate, LicenseNumber, LicenseEndDate))
+            {
+                Employee.Add(new Models.EmployeeModel
+                {
+                    ID = ID,
+                    FirstName = FirstName,
+                    SecondName = SecondName,
+                    ThirdName = ThirdName,
+                    FourthName = FourthName,
+                    FamilyName = FamilyName,
+                    LatinName = LatinName,
+                    CivilNum = CivilNum,
+                    BirthPlace = BirthPlace,
+                    DOB = DOB,
+                    Gender = Gender,
+                    Religion = Religion,
+                    Nationality = Nationality,
+                    Career = Career,
+                    PassportNum = PassportNum,
+                    PassportEndDate = PassportEndDate,
+                    PassportType = PassportType,
+                    Education = Education,
+                    MaritalStatus = MaritalStatus,
+                    salary = salary,
+                    declration = declration,
+                    ResidencyNum = ResidencyNum,
+                    ResidencyEndDate = ResidencyEndDate,
+                    StartDate = StartDate,
+                    Duration = Duration,
+                    DurationEng = DurationEng,
+                    NationalityEng = NationalityEng,
+                    CareerEng = CareerEng,
+                    Note = Note,
+                    PassportIssueDate = PassportIssueDate,
+                    LicenseNumber = LicenseNumber,
+                    LicenseEndDate = LicenseEndDate
+                });
+            }
+
+
+        }
+
+        /// <summary>
+        /// Updates the database and the collection depending on selection, we remove and add from the Observable collection to trigger the propertyChanged so it can update teh view.
+        /// </summary>
+        /// <param name="obj"></param>
+        public void updateEmployeeCommand(object obj)
+        {
+           if( employeeDb.updateEmployee(ID, FirstName, SecondName, ThirdName, FourthName, FamilyName, LatinName, CivilNum, BirthPlace, DOB, Gender, Religion, Nationality,
+                                    Career, PassportNum, PassportEndDate, PassportType, Education, MaritalStatus, Salary, declration, ResidencyNum, ResidencyEndDate, StartDate,
+                                    Duration, DurationEng, NationalityEng, CareerEng, Note, PassportIssueDate, LicenseNumber, LicenseEndDate))
+            {
+
+           
+                var found = Employee.FirstOrDefault(x => x.ID == ID);
+                Employee.Remove(found);
+                Employee.Add(new Models.EmployeeModel
+                {
+                    ID = ID,
+                    FirstName = FirstName,
+                    SecondName = SecondName,
+                    ThirdName = ThirdName,
+                    FourthName = FourthName,
+                    FamilyName = FamilyName,
+                    LatinName = LatinName,
+                    CivilNum = CivilNum,
+                    BirthPlace = BirthPlace,
+                    DOB = DOB,
+                    Gender = Gender,
+                    Religion = Religion,
+                    Nationality = Nationality,
+                    Career = Career,
+                    PassportNum = PassportNum,
+                    PassportEndDate = PassportEndDate,
+                    PassportType = PassportType,
+                    Education = Education,
+                    MaritalStatus = MaritalStatus,
+                    salary = salary,
+                    declration = declration,
+                    ResidencyNum = ResidencyNum,
+                    ResidencyEndDate = ResidencyEndDate,
+                    StartDate = StartDate,
+                    Duration = Duration,
+                    DurationEng = DurationEng,
+                    NationalityEng = NationalityEng,
+                    CareerEng = CareerEng,
+                    Note = Note,
+                    PassportIssueDate = PassportIssueDate,
+                    LicenseNumber = LicenseNumber,
+                    LicenseEndDate = LicenseEndDate
+                });
+
+            }
+        }
+
+
+        /// <summary>
+        /// deletes the whole row of the ID selected
+        /// </summary>
+        /// <param name="obj"></param>
+        public void deleteEmployeeCommand(object obj)
+        {
+            employeeDb.deleteEmplotee(ID);
+
+            int sumnum = Employee.Count;
+
+
+            for (int i = 0; i < Employee.Count; i++)
+            {
+                var username = Employee[i];
+
+                if (username.ID == ID)
+                {
+                    Employee.Remove(username);
+                }
+            }
+        }
+
+        #endregion
+
+
 
         public EmployeeViewModel()
         {
             Employee = employeeDb.selectAllEmployees();
+
+            addEmployeeButton = new RelayCommand(addEmployeeCommand);
+            deleteEmployeeButton = new RelayCommand(deleteEmployeeCommand);
+            updateEmployeeButton = new RelayCommand(updateEmployeeCommand);
         }
 
 

@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace Eblacorp_internal.Commands
 {
-    class RelayCommand : ICommand
+    public class RelayCommand : ICommand
     {
         readonly Action<object> _execute; //this is to prefore the execute
         readonly Predicate<object> _canExecute; // this is to check if the button should light up

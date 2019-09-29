@@ -266,11 +266,14 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <Button x:Name="SaveButton" Margin="5" Height="30" Content="Save" Grid.Column="0"></Button>
+                <Button x:Name="SaveButton" Margin="5" Height="30" Content="Save" Grid.Column="0"
+                        Command="{Binding addEmployeeButton}"></Button>
 
-                <Button x:Name="UpdateButton" Margin="5" Height="30" Content="Update" Grid.Column="1"></Button>
+                <Button x:Name="UpdateButton" Margin="5" Height="30" Content="Update" Grid.Column="1"
+                        Command="{Binding updateEmployeeButton}"></Button>
 
-                <Button x:Name="DeleteButton" Margin="5" Height="30" Content="Delete" Grid.Column="2"></Button>
+                <Button x:Name="DeleteButton" Margin="5" Height="30" Content="Delete" Grid.Column="2"
+                        Command="{Binding deleteEmployeeButton}"></Button>
 
                 <Button x:Name="ResetButton" Margin="5" Height="30" Content="Reset" Grid.Column="3"></Button>
             </Grid>
