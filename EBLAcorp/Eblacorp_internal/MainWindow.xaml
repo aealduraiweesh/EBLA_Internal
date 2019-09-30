@@ -43,9 +43,12 @@
                 <Button Click="EmployeeButton_Click" Background="Tan" x:Name="EmployeeBtn" Content="Employee" Margin="20"></Button>
                 <Button Click="CompanyButton_Click" Background="Tan" x:Name="CompanyBtn" Content="Company" Margin="20"></Button>
                 <Button Click="BranchButton_Click" Background="Tan" x:Name="BranchBtn" Content="Branch" Margin="20"></Button>
-
+                <Label Content="Reports" Margin="20"></Label>
+                <Button Click="EmployeeButton_Click" Background="#FFB6B8E6" x:Name="Report1" Content="Report1" Margin="20"></Button>
+                <Button Click="CompanyButton_Click" Background="#FFB6B8E6" x:Name="Report2" Content="Report2" Margin="20"></Button>
+                <Button Click="BranchButton_Click" Background="#FFB6B8E6" x:Name="Report3" Content="Report3" Margin="20"></Button>
                 <!--Close Button-->
-                <Button Background="#FFDAA155" x:Name="CloseBtn" Content="Close" Margin="20 240 20 20" Click="CloseBtn_Click"></Button>
+                <Button Background="#FFDAA155" x:Name="CloseBtn" Content="Close" Margin="20 50 20 20" Click="CloseBtn_Click"></Button>
 
 
 

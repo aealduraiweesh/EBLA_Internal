@@ -245,7 +245,15 @@
                     <DatePicker x:Name="DateOfBirthDatePicker" Text="{Binding DOB}"></DatePicker>
 
                     <TextBlock  Margin="0 5 0 0" Text="Maritial Status"></TextBlock>
-                    <ComboBox x:Name="MaritialStatusComboBox" Text="{Binding MaritalStatus}"></ComboBox>
+                    <ComboBox x:Name="MaritialStatusComboBox" Text="{Binding MaritalStatus}" IsEditable="True" ItemsSource="{Binding Employee}" TextSearch.TextPath="MaritalStatus">
+                        <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <WrapPanel>
+                                <Label Content="{Binding Education}"></Label>
+                            </WrapPanel>
+                        </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Place Of Birth"></TextBlock>
                     <TextBox x:Name="PlaceOfBirthTextBox" Text="{Binding BirthPlace}"></TextBox>

@@ -504,6 +504,9 @@ namespace Eblacorp_internal.ViewModel
         //Update selected Datagrid employee
         public RelayCommand updateEmployeeButton { get; private set; }
 
+        //Reset fields
+        public RelayCommand resetButton { get; private set; }
+
 
         public void addEmployeeCommand(object obj)
         {
@@ -627,6 +630,14 @@ namespace Eblacorp_internal.ViewModel
             }
         }
 
+        /// <summary>
+        /// Reset employeee fields
+        /// </summary>
+        /// <param name="obj"></param>
+        public void resetEmployeeCommand(object obj)
+        {
+
+        }
         #endregion
 
 
