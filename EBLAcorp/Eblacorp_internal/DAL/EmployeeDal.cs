@@ -11,7 +11,7 @@ using System.Windows;
 
 namespace Eblacorp_internal.DAL
 {
-    public class EmployeeDal
+    public class EmployeeDAL
     {
         //SQL Connection
         static string myconnection = ConfigurationManager.ConnectionStrings["Ebla"].ConnectionString;

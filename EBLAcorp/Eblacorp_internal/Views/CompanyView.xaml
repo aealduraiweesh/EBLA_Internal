@@ -3,9 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Eblacorp_internal.Views"
+             xmlns:viewmodel="clr-namespace:Eblacorp_internal.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="700" d:DesignWidth="1460">
+
+    <UserControl.DataContext>
+        <viewmodel:CompanyViewModel/>
+    </UserControl.DataContext>
+    
     <Grid>
 
         <StackPanel Margin="8">
@@ -44,7 +49,7 @@
             </Grid>
 
             <!--DataGrid-->
-            <DataGrid x:Name="EmployeeDataGrid" Margin="8 8 8 8" Height="150"></DataGrid>
+            <DataGrid x:Name="EmployeeDataGrid" Margin="8 8 8 8" Height="150" ItemsSource="{Binding Company}" SelectedItem="{Binding SelectedCompanyDataGrid}"></DataGrid>
 
             <!--Employee Form Grid -->
             <Grid Height="400"  >
@@ -54,90 +59,78 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <StackPanel Grid.Column="0" Orientation="Vertical">
+                <StackPanel Margin="5 0 5 0" Grid.Column="0" Orientation="Vertical">
                     <!--Column 0 Form section-->
                     <TextBlock  Margin="0 5 0 0" Text="Governate"></TextBlock>
-                    <TextBox x:Name="GovernateTextBox"></TextBox>
+                    <TextBox x:Name="GovernateTextBox" Text="{Binding Governate}"></TextBox>
 
-                    <TextBlock  Margin="0 5 0 0" Text="City"></TextBlock>
-                    <TextBox x:Name="CityTextBox"></TextBox>
+                    <TextBlock  Margin="0 5 0 0" Text="Area"></TextBlock>
+                    <TextBox x:Name="CityTextBox" Text="{Binding Area}"></TextBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Block"></TextBlock>
-                    <TextBox x:Name="BlockTextBox"></TextBox>
+                    <TextBox x:Name="BlockTextBox" Text="{Binding block}"></TextBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Street"></TextBlock>
-                    <TextBox x:Name="StreetTextBox"></TextBox>
+                    <TextBox x:Name="StreetTextBox" Text="{Binding street}"></TextBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Phone"></TextBlock>
-                    <TextBox x:Name="PhoneTextBox"></TextBox>
+                    <TextBox x:Name="PhoneTextBox" Text="{Binding phone}"></TextBox>
 
-                    <TextBlock  Margin="0 5 0 0" Text="File Number"></TextBlock>
-                    <TextBox x:Name="FileNumberTextBox"></TextBox>
+                    <!--<TextBlock  Margin="0 5 0 0" Text="File Number"></TextBlock>
+                    <TextBox x:Name="FileNumberTextBox" Text="{Binding}"></TextBox>-->
 
 
                 </StackPanel>
 
                 <!-- Column 1 Form Section-->
-                <Grid Grid.Column="1" Margin="5 0 5 0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="4*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="4*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="4*"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                     
+ 
+                    <StackPanel Margin="5 0 5 0" Grid.Column="1">
 
-                    <TextBlock Grid.Row="0" Text="File Number View"></TextBlock>
-                    <ListBox Background="Gray" Grid.Column="1" Grid.Row="1">
+                        <TextBlock Margin="0 5 0 0" Text="Delegate Name"></TextBlock>
+                        <TextBox x:Name="DelegateNameTextBox" Text="{Binding DelegateName}" ></TextBox>
 
-                    </ListBox>
-                    <TextBox Grid.Row="1" Margin="5 30 5 30"></TextBox>
+                        <TextBlock  Margin="0 5 0 0" Text="Reference Number"></TextBlock>
+                        <TextBox x:Name="ReferenceNumberTextBox" Text="{Binding ReferenceNumber}"></TextBox>
 
+                        <TextBlock Margin="0 5 0 0" Text="Contract Number"></TextBlock>
+                        <TextBox x:Name="ContractNumberTextBox" Text="{Binding ContractNumber}"></TextBox>
 
-                    <TextBlock Grid.Row="2" Text="File Number View"></TextBlock>
-                    <ListBox Background="Gray" Grid.Column="1" Grid.Row="3">
+                        <TextBlock Margin="0 5 0 0" Text="Automated Number"></TextBlock>
+                        <TextBox x:Name="AutomatedNumberTextBox" Text="{Binding AutomatedNumber}"></TextBox>
 
-                    </ListBox>
-                    <TextBox Grid.Row="3" Margin="5 30 5 30"></TextBox>
+                        <!--<TextBlock Margin="0 5 0 0" Text="Unknown Number"></TextBlock>
+                        <TextBox x:Name="UnkownTextBox"  Text="}"></TextBox>-->
 
+                        <TextBlock Margin="0 5 0 0" Text="Civil Number"></TextBlock>
+                        <TextBox x:Name="CivilNumberTextBox" Text="{Binding CivilNumber}"></TextBox>
 
-                    <TextBlock Grid.Row="4" Text="File Number View"></TextBlock>
-                    <ListBox Background="Gray" Grid.Column="1" Grid.Row="5">
-
-                    </ListBox>
-                    <TextBox Grid.Row="5" Margin="5 30 5 30"></TextBox>
-
-                </Grid>
+                        <!--TODO: Add list of delegates only to here-->
+                        <TextBlock Margin="0 5 0 0" Text="Delegate View"></TextBlock>
+                        <ListView Height="90" Background="Gray"  x:Name="DelegateView"></ListView>
+                </StackPanel>
+                
 
 
 
-                <StackPanel Grid.Column="2" Orientation="Vertical">
+                <StackPanel Margin="5 0 5 0" Grid.Column="2" Orientation="Vertical">
                     <!--Column 2 Form section-->
-                    <TextBlock  Text="Manager"></TextBlock>
-                    <TextBox x:Name="ManagerTextBox"></TextBox>
+                    <TextBlock Margin="0 5 0 0" Text="Manager"></TextBlock>
+                    <TextBox x:Name="ManagerTextBox" Text="{Binding ManagerName}"></TextBox>
 
                     <TextBlock Margin="0 5 0 0" Text="Manager (English)"></TextBlock>
-                    <TextBox x:Name="ManagerEnglishTextBox"></TextBox>
+                    <TextBox x:Name="ManagerEnglishTextBox" Text="{Binding ManagerNameEng}"></TextBox>
 
                     <TextBlock Margin="0 5 0 0" Text="Business Field"></TextBlock>
-                    <TextBox x:Name="BusinessFieldTextBox"></TextBox>
+                    <TextBox x:Name="BusinessFieldTextBox" Text="{Binding BusinessField}"></TextBox>
 
                     <TextBlock Margin="0 5 0 0" Text="Business Field (English)"></TextBlock>
-                    <TextBox x:Name="BusinessFieldEnglishTextBox"></TextBox>
+                    <TextBox x:Name="BusinessFieldEnglishTextBox" Text="{Binding BusinessFieldEng}"></TextBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Company Name"></TextBlock>
-                    <TextBox x:Name="CompanyNameTextBox"></TextBox>
+                    <TextBox x:Name="CompanyNameTextBox" Text="{Binding CompanyName}"></TextBox>
 
                     <TextBlock Margin="0 5 0 0" Text="Company Name (English)"></TextBlock>
-                    <TextBox x:Name="CompanyNameEnglishTextBox"></TextBox>
-
-
+                    <TextBox x:Name="CompanyNameEnglishTextBox" Text="{Binding CompanyNameEng}"></TextBox>
 
                 </StackPanel>
 
@@ -152,11 +145,13 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <Button x:Name="SaveButton" Margin="5" Height="30" Content="Save" Grid.Column="0"></Button>
+                <Button x:Name="SaveButton" Margin="5" Height="30" Content="Save" Grid.Column="0"
+                        Command="{Binding addCompanyButton}"></Button>
 
                 <Button x:Name="UpdateButton" Margin="5" Height="30" Content="Update" Grid.Column="1"></Button>
 
-                <Button x:Name="DeleteButton" Margin="5" Height="30" Content="Delete" Grid.Column="2"></Button>
+                <Button x:Name="DeleteButton" Margin="5" Height="30" Content="Delete" Grid.Column="2"
+                        Command="{Binding deleteCompanyButton}"></Button>
 
                 <Button x:Name="ResetButton" Margin="5" Height="30" Content="Reset" Grid.Column="3"></Button>
             </Grid>

@@ -25,7 +25,7 @@ namespace Eblacorp_internal.ViewModel
         }
 
         //instance of the employee DAL
-        EmployeeDal employeeDb = new EmployeeDal();
+        EmployeeDAL employeeDB = new EmployeeDAL();
 
         //collection of the Employee table information
         public ObservableCollection<Models.EmployeeModel> Employee { get; set; } = new ObservableCollection<Models.EmployeeModel>();
@@ -510,7 +510,7 @@ namespace Eblacorp_internal.ViewModel
 
         public void addEmployeeCommand(object obj)
         {
-          if(  employeeDb.addEmployee(FirstName, SecondName, ThirdName, FourthName, FamilyName, LatinName, CivilNum, BirthPlace, DOB, Gender, Religion, Nationality,
+          if(  employeeDB.addEmployee(FirstName, SecondName, ThirdName, FourthName, FamilyName, LatinName, CivilNum, BirthPlace, DOB, Gender, Religion, Nationality,
                                     Career, PassportNum, PassportEndDate, PassportType, Education, MaritalStatus, Salary, declration, ResidencyNum, ResidencyEndDate, StartDate,
                                     Duration, DurationEng, NationalityEng, CareerEng, Note, PassportIssueDate, LicenseNumber, LicenseEndDate))
             {
@@ -560,7 +560,7 @@ namespace Eblacorp_internal.ViewModel
         /// <param name="obj"></param>
         public void updateEmployeeCommand(object obj)
         {
-           if( employeeDb.updateEmployee(ID, FirstName, SecondName, ThirdName, FourthName, FamilyName, LatinName, CivilNum, BirthPlace, DOB, Gender, Religion, Nationality,
+           if( employeeDB.updateEmployee(ID, FirstName, SecondName, ThirdName, FourthName, FamilyName, LatinName, CivilNum, BirthPlace, DOB, Gender, Religion, Nationality,
                                     Career, PassportNum, PassportEndDate, PassportType, Education, MaritalStatus, Salary, declration, ResidencyNum, ResidencyEndDate, StartDate,
                                     Duration, DurationEng, NationalityEng, CareerEng, Note, PassportIssueDate, LicenseNumber, LicenseEndDate))
             {
@@ -614,9 +614,8 @@ namespace Eblacorp_internal.ViewModel
         /// <param name="obj"></param>
         public void deleteEmployeeCommand(object obj)
         {
-            employeeDb.deleteEmplotee(ID);
+            employeeDB.deleteEmplotee(ID);
 
-            int sumnum = Employee.Count;
 
 
             for (int i = 0; i < Employee.Count; i++)
@@ -644,7 +643,7 @@ namespace Eblacorp_internal.ViewModel
 
         public EmployeeViewModel()
         {
-            Employee = employeeDb.selectAllEmployees();
+            Employee = employeeDB.selectAllEmployees();
 
             addEmployeeButton = new RelayCommand(addEmployeeCommand);
             deleteEmployeeButton = new RelayCommand(deleteEmployeeCommand);
