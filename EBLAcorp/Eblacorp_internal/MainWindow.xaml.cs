@@ -1,4 +1,5 @@
 ﻿using Eblacorp_internal.ViewModel;
+using Eblacorp_internal.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,6 +49,11 @@ namespace Eblacorp_internal
         private void BranchButton_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void EmployeeReport_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new PAFMPReportView();
         }
     }
 }

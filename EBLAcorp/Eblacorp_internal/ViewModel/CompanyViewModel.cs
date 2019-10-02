@@ -1,4 +1,5 @@
 ﻿using Eblacorp_internal.Commands;
+using Eblacorp_internal.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -6,6 +7,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace Eblacorp_internal.ViewModel
 {
@@ -31,7 +33,49 @@ namespace Eblacorp_internal.ViewModel
         //Add Company to DB
         public RelayCommand addCompanyButton { get; private set; }
         public RelayCommand deleteCompanyButton { get; private set; }
+        public RelayCommand resetCompanyButton { get; private set; }
+        public RelayCommand updateCompanyButton { get; private set; }
 
+
+        public void updateCompanyCommand(object obj)
+        {
+          
+          if(companyDB.updateCompany(Comp_ID,ManagerName, CivilNumber, DelegateName, CompanyName, ContractNumber, ReferenceNumber, AutomatedNumber,
+                                    Area, block, street, phone, Governate, BusinessField, ManagerNameEng, CompanyNameEng, BusinessFieldEng))
+            {
+                var found = Company.FirstOrDefault(x => x.Comp_ID == Comp_ID);
+                Company.Remove(found);
+                Company.Add(new Models.CompanyModel
+                {
+                    Comp_ID = Comp_ID,
+                    ManagerName = ManagerName,
+                    CivilNumber = CivilNumber,
+                    DelegateName = DelegateName,
+                    CompanyName = CompanyName,
+                    ContractNumber = ContractNumber,
+                    ReferenceNumber = ReferenceNumber,
+                    AutomatedNumber = AutomatedNumber,
+                    Area = Area,
+                    block = block,
+                    street = street,
+                    phone = phone,
+                    Governate = Governate,
+                    BusinessField = BusinessField,
+                    ManagerNameeng = ManagerNameEng,
+                    CompanyNameeng = CompanyNameEng,
+                    BusinessFieldEng = BusinessFieldEng
+                }) ;
+            }
+        }
+        public void resetCompanyCommand(object obj)
+        {
+            CompanyView companyV = new CompanyView();
+            PrintDialog printDialog = new PrintDialog();
+            if(printDialog.ShowDialog()==true)
+            {
+                printDialog.PrintVisual(companyV.myGrid, "Printing in process");
+            }
+        }
 
         public void deleteCompanyCommand(object obj)
         {
@@ -347,7 +391,8 @@ namespace Eblacorp_internal.ViewModel
             //Buttons
             addCompanyButton = new RelayCommand(addCompanyCommand);
             deleteCompanyButton = new RelayCommand(deleteCompanyCommand);
-
+            resetCompanyButton = new RelayCommand(resetCompanyCommand);
+            updateCompanyButton = new RelayCommand(updateCompanyCommand);
         }
     }
 }

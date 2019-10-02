@@ -3,10 +3,133 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Eblacorp_internal.Views"
+             xmlns:viewmodel="clr-namespace:Eblacorp_internal.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.DataContext>
+        <viewmodel:PAFMReportViewModel/>
+    </UserControl.DataContext>
+    
     <Grid>
+        <ScrollViewer>
+            <StackPanel>
+            <Grid x:Name="ButtonGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    
+                </Grid.ColumnDefinitions>
+                <Button Content="Print" x:Name="PrintReportButton" Command="{Binding printButton}"></Button>
             
+            </Grid>
+
+          
+            <Grid Margin="10" x:Name="PAFMGrid" Background="White">
+                <StackPanel Margin="10">
+                    <Image Source="/Eblacorp_internal;component/assets/kuwaitLogo.jpg" MaxWidth="30" MaxHeight="40"></Image>
+                    <TextBlock HorizontalAlignment="Center" Text="الهيئة العـــــــــامة للقـــوى العــامـلة"></TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Text="The Public Authority For Manpower"></TextBlock>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" BorderThickness="1.1" BorderBrush="Black">
+                            <StackPanel Margin="5" Grid.Column="0">
+                                <TextBlock HorizontalAlignment="Center" TextDecorations="Underline" Text="Sample Form an Employment Contract in the Civil Sector"></TextBlock>
+                                <TextBlock Margin="30 10 20 0" Text="State o Kuwait"></TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock>Public Authority of Manpower/</TextBlock>
+                                    <TextBox BorderThickness="0" TextDecorations="UnderLine" MinWidth="80" Width="auto" Text="--INSERT HERE--" Foreground="Red"></TextBox>
+                                </StackPanel>
+                                <TextBlock FontFamily="Bold">Labour Department</TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock>On</TextBlock>
+                                    <TextBox BorderThickness="0" Foreground="Red" Margin="5 0 5 0" MinWidth="80">Enter Text Here</TextBox>
+                                    <TextBlock>corresponing to</TextBlock>
+                                    <DatePickerTextBox BorderThickness="0" Foreground="Red"></DatePickerTextBox>
+                                    <TextBlock>the present</TextBlock>
+                                </StackPanel>
+                                <TextBlock>contract was concluded by and between:</TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock>1. Company/</TextBlock>
+                                    <TextBox BorderThickness="0" TextDecorations="UnderLine" MinWidth="80" Width="auto" Text="--INSERT HERE--" Foreground="Red"></TextBox>
+                                </StackPanel>
+                                <TextBlock>2. Represented in signature in the present contract by:</TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock>Name:</TextBlock>
+                                    <TextBox BorderThickness="0" TextDecorations="UnderLine" MinWidth="80" Width="auto" Text="--INSERT HERE--" Foreground="Red"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock>Civil Card:</TextBlock>
+                                    <TextBox BorderThickness="0" TextDecorations="UnderLine" MinWidth="80" Width="auto" Text="--INSERT HERE--" Foreground="Red"></TextBox>
+                                </StackPanel>
+                                <TextBlock>(FirstParty)</TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock>3. Name:</TextBlock>
+                                    <TextBox BorderThickness="0" TextDecorations="UnderLine" MinWidth="80" Width="auto" Text="--INSERT HERE--" Foreground="Red"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock>4. Nationality:</TextBlock>
+                                    <TextBox BorderThickness="0" TextDecorations="UnderLine" MinWidth="80" Width="auto" Text="--INSERT HERE--" Foreground="Red"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock>Civil Card:</TextBlock>
+                                    <TextBox BorderThickness="0" TextDecorations="UnderLine" MinWidth="80" Width="auto" Text="--INSERT HERE--" Foreground="Red"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock>Residence:</TextBlock>
+                                    <TextBox BorderThickness="0" TextDecorations="UnderLine" MinWidth="80" Width="auto" Text="--INSERT HERE--" Foreground="Red"></TextBox>
+                                </StackPanel>
+                                <TextBlock>(Second Party)</TextBlock>
+                                <!--PREAMBLE-->
+                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 20 0 0">Preamble</TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock>The first party owns the facility entitled</TextBlock>
+                                    <TextBox BorderThickness="0" TextDecorations="UnderLine" MinWidth="80" Width="auto" Text="--INSERT HERE--" Foreground="Red"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock>working in the field of</TextBlock>
+                                    <TextBox BorderThickness="0" TextDecorations="UnderLine" MinWidth="80" Width="auto" Text="--INSERT HERE--" Foreground="Red"></TextBox>
+                                </StackPanel>
+                                <TextBlock>whereas it wished to conclude a contract with the second party to work</TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock>or it in the profession of </TextBlock>
+                                    <TextBox BorderThickness="0" TextDecorations="UnderLine" MinWidth="80" Width="auto" Text="--INSERT HERE--" Foreground="Red"></TextBox>
+                                    <TextBlock> whereas the parties</TextBlock>
+                                </StackPanel>
+                                <TextBlock>acknowledged their capacity to conclude this contract; they agreed upon</TextBlock>
+                                <TextBlock>  the following:</TextBlock>
+                                <!--Article One-->
+                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 20 0 0">Article One</TextBlock>
+                                <TextBlock>The preamble above shall constitute an integral part of the present</TextBlock>
+                                <TextBlock>contract.</TextBlock>
+                                <!--Article Two "Nature of the Work-->
+                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 20 0 0">Article Two</TextBlock>
+                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 20 0 0">"Nature of the Work</TextBlock>
+                                <TextBlock>The first party concluded a contract with the second party to work for it</TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock>in the profession of </TextBlock>
+                                    <TextBox BorderThickness="0" TextDecorations="UnderLine" MinWidth="80" Width="auto" Text="--INSERT HERE--" Foreground="Red"></TextBox>
+                                    <TextBlock>in the State of Kuwait.</TextBlock>
+                                </StackPanel>
+                                <!--Article Three-->
+                                
+
+
+
+
+
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+
+                </StackPanel>
+                
+                
+            </Grid>
+        </StackPanel>
+        </ScrollViewer>
+
     </Grid>
 </UserControl>

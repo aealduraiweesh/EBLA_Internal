@@ -111,7 +111,75 @@ namespace Eblacorp_internal.DAL
                 cmd.Parameters.Add(new SqlParameter("@ManagerNameeng", SqlDbType.VarChar)).Value = ManagerNameeng;
                 cmd.Parameters.Add(new SqlParameter("@CompanyNameeng", SqlDbType.NChar)).Value = CompanyNameeng;
                 cmd.Parameters.Add(new SqlParameter("@BusinessFieldEng", SqlDbType.NChar)).Value = BusinessFieldEng;
-                ;
+                
+
+
+
+                //Opens Connection
+                con.Open();
+                //Stores the table for this session
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+
+                //Create an integer variable to hold the value after the query is executed
+                int rows = cmd.ExecuteNonQuery();
+
+                //The value of rows will be bigger than 0 if the query was succesfully
+                if (rows > 0)
+                {
+                    isSuccess = true;
+
+                }
+                else
+                {
+                    isSuccess = false;
+                }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return isSuccess;
+        }
+
+        public bool updateCompany(int Comp_ID, string ManagerName, string CivilNumber, string DelegateName, string CompanyName,
+                               string ContractNumber, string ReferenceNumber, string AutomatedNumber, string Area,
+                               string block, string street, string phone, string Governate, string BusinessField,
+                               string ManagerNameeng, string CompanyNameeng, string BusinessFieldEng)
+        {
+            SqlConnection con = new SqlConnection(myconnection);
+
+            bool isSuccess = false;
+
+            try
+            {
+                //Saves the command to SqlCommand cmd
+                SqlCommand cmd = new SqlCommand("dbo.spUpdateCompany", con);
+
+                //Create the Parameter to pass get the value from UI and pass it on SQL above
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(new SqlParameter("@COMP_ID", SqlDbType.BigInt)).Value = Comp_ID;
+                cmd.Parameters.Add(new SqlParameter("@ManagerName", SqlDbType.NVarChar)).Value = ManagerName;
+                cmd.Parameters.Add(new SqlParameter("@CivilNumber", SqlDbType.NChar)).Value = CivilNumber;
+                cmd.Parameters.Add(new SqlParameter("@DelegateName", SqlDbType.NVarChar)).Value = DelegateName;
+                cmd.Parameters.Add(new SqlParameter("@CompanyName", SqlDbType.NVarChar)).Value = CompanyName;
+                cmd.Parameters.Add(new SqlParameter("@ContractNumber", SqlDbType.NVarChar)).Value = ContractNumber;
+                cmd.Parameters.Add(new SqlParameter("@ReferenceNumber", SqlDbType.NChar)).Value = ReferenceNumber;
+                cmd.Parameters.Add(new SqlParameter("@AutomatedNumber", SqlDbType.NChar)).Value = AutomatedNumber;
+                cmd.Parameters.Add(new SqlParameter("@Area", SqlDbType.NChar)).Value = Area;
+                cmd.Parameters.Add(new SqlParameter("@block", SqlDbType.NChar)).Value = block;
+                cmd.Parameters.Add(new SqlParameter("@street", SqlDbType.NChar)).Value = street;
+                cmd.Parameters.Add(new SqlParameter("@phone", SqlDbType.NChar)).Value = phone;
+                cmd.Parameters.Add(new SqlParameter("@Governate", SqlDbType.NChar)).Value = Governate;
+                cmd.Parameters.Add(new SqlParameter("@BusinessField", SqlDbType.NChar)).Value = BusinessField;
+                cmd.Parameters.Add(new SqlParameter("@ManagerNameeng", SqlDbType.VarChar)).Value = ManagerNameeng;
+                cmd.Parameters.Add(new SqlParameter("@CompanyNameeng", SqlDbType.NChar)).Value = CompanyNameeng;
+                cmd.Parameters.Add(new SqlParameter("@BusinessFieldEng", SqlDbType.NChar)).Value = BusinessFieldEng;
 
 
 

@@ -30,7 +30,7 @@
                     </Grid.ColumnDefinitions>
 
                     <TextBlock x:Name="SearchByCompanyTextBlock" TextAlignment="Center" Grid.Column="0" Text="Search by Company Name"></TextBlock>
-                    <TextBox x:Name="SearchByCompanyTextBox" Grid.Column="1" ></TextBox>
+                    <TextBox  x:Name="SearchByCompanyTextBox" Grid.Column="1" ></TextBox>
                 </Grid>
 
                 <!--Search by Delegate-->
@@ -52,7 +52,7 @@
             <DataGrid x:Name="EmployeeDataGrid" Margin="8 8 8 8" Height="150" ItemsSource="{Binding Company}" SelectedItem="{Binding SelectedCompanyDataGrid}"></DataGrid>
 
             <!--Employee Form Grid -->
-            <Grid Height="400"  >
+            <Grid x:Name="myGrid" Height="400"  >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition/>
@@ -115,7 +115,7 @@
                 <StackPanel Margin="5 0 5 0" Grid.Column="2" Orientation="Vertical">
                     <!--Column 2 Form section-->
                     <TextBlock Margin="0 5 0 0" Text="Manager"></TextBlock>
-                    <TextBox x:Name="ManagerTextBox" Text="{Binding ManagerName}"></TextBox>
+                    <TextBox  x:Name="ManagerTextBox" Text="{Binding ManagerName}"></TextBox>
 
                     <TextBlock Margin="0 5 0 0" Text="Manager (English)"></TextBlock>
                     <TextBox x:Name="ManagerEnglishTextBox" Text="{Binding ManagerNameEng}"></TextBox>
@@ -148,12 +148,14 @@
                 <Button x:Name="SaveButton" Margin="5" Height="30" Content="Save" Grid.Column="0"
                         Command="{Binding addCompanyButton}"></Button>
 
-                <Button x:Name="UpdateButton" Margin="5" Height="30" Content="Update" Grid.Column="1"></Button>
+                <Button x:Name="UpdateButton" Margin="5" Height="30" Content="Update" Grid.Column="1"
+                        Command="{Binding updateCompanyButton}"></Button>
 
                 <Button x:Name="DeleteButton" Margin="5" Height="30" Content="Delete" Grid.Column="2"
                         Command="{Binding deleteCompanyButton}"></Button>
 
-                <Button x:Name="ResetButton" Margin="5" Height="30" Content="Reset" Grid.Column="3"></Button>
+                <Button x:Name="ResetButton" Margin="5" Height="30" Content="Reset" Grid.Column="3"
+                        Command="{Binding resetCompanyButton}"></Button>
             </Grid>
 
         </StackPanel>

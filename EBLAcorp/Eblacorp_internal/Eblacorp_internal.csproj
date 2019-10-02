@@ -65,6 +65,7 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="ViewModel\CompanyViewModel.cs" />
     <Compile Include="ViewModel\EmployeeViewModel.cs" />
+    <Compile Include="ViewModel\PAFMReportViewModel.cs" />
     <Compile Include="Views\CompanyView.xaml.cs">
       <DependentUpon>CompanyView.xaml</DependentUpon>
     </Compile>
@@ -139,14 +140,13 @@
     <Resource Include="assets\spectrum.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Views\glass.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="assets\glass.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="assets\Ebla_logo_noBg.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="assets\kuwaitLogo.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
