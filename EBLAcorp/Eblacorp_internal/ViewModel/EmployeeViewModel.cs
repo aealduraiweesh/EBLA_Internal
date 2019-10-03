@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -86,6 +87,65 @@ namespace Eblacorp_internal.ViewModel
             }
 
         }
+
+        private string firstNameSearch;
+
+        public string FirstNameSearch
+        {
+            get { return firstNameSearch; }
+            set
+            {
+                firstNameSearch = value;
+                Employee = employeeDB.searchByFirstName(FirstNameSearch);
+            }
+        }
+
+        private string secondNameSearch;
+
+        public string SecondNameSearch
+        {
+            get { return secondNameSearch; }
+            set
+            {
+                secondNameSearch = value;
+                Employee = employeeDB.searchBySecondName(secondNameSearch);
+            }
+        }
+        private string thirdNameSearch;
+
+        public string ThirdNameSearch
+        {
+            get { return thirdNameSearch; }
+            set
+            {
+                thirdNameSearch = value;
+                Employee = employeeDB.searchByThirdName(thirdNameSearch);
+            }
+        }
+        private string fourthNameSearch;
+
+        public string FourthNameSearch
+        {
+            get { return fourthNameSearch; }
+            set
+            {
+                fourthNameSearch = value;
+                Employee = employeeDB.searchByFourthName(fourthNameSearch);
+            }
+        }
+        private string familyNameSearch;
+
+        public string FamilyNameSearch
+        {
+            get { return familyNameSearch; }
+            set
+            {
+                familyNameSearch = value;
+                Employee = employeeDB.searchByFamilyName(FamilyNameSearch);
+            }
+        }
+
+       
 
         private int id;
         public int ID

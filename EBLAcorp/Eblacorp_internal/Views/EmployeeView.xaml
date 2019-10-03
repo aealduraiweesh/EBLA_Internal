@@ -26,27 +26,27 @@
 
                 <StackPanel Margin="8 0 8 0" Grid.Column="0">
                     <TextBlock x:Name="SearhByFirstNameTextBlock" Text="Search by First Name" ></TextBlock>
-                    <TextBox></TextBox>
+                    <TextBox x:Name="SearchByFirstNameTextBox" Text="{Binding FirstNameSearch,UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 </StackPanel>
 
                 <StackPanel Margin="8 0 8 0" Grid.Column="1">
                     <TextBlock  x:Name="SearhBySecondNameTextBlock" Text="Search by Second Name"></TextBlock>
-                    <TextBox></TextBox>
+                    <TextBox Text="{Binding SecondNameSearch,UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 </StackPanel>
 
                 <StackPanel Margin="8 0 8 0" Grid.Column="2">
                     <TextBlock   x:Name="SearhByThirdNameTextBlock" Text="Search by third Name"></TextBlock>
-                    <TextBox></TextBox>
+                    <TextBox Text="{Binding ThirdNameSearch,UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 </StackPanel>
 
                 <StackPanel   Margin="8 0 8 0" Grid.Column="3">
                     <TextBlock x:Name="SearhByFourthNameTextBlock" Text="Search by Fourth Name"></TextBlock>
-                    <TextBox></TextBox>
+                    <TextBox Text="{Binding FourthNameSearch,UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 </StackPanel>
 
                 <StackPanel Margin="8 0 8 0" Grid.Column="4">
                     <TextBlock   x:Name="SearhByFamilyNameTextBlock" Text="Search by Family Name"></TextBlock>
-                    <TextBox></TextBox>
+                    <TextBox Text="{Binding FamilyNameSearch,UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 </StackPanel>
             </Grid>
 

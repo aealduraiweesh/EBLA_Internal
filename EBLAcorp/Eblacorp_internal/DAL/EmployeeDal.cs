@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,328 @@ namespace Eblacorp_internal.DAL
         //collection of the UserTable information
         public ObservableCollection<Models.EmployeeModel> employeeCollection { get; set; } = new ObservableCollection<Models.EmployeeModel>();
 
+
+
+
+        public ObservableCollection<Models.EmployeeModel> searchByFirstName(string FirstNameSearch)
+        {
+            employeeCollection.Clear();
+            dt.Clear();
+
+            SqlConnection con = new SqlConnection(myconnection);
+            SqlCommand cmd = new SqlCommand("dbo.spGetEmployeeByFirstName", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            
+
+            cmd.Parameters.Add(new SqlParameter("@FirstName", SqlDbType.VarChar)).Value = FirstNameSearch;
+            con.Open();
+            SqlDataAdapter adp = new SqlDataAdapter(cmd);
+            adp.Fill(dt);
+            con.Close();
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                employeeCollection.Add(new Models.EmployeeModel
+                {
+                    ID = (int)dt.Rows[i]["ID"],
+                    FirstName = dt.Rows[i]["FirstName"].ToString(),
+                    SecondName = dt.Rows[i]["SecondName"].ToString(),
+                    ThirdName = dt.Rows[i]["ThirdName"].ToString(),
+                    FourthName = dt.Rows[i]["FourthName"].ToString(),
+                    FamilyName = dt.Rows[i]["FamilyName"].ToString(),
+                    LatinName = dt.Rows[i]["LatinName"].ToString(),
+                    CivilNum = (long)dt.Rows[i]["CivilNum"],
+                    BirthPlace = dt.Rows[i]["BirthPlace"].ToString(),
+                    DOB = (DateTime)dt.Rows[i]["DOB"],
+                    Gender = dt.Rows[i]["Gender"].ToString(),
+                    Religion = dt.Rows[i]["Religion"].ToString(),
+                    Nationality = dt.Rows[i]["Nationality"].ToString(),
+                    Career = dt.Rows[i]["Career"].ToString(),
+                    PassportNum = (long)dt.Rows[i]["PassportNum"],
+                    PassportEndDate = (DateTime)dt.Rows[i]["PassportEndDate"],
+                    PassportType = dt.Rows[i]["PassportType"].ToString(),
+                    Education = dt.Rows[i]["Education"].ToString(),
+                    MaritalStatus = dt.Rows[i]["MaritalStatus"].ToString(),
+                    salary = (short)dt.Rows[i]["salary"],
+                    declration = (long)dt.Rows[i]["declration"],
+                    ResidencyNum = (long)dt.Rows[i]["ResidencyNum"],
+                    ResidencyEndDate = (DateTime)dt.Rows[i]["ResidencyEndDate"],
+                    StartDate = (DateTime)dt.Rows[i]["StartDate"],
+                    Duration = (long)dt.Rows[i]["Duration"],
+                    DurationEng = (long)dt.Rows[i]["DurationEng"],
+                    NationalityEng = dt.Rows[i]["NationalityEng"].ToString(),
+                    CareerEng = dt.Rows[i]["CareerEng"].ToString(),
+                    Note = dt.Rows[i]["Note"].ToString(),
+                    PassportIssueDate = (DateTime)dt.Rows[i]["PassPortIssueDate"],
+                    LicenseNumber = dt.Rows[i]["LicenseNumber"].ToString(),
+                    LicenseEndDate = (DateTime)dt.Rows[i]["LicenseEndDate"],
+
+
+
+
+
+                });
+            }
+                return employeeCollection;
+
+                
+        }
+
+        public ObservableCollection<Models.EmployeeModel> searchBySecondName(string SecondNameSearch)
+        {
+            employeeCollection.Clear();
+            dt.Clear();
+
+            SqlConnection con = new SqlConnection(myconnection);
+            SqlCommand cmd = new SqlCommand("dbo.spGetEmployeeBySecondName", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+
+            cmd.Parameters.Add(new SqlParameter("@SecondName", SqlDbType.VarChar)).Value = SecondNameSearch;
+            con.Open();
+            SqlDataAdapter adp = new SqlDataAdapter(cmd);
+            adp.Fill(dt);
+            con.Close();
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                employeeCollection.Add(new Models.EmployeeModel
+                {
+                    ID = (int)dt.Rows[i]["ID"],
+                    FirstName = dt.Rows[i]["FirstName"].ToString(),
+                    SecondName = dt.Rows[i]["SecondName"].ToString(),
+                    ThirdName = dt.Rows[i]["ThirdName"].ToString(),
+                    FourthName = dt.Rows[i]["FourthName"].ToString(),
+                    FamilyName = dt.Rows[i]["FamilyName"].ToString(),
+                    LatinName = dt.Rows[i]["LatinName"].ToString(),
+                    CivilNum = (long)dt.Rows[i]["CivilNum"],
+                    BirthPlace = dt.Rows[i]["BirthPlace"].ToString(),
+                    DOB = (DateTime)dt.Rows[i]["DOB"],
+                    Gender = dt.Rows[i]["Gender"].ToString(),
+                    Religion = dt.Rows[i]["Religion"].ToString(),
+                    Nationality = dt.Rows[i]["Nationality"].ToString(),
+                    Career = dt.Rows[i]["Career"].ToString(),
+                    PassportNum = (long)dt.Rows[i]["PassportNum"],
+                    PassportEndDate = (DateTime)dt.Rows[i]["PassportEndDate"],
+                    PassportType = dt.Rows[i]["PassportType"].ToString(),
+                    Education = dt.Rows[i]["Education"].ToString(),
+                    MaritalStatus = dt.Rows[i]["MaritalStatus"].ToString(),
+                    salary = (short)dt.Rows[i]["salary"],
+                    declration = (long)dt.Rows[i]["declration"],
+                    ResidencyNum = (long)dt.Rows[i]["ResidencyNum"],
+                    ResidencyEndDate = (DateTime)dt.Rows[i]["ResidencyEndDate"],
+                    StartDate = (DateTime)dt.Rows[i]["StartDate"],
+                    Duration = (long)dt.Rows[i]["Duration"],
+                    DurationEng = (long)dt.Rows[i]["DurationEng"],
+                    NationalityEng = dt.Rows[i]["NationalityEng"].ToString(),
+                    CareerEng = dt.Rows[i]["CareerEng"].ToString(),
+                    Note = dt.Rows[i]["Note"].ToString(),
+                    PassportIssueDate = (DateTime)dt.Rows[i]["PassPortIssueDate"],
+                    LicenseNumber = dt.Rows[i]["LicenseNumber"].ToString(),
+                    LicenseEndDate = (DateTime)dt.Rows[i]["LicenseEndDate"],
+
+
+
+
+
+                });
+            }
+            return employeeCollection;
+
+
+        }
+
+        public ObservableCollection<Models.EmployeeModel> searchByThirdName(string ThirdNameSearch)
+        {
+            employeeCollection.Clear();
+            dt.Clear();
+
+            SqlConnection con = new SqlConnection(myconnection);
+            SqlCommand cmd = new SqlCommand("dbo.spGetEmployeeByThirdName", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+
+            cmd.Parameters.Add(new SqlParameter("@ThirdName", SqlDbType.VarChar)).Value = ThirdNameSearch;
+            con.Open();
+            SqlDataAdapter adp = new SqlDataAdapter(cmd);
+            adp.Fill(dt);
+            con.Close();
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                employeeCollection.Add(new Models.EmployeeModel
+                {
+                    ID = (int)dt.Rows[i]["ID"],
+                    FirstName = dt.Rows[i]["FirstName"].ToString(),
+                    SecondName = dt.Rows[i]["SecondName"].ToString(),
+                    ThirdName = dt.Rows[i]["ThirdName"].ToString(),
+                    FourthName = dt.Rows[i]["FourthName"].ToString(),
+                    FamilyName = dt.Rows[i]["FamilyName"].ToString(),
+                    LatinName = dt.Rows[i]["LatinName"].ToString(),
+                    CivilNum = (long)dt.Rows[i]["CivilNum"],
+                    BirthPlace = dt.Rows[i]["BirthPlace"].ToString(),
+                    DOB = (DateTime)dt.Rows[i]["DOB"],
+                    Gender = dt.Rows[i]["Gender"].ToString(),
+                    Religion = dt.Rows[i]["Religion"].ToString(),
+                    Nationality = dt.Rows[i]["Nationality"].ToString(),
+                    Career = dt.Rows[i]["Career"].ToString(),
+                    PassportNum = (long)dt.Rows[i]["PassportNum"],
+                    PassportEndDate = (DateTime)dt.Rows[i]["PassportEndDate"],
+                    PassportType = dt.Rows[i]["PassportType"].ToString(),
+                    Education = dt.Rows[i]["Education"].ToString(),
+                    MaritalStatus = dt.Rows[i]["MaritalStatus"].ToString(),
+                    salary = (short)dt.Rows[i]["salary"],
+                    declration = (long)dt.Rows[i]["declration"],
+                    ResidencyNum = (long)dt.Rows[i]["ResidencyNum"],
+                    ResidencyEndDate = (DateTime)dt.Rows[i]["ResidencyEndDate"],
+                    StartDate = (DateTime)dt.Rows[i]["StartDate"],
+                    Duration = (long)dt.Rows[i]["Duration"],
+                    DurationEng = (long)dt.Rows[i]["DurationEng"],
+                    NationalityEng = dt.Rows[i]["NationalityEng"].ToString(),
+                    CareerEng = dt.Rows[i]["CareerEng"].ToString(),
+                    Note = dt.Rows[i]["Note"].ToString(),
+                    PassportIssueDate = (DateTime)dt.Rows[i]["PassPortIssueDate"],
+                    LicenseNumber = dt.Rows[i]["LicenseNumber"].ToString(),
+                    LicenseEndDate = (DateTime)dt.Rows[i]["LicenseEndDate"],
+
+
+
+
+
+                });
+            }
+            return employeeCollection;
+
+
+        }
+
+        public ObservableCollection<Models.EmployeeModel> searchByFourthName(string FourthNameSearch)
+        {
+            employeeCollection.Clear();
+            dt.Clear();
+
+            SqlConnection con = new SqlConnection(myconnection);
+            SqlCommand cmd = new SqlCommand("dbo.spGetEmployeeByFourthName", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+
+            cmd.Parameters.Add(new SqlParameter("@FourthName", SqlDbType.VarChar)).Value = FourthNameSearch;
+            con.Open();
+            SqlDataAdapter adp = new SqlDataAdapter(cmd);
+            adp.Fill(dt);
+            con.Close();
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                employeeCollection.Add(new Models.EmployeeModel
+                {
+                    ID = (int)dt.Rows[i]["ID"],
+                    FirstName = dt.Rows[i]["FirstName"].ToString(),
+                    SecondName = dt.Rows[i]["SecondName"].ToString(),
+                    ThirdName = dt.Rows[i]["ThirdName"].ToString(),
+                    FourthName = dt.Rows[i]["FourthName"].ToString(),
+                    FamilyName = dt.Rows[i]["FamilyName"].ToString(),
+                    LatinName = dt.Rows[i]["LatinName"].ToString(),
+                    CivilNum = (long)dt.Rows[i]["CivilNum"],
+                    BirthPlace = dt.Rows[i]["BirthPlace"].ToString(),
+                    DOB = (DateTime)dt.Rows[i]["DOB"],
+                    Gender = dt.Rows[i]["Gender"].ToString(),
+                    Religion = dt.Rows[i]["Religion"].ToString(),
+                    Nationality = dt.Rows[i]["Nationality"].ToString(),
+                    Career = dt.Rows[i]["Career"].ToString(),
+                    PassportNum = (long)dt.Rows[i]["PassportNum"],
+                    PassportEndDate = (DateTime)dt.Rows[i]["PassportEndDate"],
+                    PassportType = dt.Rows[i]["PassportType"].ToString(),
+                    Education = dt.Rows[i]["Education"].ToString(),
+                    MaritalStatus = dt.Rows[i]["MaritalStatus"].ToString(),
+                    salary = (short)dt.Rows[i]["salary"],
+                    declration = (long)dt.Rows[i]["declration"],
+                    ResidencyNum = (long)dt.Rows[i]["ResidencyNum"],
+                    ResidencyEndDate = (DateTime)dt.Rows[i]["ResidencyEndDate"],
+                    StartDate = (DateTime)dt.Rows[i]["StartDate"],
+                    Duration = (long)dt.Rows[i]["Duration"],
+                    DurationEng = (long)dt.Rows[i]["DurationEng"],
+                    NationalityEng = dt.Rows[i]["NationalityEng"].ToString(),
+                    CareerEng = dt.Rows[i]["CareerEng"].ToString(),
+                    Note = dt.Rows[i]["Note"].ToString(),
+                    PassportIssueDate = (DateTime)dt.Rows[i]["PassPortIssueDate"],
+                    LicenseNumber = dt.Rows[i]["LicenseNumber"].ToString(),
+                    LicenseEndDate = (DateTime)dt.Rows[i]["LicenseEndDate"],
+
+
+
+
+
+                });
+            }
+            return employeeCollection;
+
+
+        }
+
+        public ObservableCollection<Models.EmployeeModel> searchByFamilyName(string FamilyNameSearch)
+        {
+            employeeCollection.Clear();
+            dt.Clear();
+
+            SqlConnection con = new SqlConnection(myconnection);
+            SqlCommand cmd = new SqlCommand("dbo.spGetEmployeeByFamilyName", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+
+            cmd.Parameters.Add(new SqlParameter("@FamilyName", SqlDbType.VarChar)).Value = FamilyNameSearch;
+            con.Open();
+            SqlDataAdapter adp = new SqlDataAdapter(cmd);
+            adp.Fill(dt);
+            con.Close();
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                employeeCollection.Add(new Models.EmployeeModel
+                {
+                    ID = (int)dt.Rows[i]["ID"],
+                    FirstName = dt.Rows[i]["FirstName"].ToString(),
+                    SecondName = dt.Rows[i]["SecondName"].ToString(),
+                    ThirdName = dt.Rows[i]["ThirdName"].ToString(),
+                    FourthName = dt.Rows[i]["FourthName"].ToString(),
+                    FamilyName = dt.Rows[i]["FamilyName"].ToString(),
+                    LatinName = dt.Rows[i]["LatinName"].ToString(),
+                    CivilNum = (long)dt.Rows[i]["CivilNum"],
+                    BirthPlace = dt.Rows[i]["BirthPlace"].ToString(),
+                    DOB = (DateTime)dt.Rows[i]["DOB"],
+                    Gender = dt.Rows[i]["Gender"].ToString(),
+                    Religion = dt.Rows[i]["Religion"].ToString(),
+                    Nationality = dt.Rows[i]["Nationality"].ToString(),
+                    Career = dt.Rows[i]["Career"].ToString(),
+                    PassportNum = (long)dt.Rows[i]["PassportNum"],
+                    PassportEndDate = (DateTime)dt.Rows[i]["PassportEndDate"],
+                    PassportType = dt.Rows[i]["PassportType"].ToString(),
+                    Education = dt.Rows[i]["Education"].ToString(),
+                    MaritalStatus = dt.Rows[i]["MaritalStatus"].ToString(),
+                    salary = (short)dt.Rows[i]["salary"],
+                    declration = (long)dt.Rows[i]["declration"],
+                    ResidencyNum = (long)dt.Rows[i]["ResidencyNum"],
+                    ResidencyEndDate = (DateTime)dt.Rows[i]["ResidencyEndDate"],
+                    StartDate = (DateTime)dt.Rows[i]["StartDate"],
+                    Duration = (long)dt.Rows[i]["Duration"],
+                    DurationEng = (long)dt.Rows[i]["DurationEng"],
+                    NationalityEng = dt.Rows[i]["NationalityEng"].ToString(),
+                    CareerEng = dt.Rows[i]["CareerEng"].ToString(),
+                    Note = dt.Rows[i]["Note"].ToString(),
+                    PassportIssueDate = (DateTime)dt.Rows[i]["PassPortIssueDate"],
+                    LicenseNumber = dt.Rows[i]["LicenseNumber"].ToString(),
+                    LicenseEndDate = (DateTime)dt.Rows[i]["LicenseEndDate"],
+
+
+
+
+
+                });
+            }
+            return employeeCollection;
+
+
+        }
 
 
         /// <summary>
