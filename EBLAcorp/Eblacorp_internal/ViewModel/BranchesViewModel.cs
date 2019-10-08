@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Eblacorp_internal.Models
+namespace Eblacorp_internal.ViewModel
 {
-    class Deletgate
+    class BranchesViewModel
     {
     }
 }

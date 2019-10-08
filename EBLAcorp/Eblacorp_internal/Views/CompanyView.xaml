@@ -30,7 +30,7 @@
                     </Grid.ColumnDefinitions>
 
                     <TextBlock x:Name="SearchByCompanyTextBlock" TextAlignment="Center" Grid.Column="0" Text="Search by Company Name"></TextBlock>
-                    <TextBox  x:Name="SearchByCompanyTextBox" Grid.Column="1" ></TextBox>
+                    <TextBox Text="{Binding CompanyNameSearch,UpdateSourceTrigger=PropertyChanged}"  x:Name="SearchByCompanyTextBox" Grid.Column="1" ></TextBox>
                 </Grid>
 
                 <!--Search by Delegate-->
@@ -41,7 +41,7 @@
                     </Grid.ColumnDefinitions>
 
                     <TextBlock x:Name="SearchByDelegateTextBlock" TextAlignment="Center" Grid.Column="0" Text="Search by Delegate"></TextBlock>
-                    <TextBox x:Name="SearchByDelegateTextBox" Grid.Column="1" ></TextBox>
+                    <TextBox Text="{Binding DelegateNameSearch,UpdateSourceTrigger=PropertyChanged}" x:Name="SearchByDelegateTextBox" Grid.Column="1" ></TextBox>
                 </Grid>
 
 

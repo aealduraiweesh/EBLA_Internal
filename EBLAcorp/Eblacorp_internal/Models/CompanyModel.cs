@@ -11,7 +11,7 @@ namespace Eblacorp_internal.Models
         public int Comp_ID { get; set; }
         public string ManagerName { get; set; }
         public string CivilNumber { get; set; }
-        public string DelegateName { get; set; }
+      //  public string DelegateName { get; set; }
         public string CompanyName { get; set; }
         public string ContractNumber { get; set; }
         public string ReferenceNumber { get; set; }
@@ -25,6 +25,13 @@ namespace Eblacorp_internal.Models
         public string ManagerNameeng { get; set; }
         public string CompanyNameeng { get; set; }
         public string BusinessFieldEng { get; set; }
+        public string LisenceNum { get; set; }
+        public string FileNum { get; set; }
+        public string salary { get; set; }
+        public string email { get; set; }
+        public string nationality { get; set; }
+        public string career { get; set; }
+        public string building { get; set; }
 
 
     }

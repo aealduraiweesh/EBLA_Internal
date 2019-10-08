@@ -21,3 +21,7 @@ C:\Users\AEALDURAIWEESH\Desktop\Work Space\EBLA\repos\EBLA_Internal\EBLAcorp\Ebl
 C:\Users\AEALDURAIWEESH\Desktop\Work Space\EBLA\repos\EBLA_Internal\EBLAcorp\Eblacorp_internal\obj\Debug\Eblacorp_internal.csprojAssemblyReference.cache
 C:\Users\AEALDURAIWEESH\Desktop\Work Space\EBLA\repos\EBLA_Internal\EBLAcorp\Eblacorp_internal\obj\Debug\Views\PAFMPReportView.g.cs
 C:\Users\AEALDURAIWEESH\Desktop\Work Space\EBLA\repos\EBLA_Internal\EBLAcorp\Eblacorp_internal\obj\Debug\Views\PAFMPReportView.baml
+C:\Users\AEALDURAIWEESH\Desktop\Work Space\EBLA\repos\EBLA_Internal\EBLAcorp\Eblacorp_internal\obj\Debug\Views\DelegateView.g.cs
+C:\Users\AEALDURAIWEESH\Desktop\Work Space\EBLA\repos\EBLA_Internal\EBLAcorp\Eblacorp_internal\obj\Debug\Views\DelegateView.baml
+C:\Users\AEALDURAIWEESH\Desktop\Work Space\EBLA\repos\EBLA_Internal\EBLAcorp\Eblacorp_internal\obj\Debug\Views\BranchesView.g.cs
+C:\Users\AEALDURAIWEESH\Desktop\Work Space\EBLA\repos\EBLA_Internal\EBLAcorp\Eblacorp_internal\obj\Debug\Views\BranchesView.baml

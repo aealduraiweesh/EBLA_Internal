@@ -81,8 +81,8 @@ namespace Eblacorp_internal.ViewModel
                 CareerEng = selectedEmployeeDataGrid.CareerEng;
                 Note = selectedEmployeeDataGrid.Note;
                 PassportIssueDate = selectedEmployeeDataGrid.PassportIssueDate;
-                LicenseNumber = selectedEmployeeDataGrid.LicenseNumber;
-                LicenseEndDate = selectedEmployeeDataGrid.LicenseEndDate;
+  /*              LicenseNumber = selectedEmployeeDataGrid.LicenseNumber;
+                LicenseEndDate = selectedEmployeeDataGrid.LicenseEndDate;*/
 
             }
 
@@ -230,9 +230,9 @@ namespace Eblacorp_internal.ViewModel
             }
         }
 
-        private long civilNum;
+        private string civilNum;
 
-        public long CivilNum
+        public string CivilNum
         {
             get { return civilNum; }
             set
@@ -320,9 +320,9 @@ namespace Eblacorp_internal.ViewModel
             }
         }
 
-        private long passportNum;
+        private string passportNum;
 
-        public long PassportNum
+        public string PassportNum
         {
             get { return passportNum; }
             set
@@ -385,9 +385,9 @@ namespace Eblacorp_internal.ViewModel
             }
         }
 
-        private short salary;
+        private string salary;
 
-        public short Salary
+        public string Salary
         {
             get { return salary; }
             set
@@ -398,9 +398,9 @@ namespace Eblacorp_internal.ViewModel
             }
         }
 
-        private long declration;
+        private string declration;
 
-        public long Declration
+        public string Declration
         {
             get { return declration; }
             set
@@ -411,9 +411,9 @@ namespace Eblacorp_internal.ViewModel
             }
         }
 
-        private long residencyNum;
+        private string residencyNum;
 
-        public long ResidencyNum
+        public string ResidencyNum
         {
             get { return residencyNum; }
             set
@@ -431,11 +431,24 @@ namespace Eblacorp_internal.ViewModel
             get { return residencyEndDate; }
             set
             {
-                residencyEndDate = value;
+                residencyEndDate = ResidencyEndDatePicker.Date;
                 NotifyPropertyChanged("ResidencyEndDate");
 
             }
         }
+
+        private DateTime residencyEndDatePicker;
+        public DateTime ResidencyEndDatePicker
+        {
+            get { return residencyEndDatePicker; }
+            set
+            {
+                residencyEndDatePicker = value;
+                ResidencyEndDate = ResidencyEndDatePicker.Date;
+                NotifyPropertyChanged("ResidencyEndDate");
+            }
+        }
+
 
         private DateTime startDate;
 
@@ -450,9 +463,9 @@ namespace Eblacorp_internal.ViewModel
             }
         }
 
-        private long duration;
+        private string duration;
 
-        public long Duration
+        public string Duration
         {
             get { return duration; }
             set
@@ -463,9 +476,9 @@ namespace Eblacorp_internal.ViewModel
             }
         }
 
-        private long durationEng;
+        private string durationEng;
 
-        public long DurationEng
+        public string DurationEng
         {
             get { return durationEng; }
             set { durationEng = value; }
@@ -606,8 +619,8 @@ namespace Eblacorp_internal.ViewModel
                     CareerEng = CareerEng,
                     Note = Note,
                     PassportIssueDate = PassportIssueDate,
-                    LicenseNumber = LicenseNumber,
-                    LicenseEndDate = LicenseEndDate
+/*                    LicenseNumber = LicenseNumber,
+                    LicenseEndDate = LicenseEndDate*/
                 });
             }
 
@@ -660,8 +673,8 @@ namespace Eblacorp_internal.ViewModel
                     CareerEng = CareerEng,
                     Note = Note,
                     PassportIssueDate = PassportIssueDate,
-                    LicenseNumber = LicenseNumber,
-                    LicenseEndDate = LicenseEndDate
+/*                    LicenseNumber = LicenseNumber,
+                    LicenseEndDate = LicenseEndDate*/
                 });
 
             }

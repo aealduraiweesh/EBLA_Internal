@@ -52,7 +52,6 @@ namespace Eblacorp_internal.DAL
                     Comp_ID = (int)dt.Rows[i]["Comp_ID"],
                     ManagerName = dt.Rows[i]["ManagerName"].ToString(),
                     CivilNumber = dt.Rows[i]["CivilNumber"].ToString(),
-                    DelegateName = dt.Rows[i]["DelegateName"].ToString(),
                     CompanyName = dt.Rows[i]["CompanyName"].ToString(),
                     ContractNumber = dt.Rows[i]["ContractNumber"].ToString(),
                     ReferenceNumber = dt.Rows[i]["ReferenceNumber"].ToString(),
@@ -74,6 +73,99 @@ namespace Eblacorp_internal.DAL
             return companyCollection;
         }
 
+        public ObservableCollection<Models.CompanyModel> searchByCompanyName(string CompanyName)
+        {
+            companyCollection.Clear();
+            dt.Clear();
+
+            SqlConnection con = new SqlConnection(myconnection);
+            SqlCommand cmd = new SqlCommand("dbo.spGetCompanyByCompanyName", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+
+            cmd.Parameters.Add(new SqlParameter("@CompanyName", SqlDbType.VarChar)).Value = CompanyName;
+            con.Open();
+            SqlDataAdapter adp = new SqlDataAdapter(cmd);
+            adp.Fill(dt);
+            con.Close();
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                companyCollection.Add(new Models.CompanyModel
+                {
+
+                    Comp_ID = (int)dt.Rows[i]["Comp_ID"],
+                    ManagerName = dt.Rows[i]["ManagerName"].ToString(),
+                    CivilNumber = dt.Rows[i]["CivilNumber"].ToString(),
+                    CompanyName = dt.Rows[i]["CompanyName"].ToString(),
+                    ContractNumber = dt.Rows[i]["ContractNumber"].ToString(),
+                    ReferenceNumber = dt.Rows[i]["ReferenceNumber"].ToString(),
+                    AutomatedNumber = dt.Rows[i]["AutomatedNumber"].ToString(),
+                    Area = dt.Rows[i]["Area"].ToString(),
+                    block = dt.Rows[i]["block"].ToString(),
+                    street = dt.Rows[i]["street"].ToString(),
+                    phone = dt.Rows[i]["phone"].ToString(),
+                    Governate = dt.Rows[i]["Governate"].ToString(),
+                    BusinessField = dt.Rows[i]["BusinessField"].ToString(),
+                    ManagerNameeng = dt.Rows[i]["ManagerNameeng"].ToString(),
+                    CompanyNameeng = dt.Rows[i]["CompanyNameeng"].ToString(),
+                    BusinessFieldEng = dt.Rows[i]["BusinessFieldEng"].ToString(),
+
+
+
+                });
+            }
+            return companyCollection;
+
+
+        }
+
+        public ObservableCollection<Models.CompanyModel> searchByDelegateName(string CompanyName)
+        {
+            companyCollection.Clear();
+            dt.Clear();
+
+            SqlConnection con = new SqlConnection(myconnection);
+            SqlCommand cmd = new SqlCommand("dbo.spGetCompanyByDelegateName", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+
+            cmd.Parameters.Add(new SqlParameter("@DelegateName", SqlDbType.VarChar)).Value = CompanyName;
+            con.Open();
+            SqlDataAdapter adp = new SqlDataAdapter(cmd);
+            adp.Fill(dt);
+            con.Close();
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                companyCollection.Add(new Models.CompanyModel
+                {
+
+                    Comp_ID = (int)dt.Rows[i]["Comp_ID"],
+                    ManagerName = dt.Rows[i]["ManagerName"].ToString(),
+                    CivilNumber = dt.Rows[i]["CivilNumber"].ToString(),
+                    CompanyName = dt.Rows[i]["CompanyName"].ToString(),
+                    ContractNumber = dt.Rows[i]["ContractNumber"].ToString(),
+                    ReferenceNumber = dt.Rows[i]["ReferenceNumber"].ToString(),
+                    AutomatedNumber = dt.Rows[i]["AutomatedNumber"].ToString(),
+                    Area = dt.Rows[i]["Area"].ToString(),
+                    block = dt.Rows[i]["block"].ToString(),
+                    street = dt.Rows[i]["street"].ToString(),
+                    phone = dt.Rows[i]["phone"].ToString(),
+                    Governate = dt.Rows[i]["Governate"].ToString(),
+                    BusinessField = dt.Rows[i]["BusinessField"].ToString(),
+                    ManagerNameeng = dt.Rows[i]["ManagerNameeng"].ToString(),
+                    CompanyNameeng = dt.Rows[i]["CompanyNameeng"].ToString(),
+                    BusinessFieldEng = dt.Rows[i]["BusinessFieldEng"].ToString(),
+
+
+
+                });
+            }
+            return companyCollection;
+
+
+        }
 
         public bool addCompany(string ManagerName, string CivilNumber, string DelegateName, string CompanyName,
                                string ContractNumber, string ReferenceNumber, string AutomatedNumber, string Area,

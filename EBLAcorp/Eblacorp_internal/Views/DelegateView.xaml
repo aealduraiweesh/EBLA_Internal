@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="Eblacorp_internal.Views.DelegateView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:viewmodel="clr-namespace:Eblacorp_internal.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.DataContext>
+        <viewmodel:DelegateViewModel/>
+    </UserControl.DataContext>
+    
+    <Grid>
+        <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Margin="5" Grid.Column="0">
+                    <TextBlock Text="Search by Delegate Name"></TextBlock>
+                    <TextBox></TextBox>
+                </StackPanel>
+                <StackPanel Margin="5" Grid.Column="1">
+                    <TextBlock Text="Search by Company Name"></TextBlock>
+                    <TextBox></TextBox>
+                </StackPanel>
+
+            </Grid>
+
+            <DataGrid Margin="5 10 5 10" MinHeight="120" ItemsSource="{Binding Delegate}" SelectedItem="{Binding SelectedDelegate}"></DataGrid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Margin="5" Grid.Column="0">
+                    <TextBlock Text="Delegate Name"></TextBlock>
+                    <TextBox Text="{Binding DelegateName}"></TextBox>
+                    <TextBlock Text="Civil Number"></TextBlock>
+                    <TextBox Text="{Binding Civil}"></TextBox>
+                </StackPanel>
+                <StackPanel Margin="5" Grid.Column="1">
+                    <TextBlock Text="Nationality"></TextBlock>
+                    <TextBox Text="{Binding Nationality}"></TextBox>
+                    <TextBlock Text="Company Name"></TextBlock>
+                    <TextBox Text="{Binding CompanyName}"></TextBox>
+                </StackPanel>
+            </Grid>
+
+
+            <Grid Margin="0 10 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button Margin="5" Grid.Column="0" x:Name="Save" Content="Save"
+                        Command="{Binding addDelegate}"></Button>
+                <Button Margin="5" Grid.Column="1" x:Name="Update" Content="Update"
+                        Command="{Binding updateDelegate}"></Button>
+                <Button Margin="5" Grid.Column="2" x:Name="Delete" Content="Delete"
+                        Command="{Binding deleteDelegate}"></Button>
+                <Button Margin="5" Grid.Column="3" x:Name="Reset" Content="Reset"
+                        Command="{Binding resetDelegate}"></Button>
+
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

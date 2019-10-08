@@ -50,7 +50,6 @@ namespace Eblacorp_internal.ViewModel
                     Comp_ID = Comp_ID,
                     ManagerName = ManagerName,
                     CivilNumber = CivilNumber,
-                    DelegateName = DelegateName,
                     CompanyName = CompanyName,
                     ContractNumber = ContractNumber,
                     ReferenceNumber = ReferenceNumber,
@@ -101,7 +100,6 @@ namespace Eblacorp_internal.ViewModel
                 {
                     ManagerName = ManagerName,
                     CivilNumber = CivilNumber,
-                    DelegateName = DelegateName,
                     CompanyName = CompanyName,
                     ContractNumber =ContractNumber,
                     ReferenceNumber = ReferenceNumber,
@@ -145,7 +143,6 @@ namespace Eblacorp_internal.ViewModel
                 Comp_ID = selectedCompanyDataGrid.Comp_ID;
                 ManagerName = selectedCompanyDataGrid.ManagerName;
                 CivilNumber = selectedCompanyDataGrid.CivilNumber;
-                DelegateName = selectedCompanyDataGrid.DelegateName;
                 CompanyName = selectedCompanyDataGrid.CompanyName;
                 ContractNumber = selectedCompanyDataGrid.ContractNumber;
                 ReferenceNumber = selectedCompanyDataGrid.ReferenceNumber;
@@ -164,8 +161,40 @@ namespace Eblacorp_internal.ViewModel
 
         }
 
-        private int comp_id;
+        private string companyNameSearch;
 
+        public string CompanyNameSearch
+        {
+            get
+            {
+                return companyNameSearch;
+            }
+            set
+            {
+
+                companyNameSearch = value;
+                Company = companyDB.searchByCompanyName(companyNameSearch);
+            }
+        }
+
+
+        private string delegateNameSearch;
+        public string DelegateNameSearch
+        {
+            get
+            {
+                return delegateNameSearch;
+            }
+            set
+            {
+                delegateNameSearch = value;
+                Company = companyDB.searchByDelegateName(delegateNameSearch);
+            }
+        }
+
+
+
+        private int comp_id;
         public int Comp_ID
         {
             get { return comp_id; }

@@ -48,12 +48,17 @@ namespace Eblacorp_internal
 
         private void BranchButton_Click(object sender, RoutedEventArgs e)
         {
-
+            DataContext = new BranchesView();
         }
 
         private void EmployeeReport_Click(object sender, RoutedEventArgs e)
         {
             DataContext = new PAFMPReportView();
+        }
+
+        private void DelegateButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new DelegateView();
         }
     }
 }
