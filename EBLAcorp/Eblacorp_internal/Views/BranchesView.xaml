@@ -18,18 +18,18 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <StackPanel Grid.Column="0">
-                    <TextBlock></TextBlock>
-                    <TextBox></TextBox>
+                <StackPanel Margin="5" Grid.Column="0">
+                    <TextBlock Text="Search By Branch Name"></TextBlock>
+                    <TextBox Text="{Binding SearchByBranch, UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 </StackPanel>
-                <StackPanel Grid.Column="1">
-                    <TextBlock></TextBlock>
-                    <TextBox></TextBox>
+                <StackPanel Margin="5" Grid.Column="1">
+                    <TextBlock Text="Search By Company Name"></TextBlock>
+                    <TextBox Text="{Binding SearchByCompany,UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 </StackPanel>
 
             </Grid>
-            
-            <DataGrid Margin="5" MinHeight="100"></DataGrid>
+
+            <DataGrid ItemsSource="{Binding Branches}" SelectedItem="{Binding SelectedBranch}" Margin="5 10 5 10" MinHeight="130"></DataGrid>
 
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -38,40 +38,56 @@
                 </Grid.ColumnDefinitions>
 
                 <StackPanel Margin="5" Grid.Column="0">
-                    <TextBlock></TextBlock>
-                    <TextBox></TextBox>
-                    <TextBlock></TextBlock>
-                    <TextBox></TextBox>
-                    <TextBlock></TextBlock>
-                    <TextBox></TextBox>
-                    <TextBlock></TextBlock>
-                    <TextBox></TextBox>
-                    <TextBlock></TextBlock>
-                    <TextBox></TextBox>
-                    <TextBlock></TextBlock>
-                    <TextBox></TextBox>
-                    <TextBlock></TextBlock>
-                    <TextBox></TextBox>
+                    <TextBlock Text="LisenceNum"></TextBlock>
+                    <TextBox Text="{Binding LisenceNum}"></TextBox>
+                    
+                    <TextBlock Text="File Number"></TextBlock>
+                    <TextBox Text="{Binding FileNum}"></TextBox>
+
+                    <TextBlock Text="Company Name"></TextBlock>
+                    <TextBox Text="{Binding CompanyName}"></TextBox>
+
+                    <TextBlock Text=" Branch Name"></TextBlock>
+                    <TextBox Text="{Binding BranchName}"></TextBox>
+                    
+                    <TextBlock Text="Contract Number"></TextBlock>
+                    <TextBox Text="{Binding ContractNumber}" ></TextBox>
+
+                    <TextBlock Text="Reference Number"></TextBlock>
+                    <TextBox Text="{Binding ReferenceNumber}"></TextBox>
+
+                    <TextBlock Text="Automated Number"></TextBlock>
+                    <TextBox Text="{Binding AutomatedNumber}"></TextBox>
+
                 </StackPanel>
+                
                 <StackPanel Margin="5" Grid.Column="1">
-                    <TextBlock></TextBlock>
-                    <TextBox></TextBox>
-                    <TextBlock></TextBlock>
-                    <TextBox></TextBox>
-                    <TextBlock></TextBlock>
-                    <TextBox></TextBox>
-                    <TextBlock></TextBlock>
-                    <TextBox></TextBox>
-                    <TextBlock></TextBlock>
-                    <TextBox></TextBox>
-                    <TextBlock></TextBlock>
-                    <TextBox></TextBox>
-                    <TextBlock></TextBlock>
-                    <TextBox></TextBox>
+
+                    <TextBlock Text="Business Field"></TextBlock>
+                    <TextBox Text="{Binding BusinessField}"></TextBox>
+
+                    <TextBlock Text="Area"></TextBlock>
+                    <TextBox Text="{Binding Area}"></TextBox>
+                    
+                    <TextBlock Text="Block"></TextBlock>
+                    <TextBox Text="{Binding Block}"></TextBox>
+                    
+                    <TextBlock Text="Street"></TextBlock>
+                    <TextBox Text="{Binding Street}"></TextBox>
+                    
+                    <TextBlock Text="Phone"></TextBlock>
+                    <TextBox Text="{Binding Phone}"></TextBox>
+                    
+                    <TextBlock Text="Governate"></TextBlock>
+                    <TextBox Text="{Binding Governate}"></TextBox>
+                    
+                    <TextBlock Text="Civil Number"></TextBlock>
+                    <TextBox Text="{Binding CivilNumber}"></TextBox>
+
                 </StackPanel>
             </Grid>
 
-            <Grid>
+            <Grid Margin="0 10 0 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
@@ -79,10 +95,14 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Column="0" Content="Save"></Button>
-                <Button Grid.Column="1" Content="Update"></Button>
-                <Button Grid.Column="2" Content="Delete"></Button>
-                <Button Grid.Column="3" Content="Reset"></Button>
+                <Button Grid.Column="0" Margin="5" Content="Save"
+                        Command="{Binding addBranch}"></Button>
+                <Button Grid.Column="1" Margin="5" Content="Update"
+                        Command="{Binding updateBranch}"></Button>
+                <Button Grid.Column="2" Margin="5" Content="Delete"
+                        Command="{Binding deleteBranch}"></Button>
+                <Button Grid.Column="3" Margin="5" Content="Reset"
+                        Command="{Binding resetBranch}"></Button>
 
             </Grid>
         </StackPanel>

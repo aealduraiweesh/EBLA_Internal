@@ -86,8 +86,7 @@
  
                     <StackPanel Margin="5 0 5 0" Grid.Column="1">
 
-                        <TextBlock Margin="0 5 0 0" Text="Delegate Name"></TextBlock>
-                        <TextBox x:Name="DelegateNameTextBox" Text="{Binding DelegateName}" ></TextBox>
+     
 
                         <TextBlock  Margin="0 5 0 0" Text="Reference Number"></TextBlock>
                         <TextBox x:Name="ReferenceNumberTextBox" Text="{Binding ReferenceNumber}"></TextBox>

@@ -167,7 +167,7 @@ namespace Eblacorp_internal.DAL
 
         }
 
-        public bool addCompany(string ManagerName, string CivilNumber, string DelegateName, string CompanyName,
+        public bool addCompany(string ManagerName, string CivilNumber, string CompanyName,
                                string ContractNumber, string ReferenceNumber, string AutomatedNumber, string Area,
                                string block, string street, string phone, string Governate, string BusinessField, 
                                string ManagerNameeng, string CompanyNameeng, string BusinessFieldEng)
@@ -189,7 +189,6 @@ namespace Eblacorp_internal.DAL
 
                 cmd.Parameters.Add(new SqlParameter("@ManagerName", SqlDbType.NVarChar)).Value = ManagerName;
                 cmd.Parameters.Add(new SqlParameter("@CivilNumber", SqlDbType.NChar)).Value = CivilNumber;
-                cmd.Parameters.Add(new SqlParameter("@DelegateName", SqlDbType.NVarChar)).Value = DelegateName;
                 cmd.Parameters.Add(new SqlParameter("@CompanyName", SqlDbType.NVarChar)).Value = CompanyName;
                 cmd.Parameters.Add(new SqlParameter("@ContractNumber", SqlDbType.NVarChar)).Value = ContractNumber;
                 cmd.Parameters.Add(new SqlParameter("@ReferenceNumber", SqlDbType.NChar)).Value = ReferenceNumber;
@@ -238,7 +237,7 @@ namespace Eblacorp_internal.DAL
             return isSuccess;
         }
 
-        public bool updateCompany(int Comp_ID, string ManagerName, string CivilNumber, string DelegateName, string CompanyName,
+        public bool updateCompany(int Comp_ID, string ManagerName, string CivilNumber, string CompanyName,
                                string ContractNumber, string ReferenceNumber, string AutomatedNumber, string Area,
                                string block, string street, string phone, string Governate, string BusinessField,
                                string ManagerNameeng, string CompanyNameeng, string BusinessFieldEng)
@@ -258,7 +257,6 @@ namespace Eblacorp_internal.DAL
                 cmd.Parameters.Add(new SqlParameter("@COMP_ID", SqlDbType.BigInt)).Value = Comp_ID;
                 cmd.Parameters.Add(new SqlParameter("@ManagerName", SqlDbType.NVarChar)).Value = ManagerName;
                 cmd.Parameters.Add(new SqlParameter("@CivilNumber", SqlDbType.NChar)).Value = CivilNumber;
-                cmd.Parameters.Add(new SqlParameter("@DelegateName", SqlDbType.NVarChar)).Value = DelegateName;
                 cmd.Parameters.Add(new SqlParameter("@CompanyName", SqlDbType.NVarChar)).Value = CompanyName;
                 cmd.Parameters.Add(new SqlParameter("@ContractNumber", SqlDbType.NVarChar)).Value = ContractNumber;
                 cmd.Parameters.Add(new SqlParameter("@ReferenceNumber", SqlDbType.NChar)).Value = ReferenceNumber;

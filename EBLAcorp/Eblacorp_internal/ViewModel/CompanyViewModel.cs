@@ -40,7 +40,7 @@ namespace Eblacorp_internal.ViewModel
         public void updateCompanyCommand(object obj)
         {
           
-          if(companyDB.updateCompany(Comp_ID,ManagerName, CivilNumber, DelegateName, CompanyName, ContractNumber, ReferenceNumber, AutomatedNumber,
+          if(companyDB.updateCompany(Comp_ID,ManagerName, CivilNumber, CompanyName, ContractNumber, ReferenceNumber, AutomatedNumber,
                                     Area, block, street, phone, Governate, BusinessField, ManagerNameEng, CompanyNameEng, BusinessFieldEng))
             {
                 var found = Company.FirstOrDefault(x => x.Comp_ID == Comp_ID);
@@ -93,7 +93,7 @@ namespace Eblacorp_internal.ViewModel
         }
         public void addCompanyCommand(object obj)
         {
-            if(companyDB.addCompany(ManagerName, CivilNumber, DelegateName, CompanyName, ContractNumber, ReferenceNumber, AutomatedNumber, 
+            if(companyDB.addCompany(ManagerName, CivilNumber, CompanyName, ContractNumber, ReferenceNumber, AutomatedNumber, 
                                  Area, block, street, phone, Governate, BusinessField, ManagerNameEng, CompanyNameEng, BusinessFieldEng))
             {
                 Company.Add(new Models.CompanyModel
@@ -229,7 +229,7 @@ namespace Eblacorp_internal.ViewModel
 
             }
         }
-        private string delegateName;
+/*        private string delegateName;
 
         public string DelegateName
         {
@@ -240,9 +240,9 @@ namespace Eblacorp_internal.ViewModel
                 NotifyPropertyChanged("DelegateName");
 
             }
-        }
-        private string companyName;
+        }*/
 
+        private string companyName;
         public string CompanyName
         {
             get { return companyName; }
@@ -398,6 +398,90 @@ namespace Eblacorp_internal.ViewModel
             }
         }
 
+        private string lisenceNum;
+
+        public string LisenceNum
+        {
+            get { return lisenceNum; }
+            set
+            {
+                lisenceNum = value;
+                NotifyPropertyChanged("LisenceNum");
+            }
+        }
+
+        private string fileNum;
+
+        public string FileNum
+        {
+            get { return fileNum; }
+            set
+            {
+                fileNum = value;
+                NotifyPropertyChanged("FileNum");
+            }
+        }
+
+        private string salary;
+
+        public string Salary
+        {
+            get { return salary; }
+            set
+            {
+                salary = value;
+                NotifyPropertyChanged("Salary");
+            }
+        }
+
+        private string email;
+
+        public string Email
+        {
+            get { return email; }
+            set
+            {
+                email = value;
+                NotifyPropertyChanged("Email");
+            }
+        }
+
+        private string nationality;
+
+        public string Nationality
+        {
+            get { return nationality; }
+            set
+            {
+                nationality = value;
+                NotifyPropertyChanged("Nationality");
+            }
+        }
+
+        private string career;
+
+        public string Career
+        {
+            get { return career; }
+            set
+            {
+                career = value;
+                NotifyPropertyChanged("Career");
+            }
+        }
+
+
+        private string building;
+
+        public string Building
+        {
+            get { return building; }
+            set
+            {
+                building = value;
+                NotifyPropertyChanged("Building");
+            }
+        }
 
 
 
