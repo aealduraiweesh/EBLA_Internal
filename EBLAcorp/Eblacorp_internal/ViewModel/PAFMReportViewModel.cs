@@ -20,7 +20,11 @@ namespace Eblacorp_internal.ViewModel
             PrintDialog printDialog = new PrintDialog();
             if (printDialog.ShowDialog() == true)
             {
-                printDialog.PrintVisual(PAFMPView.PAFMGrid, "Printing in process");
+
+
+               // printDialog.PrintVisual(PAFMPView.PAFMGridPage1, "Printing in process");
+                printDialog.PrintVisual(PAFMPView.PAFMGridPage2, "Printing in process");
+
             }
         }
 
