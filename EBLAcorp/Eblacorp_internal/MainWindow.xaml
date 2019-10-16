@@ -46,7 +46,7 @@
                 <Button Click="DelegateButton_Click" Background="Tan" x:Name="DelegateBtn" Content="Delegate" Margin="20"></Button>
                 <Label Content="Reports" Margin="20"></Label>
                 <Button Click="EmployeeReport_Click" Background="#FFB6B8E6" x:Name="Report1" Content="Report1" Margin="20"></Button>
-                <Button Click="CompanyButton_Click" Background="#FFB6B8E6" x:Name="Report2" Content="Report2" Margin="20"></Button>
+                <Button Click="IRTTOrderReport_Click" Background="#FFB6B8E6" x:Name="Report2" Content="Report2" Margin="20"></Button>
                 <Button Click="BranchButton_Click" Background="#FFB6B8E6" x:Name="Report3" Content="Report3" Margin="20"></Button>
                 
                 <!--Close Button-->

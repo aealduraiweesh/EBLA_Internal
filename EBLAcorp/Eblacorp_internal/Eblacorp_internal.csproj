@@ -71,7 +71,9 @@
     <Compile Include="ViewModel\CompanyViewModel.cs" />
     <Compile Include="ViewModel\DelegateViewModel.cs" />
     <Compile Include="ViewModel\EmployeeViewModel.cs" />
+    <Compile Include="ViewModel\IRTTOrderReportViewModel.cs" />
     <Compile Include="ViewModel\PAFMReportViewModel.cs" />
+    <Compile Include="ViewModel\PRReportViewModel.cs" />
     <Compile Include="Views\BranchesView.xaml.cs">
       <DependentUpon>BranchesView.xaml</DependentUpon>
     </Compile>
@@ -84,8 +86,14 @@
     <Compile Include="Views\EmployeeView.xaml.cs">
       <DependentUpon>EmployeeView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\IRTTOrderReportView.xaml.cs">
+      <DependentUpon>IRTTOrderReportView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\PAFMPReportView.xaml.cs">
       <DependentUpon>PAFMPReportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PRReportView.xaml.cs">
+      <DependentUpon>PRReportView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -115,7 +123,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\IRTTOrderReportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\PAFMPReportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PRReportView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -167,6 +183,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="assets\kuwaitLogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\kuwaitLogoColor.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

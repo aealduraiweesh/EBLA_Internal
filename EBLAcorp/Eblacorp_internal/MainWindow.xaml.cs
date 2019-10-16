@@ -60,5 +60,10 @@ namespace Eblacorp_internal
         {
             DataContext = new DelegateView();
         }
+
+        private void IRTTOrderReport_Click(object sender, RoutedEventArgs e)
+        {
+           DataContext = new IRTTOrderReportView();
+        }
     }
 }
