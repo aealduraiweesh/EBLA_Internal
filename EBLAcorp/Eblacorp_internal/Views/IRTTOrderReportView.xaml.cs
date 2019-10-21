@@ -25,6 +25,9 @@ namespace Eblacorp_internal.Views
             InitializeComponent();
         }
 
+        private void TextBox_GiveFeedback(object sender, GiveFeedbackEventArgs e)
+        {
 
+        }
     }
 }

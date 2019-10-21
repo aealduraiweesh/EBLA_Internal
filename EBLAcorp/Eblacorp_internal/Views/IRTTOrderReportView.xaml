@@ -18,6 +18,7 @@
                         Command="{Binding printButton}">Print</Button>
             </Grid>
 
+            <ScrollViewer HorizontalScrollBarVisibility="Visible">
             <Border BorderThickness="1" BorderBrush="Black">
             <Grid Background="White" x:Name="IRTTOrderReportGrid">
                     <StackPanel x:Name="reportFlow">
@@ -63,9 +64,147 @@
                             <ComboBox Grid.Row="1" Grid.Column="2"></ComboBox>
                 
                         </Grid>
+                        <TextBlock Margin="10" FontSize="12" FontWeight="Bold" Foreground="Red" HorizontalAlignment="Center">صــاحب العــــمل</TextBlock>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="1" BorderBrush="Black" BorderThickness="1">
+                            <Grid >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Margin="10" Grid.Row="0" Grid.Column="3">إسـم صـاحب العمــــل</TextBlock>
+                                    <TextBox Grid.Row="0" Grid.Column="0"  Grid.ColumnSpan="3"></TextBox>
+
+                                    <TextBlock Margin="10"  Grid.Row="1" Grid.Column="3">إسم المفوض بالتوقيع</TextBlock>
+                                    <TextBox Grid.Row="1" Grid.Column="0"  Grid.ColumnSpan="3"></TextBox>
+
+                                    <TextBlock Margin="10"  Grid.Row="2" Grid.Column="3">الإسـم التجاري</TextBlock>
+                                    <TextBox Grid.Row="2" Grid.Column="0"  Grid.ColumnSpan="3"></TextBox>
+
+                                    <TextBlock Margin="10"  Grid.Row="3" Grid.Column="3">رقم الملف </TextBlock>
+                                    <TextBox   Grid.Row="3" Grid.Column="2" ></TextBox>
+                                    <TextBlock Margin="10"  Grid.Row="3" Grid.Column="1">رقم العقد</TextBlock>
+                                    <TextBox Grid.Row="3" Grid.Column="0" ></TextBox>
+
+
+                                </Grid>
+                            </Border>
+
+                            <Border Grid.Column="0" BorderBrush="Black" BorderThickness="1">
+                                <StackPanel>
+                                    <TextBlock Foreground="Red" HorizontalAlignment="Right">أقر أنا الموقع أدناه بصحة البيانات المدرجة بهذا الطلب
+                                    <LineBreak/>وأتعهد بتنفيذ ما جاء بالتنبيهات المدون خلف الطلب</TextBlock>
+                                    <TextBlock FontSize="16" FontWeight="Bold" HorizontalAlignment="Right" Margin="10 10 10 10">التوقيع</TextBlock>
+                                </StackPanel>
+                                
+                                
+                            </Border>
+                        </Grid>
+
+                        <TextBlock Margin="10" FontSize="12" FontWeight="Bold" Foreground="Red" HorizontalAlignment="Center">صــاحب العــــمل</TextBlock>
+
+                        <Border BorderBrush="Black" BorderThickness="1">
+                            <StackPanel>
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <StackPanel Grid.Row="0" Grid.Column="6">
+                                    <TextBlock HorizontalAlignment="Right">الإســــم</TextBlock>
+                                        <TextBlock HorizontalAlignment="Right" TextDecorations="underline" Foreground="Red">لغير العرب</TextBlock>
+                                        </StackPanel>
+                                    <TextBox Margin="10 0 10 0" Grid.Row="0" Grid.Column="4"></TextBox>
+                                    <TextBox Margin="10 0 10 0" Grid.Row="0" Grid.Column="3"></TextBox>
+                                    <TextBox Margin="10 0 10 0" Grid.Row="0" Grid.Column="2"></TextBox>
+                                    <TextBox Margin="10 0 10 0" Grid.Row="0" Grid.Column="1"></TextBox>
+                                    <TextBox Margin="10 0 10 0" Grid.Row="0" Grid.Column="0"></TextBox>
+                                </Grid>
+                                <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                    <TextBlock Grid.Row="0" Grid.Column="9" VerticalAlignment="Center">الاسم بالأحرف اللاتينيه</TextBlock>
+                                    <TextBox Margin="10" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="9"></TextBox>
+
+                                     <TextBlock Grid.Row="1" Grid.Column="9" HorizontalAlignment="Right" VerticalAlignment="Center">الرقم المدني</TextBlock>
+                                     <TextBox Grid.Row="1" Grid.Column="7" Grid.ColumnSpan="2"></TextBox>
+                                     <TextBlock Grid.Row="1" Grid.Column="6">تاريخ الميلاد</TextBlock>
+                                     <TextBox Grid.Row="1" Grid.Column="5"></TextBox>
+                                     <TextBox Grid.Row="1" Grid.Column="4"></TextBox>
+                                     <TextBox Grid.Row="1" Grid.Column="3"></TextBox>
+                                     <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal">
+                                            <TextBox MinWidth="50"></TextBox>
+                                            <TextBlock >النوع</TextBlock>
+                                     </StackPanel>
+
+                                    <TextBlock HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1">الديانة</TextBlock>
+                                    <TextBox Grid.Row="1" Grid.Column="0"></TextBox>
+
+
+                                        <TextBlock Grid.Row="2" Grid.Column="9" HorizontalAlignment="Right" >الجنسية</TextBlock>
+                                        <TextBox Grid.Row="2" Grid.Column="6" Grid.ColumnSpan="3"></TextBox>
+                                        <TextBox Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2" Background="Gray" ></TextBox>
+                                        <TextBlock Grid.Row="2" Grid.Column="3">المهنة</TextBlock>
+                                        <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"></TextBox>
+                                        <TextBox Grid.Row="2" Grid.Column="0" Background="Gray" ></TextBox>
+
+                                        <TextBox Grid.Row="3" Grid.Column="0"></TextBox>
+                                        <TextBlock Grid.Row="3" Grid.Column="1">الحالة الاجتماعية</TextBlock>
+                                    
+                                        <TextBlock Grid.Row="3" Grid.Column="3">المؤهل الدراسي</TextBlock>
+                                        <TextBox Grid.Row="3" Grid.Column="2"></TextBox>
+                                    
+                                    
+                                    </Grid>
+                            </StackPanel>
+                        </Border>
+                        
                     </StackPanel>
+
             </Grid>
             </Border>
+            </ScrollViewer>
         </StackPanel>    
         
     </Grid>
