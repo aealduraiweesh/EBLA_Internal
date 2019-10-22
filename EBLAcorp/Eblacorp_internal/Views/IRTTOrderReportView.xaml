@@ -19,7 +19,7 @@
             </Grid>
 
             <ScrollViewer HorizontalScrollBarVisibility="Visible">
-            <Border BorderThickness="1" BorderBrush="Black">
+            <Border BorderThickness="1" BorderBrush="Black" x:Name="Report" Margin="20 20 20 0">
             <Grid Background="White" x:Name="IRTTOrderReportGrid">
                     <StackPanel x:Name="reportFlow">
                         <Grid x:Name="Header">
@@ -116,7 +116,7 @@
                             </Border>
                         </Grid>
 
-                        <TextBlock Margin="10" FontSize="12" FontWeight="Bold" Foreground="Red" HorizontalAlignment="Center">صــاحب العــــمل</TextBlock>
+                            <TextBlock Margin="10" FontSize="12" FontWeight="Bold" Foreground="Red" HorizontalAlignment="Center"> العــــمل</TextBlock>
 
                         <Border BorderBrush="Black" BorderThickness="1">
                             <StackPanel>
@@ -182,25 +182,155 @@
                                     <TextBox Grid.Row="1" Grid.Column="0"></TextBox>
 
 
-                                        <TextBlock Grid.Row="2" Grid.Column="9" HorizontalAlignment="Right" >الجنسية</TextBlock>
-                                        <TextBox Grid.Row="2" Grid.Column="6" Grid.ColumnSpan="3"></TextBox>
-                                        <TextBox Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2" Background="Gray" ></TextBox>
-                                        <TextBlock Grid.Row="2" Grid.Column="3">المهنة</TextBlock>
-                                        <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"></TextBox>
-                                        <TextBox Grid.Row="2" Grid.Column="0" Background="Gray" ></TextBox>
+                                    <TextBlock Grid.Row="2" Grid.Column="9" HorizontalAlignment="Right" >الجنسية</TextBlock>
+                                    <TextBox Grid.Row="2" Grid.Column="6" Grid.ColumnSpan="3"></TextBox>
+                                    <TextBox Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2" Background="lightgray" ></TextBox>
+                                    <TextBlock Grid.Row="2" Grid.Column="3">المهنة</TextBlock>
+                                    <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"></TextBox>
+                                    <TextBox Grid.Row="2" Grid.Column="0" Background="lightgray" ></TextBox>
 
-                                        <TextBox Grid.Row="3" Grid.Column="0"></TextBox>
-                                        <TextBlock Grid.Row="3" Grid.Column="1">الحالة الاجتماعية</TextBlock>
-                                    
-                                        <TextBlock Grid.Row="3" Grid.Column="3">المؤهل الدراسي</TextBlock>
-                                        <TextBox Grid.Row="3" Grid.Column="2"></TextBox>
-                                    
-                                    
+                                    <TextBox Grid.Row="3" Grid.Column="0"></TextBox>
+                                    <TextBlock Grid.Row="3" Grid.Column="1">الحالة الاجتماعية</TextBlock>
+
+
+                                    <TextBlock Grid.Row="3" Grid.Column="9" HorizontalAlignment="Right">رقم جواز السفر</TextBlock>
+                                    <TextBox Grid.Row="3" Grid.Column="7" Grid.ColumnSpan="2"></TextBox>
+                                    <TextBlock Grid.Row="3" Grid.Column="6" >نوعه</TextBlock>
+                                    <TextBox Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="2"></TextBox>
+                                    <TextBlock Grid.Row="3" Grid.Column="3">المؤهل الدراسي</TextBlock>
+                                    <TextBox Grid.Row="3" Grid.Column="2"></TextBox>
+
+
+                                        <TextBlock Grid.Row="4" Grid.Column="9" HorizontalAlignment="Right">الأجر بالدينار</TextBlock>
+                                        <TextBox Grid.Row="4" Grid.Column="8"></TextBox>
+                                        <TextBox Grid.Row="4" Grid.Column="6" Grid.ColumnSpan="2" Margin="5 0 5 0"></TextBox>
+                                        <TextBlock Grid.Row="4" Grid.Column="5">رقم التصريح بالعمل</TextBlock>
+                                        <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="4">
+                                            <TextBox MinWidth="20"></TextBox>
+                                            <TextBox MinWidth="20"></TextBox>
+                                            <TextBox MinWidth="39"></TextBox>
+                                        </StackPanel>
+                                        <TextBlock Grid.Row="4" Grid.Column="3">رقم الاقامة</TextBlock>
+                                        <TextBox Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3"></TextBox>
+
+                                        <TextBlock Grid.Row="5" Grid.Column="9" HorizontalAlignment="Right">تاريخ الدخول</TextBlock>
+                                        <TextBox Grid.Row="5"  Grid.Column="8" Margin="5 0 5 0"></TextBox>
+                                        <TextBox Grid.Row="5"  Grid.Column="7" Margin="5 0 5 0"></TextBox>
+                                        <TextBox Grid.Row="5"  Grid.Column="6" Margin="5 0 5 0"></TextBox>
+
+                                        <TextBlock Grid.Row="5" Grid.Column="5">مدة الاستخدام
+                                        <LineBreak/>المطلوبه</TextBlock>
+
+                                        <TextBox Grid.Row="5" Grid.Column="4"></TextBox>
+                                        <TextBox Grid.Row="5" Grid.Column="3" Background="lightgray"></TextBox>
+                                        <TextBlock Grid.Row="5" Grid.Column="2">(تاريخ انتهاء العمل ( للإجراءات14434241</TextBlock>
+                                        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2">
+                                            <TextBox MinWidth="20" Margin="5 0 5 0"></TextBox>
+                                            <TextBox MinWidth="20" Margin="5 0 5 0"></TextBox>
+                                            <TextBox MinWidth="20" Margin="5 0 5 0"></TextBox>
+                                        </StackPanel>
+
                                     </Grid>
+                                
+                                
                             </StackPanel>
                         </Border>
-                        
-                    </StackPanel>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Margin="10" FontSize="11" FontWeight="Bold" Foreground="Red" HorizontalAlignment="Center"> وأوافق على تحويل العامل المذكورة بياناته اعلاه إلى صاحب العمل التالية بياناته</TextBlock>
+                                <TextBlock Grid.Column="1" Margin="10" FontSize="11" FontWeight="Bold" Foreground="Red" HorizontalAlignment="Center"> (تملأ البيانات التالية للإجراءات من 5  الى  10  فقط )</TextBlock>
+
+                            </Grid>
+
+
+
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <Border Grid.Column="1" BorderBrush="Black" BorderThickness="1">
+                                    <StackPanel>
+                                    <Grid >
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        <TextBlock Margin="10" Grid.Row="0" Grid.Column="3">إسـم صـاحب العمــــل</TextBlock>
+                                        <TextBox Grid.Row="0" Grid.Column="0"  Grid.ColumnSpan="3"></TextBox>
+
+                                        <TextBlock Margin="10"  Grid.Row="1" Grid.Column="3">إسم المفوض بالتوقيع</TextBlock>
+                                        <TextBox Grid.Row="1" Grid.Column="0"  Grid.ColumnSpan="3"></TextBox>
+
+                                        <TextBlock Margin="10"  Grid.Row="2" Grid.Column="3">الإسـم التجاري</TextBlock>
+                                        <TextBox Grid.Row="2" Grid.Column="0"  Grid.ColumnSpan="3"></TextBox>
+
+                                        <TextBlock Margin="10"  Grid.Row="3" Grid.Column="3">رقم الملف</TextBlock>
+                                        <TextBox   Grid.Row="3" Grid.Column="2" ></TextBox>
+                                        <TextBlock Margin="10"  Grid.Row="3" Grid.Column="1">رقم العقد</TextBlock>
+                                        <TextBox Grid.Row="3" Grid.Column="0" ></TextBox>
+
+
+                                    </Grid>
+                                        <Border BorderBrush="Black" BorderThickness="1">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition/>
+                                                    <ColumnDefinition/>
+                                                    <ColumnDefinition/>
+                                                    <ColumnDefinition/>
+                                                    <ColumnDefinition/>
+                                                    <ColumnDefinition/>
+                                                    <ColumnDefinition/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition/>
+                                                    <RowDefinition/>
+                                                </Grid.RowDefinitions>
+
+                                                <TextBlock Grid.Row="0" Grid.Column="6">المهنة الجديدة</TextBlock>
+                                                <TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="lightgray"></TextBox>
+                                                <TextBox Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4"></TextBox>
+
+                                                <TextBlock Grid.Row="1" Grid.Column="7">الإجر بالدينار</TextBlock>
+                                                <TextBox Grid.Row="1" Grid.Column="5"></TextBox>
+                                                <TextBox Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2"></TextBox>
+                                                <TextBlock Grid.Row="1" Grid.Column="2">مدة الاستخدام المطلوبة</TextBlock>
+                                                <TextBox Grid.Row="1" Grid.Column="1"></TextBox>
+                                                <TextBox Grid.Row="1" Grid.Column="0" Background="LightGray"></TextBox>
+
+                                            </Grid>
+                                        </Border>
+                                    </StackPanel>
+                                </Border>
+
+                                <Border Grid.Column="0" BorderBrush="Black" BorderThickness="1">
+                                    <StackPanel>
+                                        <TextBlock Foreground="Red" HorizontalAlignment="Right">أقر أنا الموقع أدناه بصحة البيانات المدرجة بهذا الطلب
+                                    <LineBreak/>وأتعهد بتنفيذ ما جاء بالتنبيهات المدون خلف الطلب</TextBlock>
+                                        <TextBlock FontSize="16" FontWeight="Bold" HorizontalAlignment="Right" Margin="10 10 10 10">التوقيع</TextBlock>
+                                    </StackPanel>
+
+
+                                </Border>
+                            </Grid>
+
+
+                        </StackPanel>
 
             </Grid>
             </Border>

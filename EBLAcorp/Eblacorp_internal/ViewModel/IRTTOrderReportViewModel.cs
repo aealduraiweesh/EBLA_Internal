@@ -23,7 +23,7 @@ namespace Eblacorp_internal.ViewModel
 
 
                 // printDialog.PrintVisual(PAFMPView.PAFMGridPage1, "Printing in process");
-                printDialog.PrintVisual(IRTTView.IRTTOrderReportGrid, "Printing in process");
+                printDialog.PrintVisual(IRTTView.Report, "Printing in process");
 
             }
         }
