@@ -103,9 +103,9 @@
                         <TextBlock Margin="0 5 0 0" Text="Civil Number"></TextBlock>
                         <TextBox x:Name="CivilNumberTextBox" Text="{Binding CivilNumber}"></TextBox>
 
-                        <!--TODO: Add list of delegates only to here-->
-                        <TextBlock Margin="0 5 0 0" Text="Delegate View"></TextBlock>
-                        <ListView Height="90" Background="Gray"  x:Name="DelegateView"></ListView>
+                        <!--CANCELED TODO: Add list of delegates only to here-->
+                        <!--<TextBlock Margin="0 5 0 0" Text="Delegate View"></TextBlock>
+                        <ListView Height="90" Background="Gray"  x:Name="DelegateView"></ListView>-->
                 </StackPanel>
                 
 

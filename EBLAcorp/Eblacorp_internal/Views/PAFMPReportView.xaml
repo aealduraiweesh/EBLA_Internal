@@ -5,26 +5,38 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:viewmodel="clr-namespace:Eblacorp_internal.ViewModel"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="1950" d:DesignWidth="800">
 
     <UserControl.DataContext>
         <viewmodel:PAFMReportViewModel/>
     </UserControl.DataContext>
     
     <Grid>
-        <ScrollViewer>
-            <StackPanel>
-            <Grid x:Name="ButtonGrid">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel  Grid.Row="0">
+            <Grid x:Name="ButtonGrid" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition></ColumnDefinition>
-                    
+
                 </Grid.ColumnDefinitions>
                 <Button Content="Print" x:Name="PrintReportButton" Command="{Binding printButton}"></Button>
-            
-            </Grid>
+         
 
-          
-            <Grid Margin="10" x:Name="PAFMGridPage1" Background="White">
+            </Grid>
+         
+        </StackPanel>
+        
+        <FlowDocumentScrollViewer Grid.Row="1">
+                
+                <FlowDocument x:Name="PAFMFlowDocument" FontSize="11">
+                    <Paragraph>
+                        <StackPanel>
+                            <Grid Margin="10" x:Name="PAFMGridPage1" Background="White">
                 <StackPanel Margin="5">
                     <Image Source="/Eblacorp_internal;component/assets/kuwaitLogo.jpg" MaxWidth="30" MaxHeight="40"></Image>
                     <TextBlock HorizontalAlignment="Center" Text="الهيئة العـــــــــامة للقـــوى العــامـلة"></TextBlock>
@@ -261,9 +273,7 @@
                             
                             
                             
-                            
-                            
-                            
+                                                       
                             
                             <!--Arabic Side-->
                         <StackPanel Margin="0" Grid.Column="1">
@@ -294,7 +304,9 @@
 
                 </Grid>
         </StackPanel>
-        </ScrollViewer>
+                    </Paragraph>
+                </FlowDocument>
+            </FlowDocumentScrollViewer>
 
     </Grid>
 </UserControl>

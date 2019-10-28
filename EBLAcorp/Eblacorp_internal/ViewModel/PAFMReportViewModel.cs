@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Documents;
 
 namespace Eblacorp_internal.ViewModel
 {
@@ -16,16 +17,19 @@ namespace Eblacorp_internal.ViewModel
 
         public void printCommand(object obj)
         {
-            PAFMPReportView PAFMPView = new PAFMPReportView();
-            PrintDialog printDialog = new PrintDialog();
-            if (printDialog.ShowDialog() == true)
-            {
+            PAFMPReportView PAFMReportView = new PAFMPReportView();
 
+            PrintDialog pd = new PrintDialog();
+            if (pd.ShowDialog() != true) return;
 
-               // printDialog.PrintVisual(PAFMPView.PAFMGridPage1, "Printing in process");
-                printDialog.PrintVisual(PAFMPView.PAFMGridPage2, "Printing in process");
+            PAFMReportView.PAFMFlowDocument.PageHeight = pd.PrintableAreaHeight;
+            PAFMReportView.PAFMFlowDocument.PageWidth = pd.PrintableAreaWidth;
+            PAFMReportView.PAFMFlowDocument.ColumnWidth = pd.PrintableAreaWidth;
+            PAFMReportView.PAFMFlowDocument.ColumnGap = 0;
 
-            }
+            IDocumentPaginatorSource idocument = PAFMReportView.PAFMFlowDocument as IDocumentPaginatorSource;
+
+            pd.PrintDocument(idocument.DocumentPaginator, "Printing Flow Document...");
         }
 
         public PAFMReportViewModel()

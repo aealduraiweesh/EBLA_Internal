@@ -98,6 +98,7 @@ namespace Eblacorp_internal.ViewModel
             {
                 Company.Add(new Models.CompanyModel
                 {
+                    Comp_ID = companyDB.getLastInertedID(),
                     ManagerName = ManagerName,
                     CivilNumber = CivilNumber,
                     CompanyName = CompanyName,

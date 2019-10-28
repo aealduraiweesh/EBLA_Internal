@@ -23,6 +23,23 @@ namespace Eblacorp_internal.DAL
         public ObservableCollection<Models.CompanyModel> companyCollection { get; set; } = new ObservableCollection<Models.CompanyModel>();
 
 
+
+        public int getLastInertedID()
+        {            
+            int amt;
+            using (var con = new SqlConnection(myconnection))
+            {
+                var sql = "Select Comp_ID from company where Comp_ID = IDENT_CURRENT('company')";
+                using (var cmd = new SqlCommand(sql, con))
+                {
+                    //md.Parameters.AddWithValue("@RoomNo", Int32.Parse(txtRoom.Text));
+                    con.Open();
+                    amt = (int)cmd.ExecuteScalar();
+                }
+            }
+            return amt;
+        }
+
         public ObservableCollection<Models.CompanyModel> selectAllEmployees()
         {
 
