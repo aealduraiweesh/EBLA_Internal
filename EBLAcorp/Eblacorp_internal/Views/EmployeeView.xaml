@@ -118,15 +118,9 @@
                     <TextBox x:Name="ResidencyNumberTextBox" Text="{Binding ResidencyNum}"></TextBox>
 
                     <TextBlock  Margin="0 5 0 0" Text="Residency End Date"></TextBlock>
+                    <DatePicker x:Name="ResidencyEndDateDatePickerTextBox" Text="{Binding ResidencyEndDate}"></DatePicker>
 
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="8*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                    <TextBox Text="{Binding ResidencyEndDate}" Grid.Column="0"> </TextBox>
-                    <DatePicker  BorderThickness="0" Width="28" Grid.Column="1" x:Name="ResidencyEndDateDatePickerTextBox" Text="{Binding ResidencyEndDatePicker}"></DatePicker>
-                    </Grid>
+           
                     <TextBlock  Margin="0 5 0 0" Text="Residency Start Date"></TextBlock>
                     <DatePicker x:Name="ResidencyStartDateDatePickerTextBox" Text="{Binding StartDate}"></DatePicker>
 
@@ -185,8 +179,8 @@
                         </ComboBox.ItemTemplate>
                     </ComboBox>
 
-                    <TextBlock  Margin="0 5 0 0" Text="License"></TextBlock>
-                    <TextBox x:Name="LicenseTextBox" Text="{Binding LicenseNumber}"></TextBox>
+                    <!--<TextBlock  Margin="0 5 0 0" Text="License"></TextBlock>
+                    <TextBox x:Name="LicenseTextBox" Text="{Binding LicenseNumber}"></TextBox>-->
 
 
                 </StackPanel>

@@ -55,29 +55,29 @@ namespace Eblacorp_internal.DAL
                     LatinName = dt.Rows[i]["LatinName"].ToString(),
                     CivilNum = dt.Rows[i]["CivilNum"].ToString(),
                     BirthPlace = dt.Rows[i]["BirthPlace"].ToString(),
-                    DOB = (DateTime)dt.Rows[i]["DOB"],
+                    DOB = (DateTime?)dt.Rows[i]["DOB"],
                     Gender = dt.Rows[i]["Gender"].ToString(),
                     Religion = dt.Rows[i]["Religion"].ToString(),
                     Nationality = dt.Rows[i]["Nationality"].ToString(),
                     Career = dt.Rows[i]["Career"].ToString(),
                     PassportNum = dt.Rows[i]["PassportNum"].ToString(),
-                    PassportEndDate = (DateTime)dt.Rows[i]["PassportEndDate"],
+                    PassportEndDate = (DateTime?)dt.Rows[i]["PassportEndDate"],
                     PassportType = dt.Rows[i]["PassportType"].ToString(),
                     Education = dt.Rows[i]["Education"].ToString(),
                     MaritalStatus = dt.Rows[i]["MaritalStatus"].ToString(),
                     salary = dt.Rows[i]["salary"].ToString(),
                     declration = dt.Rows[i]["declration"].ToString(),
                     ResidencyNum = dt.Rows[i]["ResidencyNum"].ToString(),
-                    ResidencyEndDate = (DateTime)dt.Rows[i]["ResidencyEndDate"],
-                    StartDate = (DateTime)dt.Rows[i]["StartDate"],
+                    ResidencyEndDate = (DateTime?)dt.Rows[i]["ResidencyEndDate"],
+                    StartDate = (DateTime?)dt.Rows[i]["StartDate"],
                     Duration = dt.Rows[i]["Duration"].ToString(),
                     DurationEng = dt.Rows[i]["DurationEng"].ToString(),
                     NationalityEng = dt.Rows[i]["NationalityEng"].ToString(),
                     CareerEng = dt.Rows[i]["CareerEng"].ToString(),
                     Note = dt.Rows[i]["Note"].ToString(),
-                    PassportIssueDate = (DateTime)dt.Rows[i]["PassPortIssueDate"],
+                    PassportIssueDate = (DateTime?)dt.Rows[i]["PassPortIssueDate"],
 /*                    LicenseNumber = dt.Rows[i]["LicenseNumber"].ToString(),
-                    LicenseEndDate = (DateTime)dt.Rows[i]["LicenseEndDate"],*/
+                    LicenseEndDate = (DateTime?)dt.Rows[i]["LicenseEndDate"],*/
 
 
 
@@ -119,27 +119,27 @@ namespace Eblacorp_internal.DAL
                     LatinName = dt.Rows[i]["LatinName"].ToString(),
                     CivilNum = dt.Rows[i]["CivilNum"].ToString(),
                     BirthPlace = dt.Rows[i]["BirthPlace"].ToString(),
-                    DOB = (DateTime)dt.Rows[i]["DOB"],
+                    DOB = (DateTime?)dt.Rows[i]["DOB"],
                     Gender = dt.Rows[i]["Gender"].ToString(),
                     Religion = dt.Rows[i]["Religion"].ToString(),
                     Nationality = dt.Rows[i]["Nationality"].ToString(),
                     Career = dt.Rows[i]["Career"].ToString(),
                     PassportNum = dt.Rows[i]["PassportNum"].ToString(),
-                    PassportEndDate = (DateTime)dt.Rows[i]["PassportEndDate"],
+                    PassportEndDate = (DateTime?)dt.Rows[i]["PassportEndDate"],
                     PassportType = dt.Rows[i]["PassportType"].ToString(),
                     Education = dt.Rows[i]["Education"].ToString(),
                     MaritalStatus = dt.Rows[i]["MaritalStatus"].ToString(),
                     salary = dt.Rows[i]["salary"].ToString(),
                     declration = dt.Rows[i]["declration"].ToString(),
                     ResidencyNum = dt.Rows[i]["ResidencyNum"].ToString(),
-                    ResidencyEndDate = (DateTime)dt.Rows[i]["ResidencyEndDate"],
-                    StartDate = (DateTime)dt.Rows[i]["StartDate"],
+                    ResidencyEndDate = (DateTime?)dt.Rows[i]["ResidencyEndDate"],
+                    StartDate = (DateTime?)dt.Rows[i]["StartDate"],
                     Duration = dt.Rows[i]["Duration"].ToString(),
                     DurationEng = dt.Rows[i]["DurationEng"].ToString(),
                     NationalityEng = dt.Rows[i]["NationalityEng"].ToString(),
                     CareerEng = dt.Rows[i]["CareerEng"].ToString(),
                     Note = dt.Rows[i]["Note"].ToString(),
-                    PassportIssueDate = (DateTime)dt.Rows[i]["PassPortIssueDate"],
+                    PassportIssueDate = (DateTime?)dt.Rows[i]["PassPortIssueDate"],
 
 
 
@@ -180,27 +180,27 @@ namespace Eblacorp_internal.DAL
                     LatinName = dt.Rows[i]["LatinName"].ToString(),
                     CivilNum = dt.Rows[i]["CivilNum"].ToString(),
                     BirthPlace = dt.Rows[i]["BirthPlace"].ToString(),
-                    DOB = (DateTime)dt.Rows[i]["DOB"],
+                    DOB = (DateTime?)dt.Rows[i]["DOB"],
                     Gender = dt.Rows[i]["Gender"].ToString(),
                     Religion = dt.Rows[i]["Religion"].ToString(),
                     Nationality = dt.Rows[i]["Nationality"].ToString(),
                     Career = dt.Rows[i]["Career"].ToString(),
                     PassportNum = dt.Rows[i]["PassportNum"].ToString(),
-                    PassportEndDate = (DateTime)dt.Rows[i]["PassportEndDate"],
+                    PassportEndDate = (DateTime?)dt.Rows[i]["PassportEndDate"],
                     PassportType = dt.Rows[i]["PassportType"].ToString(),
                     Education = dt.Rows[i]["Education"].ToString(),
                     MaritalStatus = dt.Rows[i]["MaritalStatus"].ToString(),
                     salary = dt.Rows[i]["salary"].ToString(),
                     declration = dt.Rows[i]["declration"].ToString(),
                     ResidencyNum = dt.Rows[i]["ResidencyNum"].ToString(),
-                    ResidencyEndDate = (DateTime)dt.Rows[i]["ResidencyEndDate"],
-                    StartDate = (DateTime)dt.Rows[i]["StartDate"],
+                    ResidencyEndDate = (DateTime?)dt.Rows[i]["ResidencyEndDate"],
+                    StartDate = (DateTime?)dt.Rows[i]["StartDate"],
                     Duration = dt.Rows[i]["Duration"].ToString(),
                     DurationEng = dt.Rows[i]["DurationEng"].ToString(),
                     NationalityEng = dt.Rows[i]["NationalityEng"].ToString(),
                     CareerEng = dt.Rows[i]["CareerEng"].ToString(),
                     Note = dt.Rows[i]["Note"].ToString(),
-                    PassportIssueDate = (DateTime)dt.Rows[i]["PassPortIssueDate"],
+                    PassportIssueDate = (DateTime?)dt.Rows[i]["PassPortIssueDate"],
 
 
 
@@ -240,27 +240,27 @@ namespace Eblacorp_internal.DAL
                     LatinName = dt.Rows[i]["LatinName"].ToString(),
                     CivilNum = dt.Rows[i]["CivilNum"].ToString(),
                     BirthPlace = dt.Rows[i]["BirthPlace"].ToString(),
-                    DOB = (DateTime)dt.Rows[i]["DOB"],
+                    DOB = (DateTime?)dt.Rows[i]["DOB"],
                     Gender = dt.Rows[i]["Gender"].ToString(),
                     Religion = dt.Rows[i]["Religion"].ToString(),
                     Nationality = dt.Rows[i]["Nationality"].ToString(),
                     Career = dt.Rows[i]["Career"].ToString(),
                     PassportNum = dt.Rows[i]["PassportNum"].ToString(),
-                    PassportEndDate = (DateTime)dt.Rows[i]["PassportEndDate"],
+                    PassportEndDate = (DateTime?)dt.Rows[i]["PassportEndDate"],
                     PassportType = dt.Rows[i]["PassportType"].ToString(),
                     Education = dt.Rows[i]["Education"].ToString(),
                     MaritalStatus = dt.Rows[i]["MaritalStatus"].ToString(),
                     salary = dt.Rows[i]["salary"].ToString(),
                     declration = dt.Rows[i]["declration"].ToString(),
                     ResidencyNum = dt.Rows[i]["ResidencyNum"].ToString(),
-                    ResidencyEndDate = (DateTime)dt.Rows[i]["ResidencyEndDate"],
-                    StartDate = (DateTime)dt.Rows[i]["StartDate"],
+                    ResidencyEndDate = (DateTime?)dt.Rows[i]["ResidencyEndDate"],
+                    StartDate = (DateTime?)dt.Rows[i]["StartDate"],
                     Duration = dt.Rows[i]["Duration"].ToString(),
                     DurationEng = dt.Rows[i]["DurationEng"].ToString(),
                     NationalityEng = dt.Rows[i]["NationalityEng"].ToString(),
                     CareerEng = dt.Rows[i]["CareerEng"].ToString(),
                     Note = dt.Rows[i]["Note"].ToString(),
-                    PassportIssueDate = (DateTime)dt.Rows[i]["PassPortIssueDate"],
+                    PassportIssueDate = (DateTime?)dt.Rows[i]["PassPortIssueDate"],
 
 
 
@@ -301,27 +301,27 @@ namespace Eblacorp_internal.DAL
                     LatinName = dt.Rows[i]["LatinName"].ToString(),
                     CivilNum = dt.Rows[i]["CivilNum"].ToString(),
                     BirthPlace = dt.Rows[i]["BirthPlace"].ToString(),
-                    DOB = (DateTime)dt.Rows[i]["DOB"],
+                    DOB = (DateTime?)dt.Rows[i]["DOB"],
                     Gender = dt.Rows[i]["Gender"].ToString(),
                     Religion = dt.Rows[i]["Religion"].ToString(),
                     Nationality = dt.Rows[i]["Nationality"].ToString(),
                     Career = dt.Rows[i]["Career"].ToString(),
                     PassportNum = dt.Rows[i]["PassportNum"].ToString(),
-                    PassportEndDate = (DateTime)dt.Rows[i]["PassportEndDate"],
+                    PassportEndDate = (DateTime?)dt.Rows[i]["PassportEndDate"],
                     PassportType = dt.Rows[i]["PassportType"].ToString(),
                     Education = dt.Rows[i]["Education"].ToString(),
                     MaritalStatus = dt.Rows[i]["MaritalStatus"].ToString(),
                     salary = dt.Rows[i]["salary"].ToString(),
                     declration = dt.Rows[i]["declration"].ToString(),
                     ResidencyNum = dt.Rows[i]["ResidencyNum"].ToString(),
-                    ResidencyEndDate = (DateTime)dt.Rows[i]["ResidencyEndDate"],
-                    StartDate = (DateTime)dt.Rows[i]["StartDate"],
+                    ResidencyEndDate = (DateTime?)dt.Rows[i]["ResidencyEndDate"],
+                    StartDate = (DateTime?)dt.Rows[i]["StartDate"],
                     Duration = dt.Rows[i]["Duration"].ToString(),
                     DurationEng = dt.Rows[i]["DurationEng"].ToString(),
                     NationalityEng = dt.Rows[i]["NationalityEng"].ToString(),
                     CareerEng = dt.Rows[i]["CareerEng"].ToString(),
                     Note = dt.Rows[i]["Note"].ToString(),
-                    PassportIssueDate = (DateTime)dt.Rows[i]["PassPortIssueDate"],
+                    PassportIssueDate = (DateTime?)dt.Rows[i]["PassPortIssueDate"],
 
 
 
@@ -370,27 +370,27 @@ namespace Eblacorp_internal.DAL
                     LatinName = dt.Rows[i]["LatinName"].ToString(),
                     CivilNum = dt.Rows[i]["CivilNum"].ToString(),
                     BirthPlace = dt.Rows[i]["BirthPlace"].ToString(),
-                    DOB = (DateTime)dt.Rows[i]["DOB"],
+                    DOB = (DateTime?)dt.Rows[i]["DOB"],
                     Gender = dt.Rows[i]["Gender"].ToString(),
                     Religion = dt.Rows[i]["Religion"].ToString(),
                     Nationality = dt.Rows[i]["Nationality"].ToString(),
                     Career = dt.Rows[i]["Career"].ToString(),
                     PassportNum = dt.Rows[i]["PassportNum"].ToString(),
-                    PassportEndDate = (DateTime)dt.Rows[i]["PassportEndDate"],
+                    PassportEndDate = (DateTime?)dt.Rows[i]["PassportEndDate"],
                     PassportType = dt.Rows[i]["PassportType"].ToString(),
                     Education = dt.Rows[i]["Education"].ToString(),
                     MaritalStatus = dt.Rows[i]["MaritalStatus"].ToString(),
                     salary = dt.Rows[i]["salary"].ToString(),
                     declration = dt.Rows[i]["declration"].ToString(),
                     ResidencyNum = dt.Rows[i]["ResidencyNum"].ToString(),
-                    ResidencyEndDate = (DateTime)dt.Rows[i]["ResidencyEndDate"],
-                    StartDate = (DateTime)dt.Rows[i]["StartDate"],
+                    ResidencyEndDate = (DateTime?)dt.Rows[i]["ResidencyEndDate"],
+                    StartDate = (DateTime?)dt.Rows[i]["StartDate"],
                     Duration = dt.Rows[i]["Duration"].ToString(),
                     DurationEng = dt.Rows[i]["DurationEng"].ToString(),
                     NationalityEng = dt.Rows[i]["NationalityEng"].ToString(),
                     CareerEng = dt.Rows[i]["CareerEng"].ToString(),
                     Note = dt.Rows[i]["Note"].ToString(),
-                    PassportIssueDate = (DateTime)dt.Rows[i]["PassPortIssueDate"],
+                    PassportIssueDate = (DateTime?)dt.Rows[i]["PassPortIssueDate"],
 
 
 
@@ -437,10 +437,10 @@ namespace Eblacorp_internal.DAL
      /// <param name="LicenseEndDate"></param>
      /// <returns></returns>
         public bool addEmployee(string FirstName, string SecondName, string ThirdName, string FourthName, String FamilyName, string LatinName,
-                                string CivilNum, string BirthPlace, DateTime DOB, string Gender, string Religion , string Nationality, string Career,
-                                string PassportNum , DateTime PassportEndDate, string PassportType, string Education, string MaritalStatus, string salary, 
-                                string declration, string ResidencyNum, DateTime ResidencyEndDate, DateTime StartDate, string Duration, string DurationEng, 
-                                string NationalityEng, string CareerEng, string Note, DateTime PassportIssueDate, string LicenseNumber, DateTime LicenseEndDate) 
+                                string CivilNum, string BirthPlace, DateTime? DOB, string Gender, string Religion , string Nationality, string Career,
+                                string PassportNum , DateTime? PassportEndDate, string PassportType, string Education, string MaritalStatus, string salary, 
+                                string declration, string ResidencyNum, DateTime? ResidencyEndDate, DateTime? StartDate, string Duration, string DurationEng, 
+                                string NationalityEng, string CareerEng, string Note, DateTime? PassportIssueDate) 
         {
 
             //Connects to our database
@@ -486,8 +486,8 @@ namespace Eblacorp_internal.DAL
                 cmd.Parameters.Add(new SqlParameter("@CareerEng", SqlDbType.VarChar)).Value = CareerEng;
                 cmd.Parameters.Add(new SqlParameter("@Note", SqlDbType.VarChar)).Value = Note;
                 cmd.Parameters.Add(new SqlParameter("@PassportIssueDate", SqlDbType.Date)).Value = PassportIssueDate;
-                cmd.Parameters.Add(new SqlParameter("@LicenseNumber", SqlDbType.VarChar)).Value = LicenseNumber;
-                cmd.Parameters.Add(new SqlParameter("@LicenseEndDate", SqlDbType.DateTime)).Value = LicenseEndDate;
+/*                cmd.Parameters.Add(new SqlParameter("@LicenseNumber", SqlDbType.VarChar)).Value = LicenseNumber;
+                cmd.Parameters.Add(new SqlParameter("@LicenseEndDate", SqlDbType.DateTime)).Value = LicenseEndDate;*/
 
 
                 //Opens Connection
@@ -578,10 +578,10 @@ namespace Eblacorp_internal.DAL
         }
 
         public bool updateEmployee(int ID, string FirstName, string SecondName, string ThirdName, string FourthName, String FamilyName, string LatinName,
-                                string CivilNum, string BirthPlace, DateTime DOB, string Gender, string Religion, string Nationality, string Career,
-                                string PassportNum, DateTime PassportEndDate, string PassportType, string Education, string MaritalStatus, string salary,
-                                string declration, string ResidencyNum, DateTime ResidencyEndDate, DateTime StartDate, string Duration, string DurationEng,
-                                string NationalityEng, string CareerEng, string Note, DateTime PassportIssueDate, string LicenseNumber, DateTime LicenseEndDate)
+                                string CivilNum, string BirthPlace, DateTime? DOB, string Gender, string Religion, string Nationality, string Career,
+                                string PassportNum, DateTime? PassportEndDate, string PassportType, string Education, string MaritalStatus, string salary,
+                                string declration, string ResidencyNum, DateTime? ResidencyEndDate, DateTime? StartDate, string Duration, string DurationEng,
+                                string NationalityEng, string CareerEng, string Note, DateTime? PassportIssueDate)
         {
             SqlConnection con = new SqlConnection(myconnection);
 
@@ -626,8 +626,7 @@ namespace Eblacorp_internal.DAL
                 cmd.Parameters.Add(new SqlParameter("@CareerEng", SqlDbType.VarChar)).Value = CareerEng;
                 cmd.Parameters.Add(new SqlParameter("@Note", SqlDbType.VarChar)).Value = Note;
                 cmd.Parameters.Add(new SqlParameter("@PassportIssueDate", SqlDbType.Date)).Value = PassportIssueDate;
-                cmd.Parameters.Add(new SqlParameter("@LicenseNumber", SqlDbType.VarChar)).Value = LicenseNumber;
-                cmd.Parameters.Add(new SqlParameter("@LicenseEndDate", SqlDbType.DateTime)).Value = LicenseEndDate;
+       
 
                 //Opens Connection
                 con.Open();

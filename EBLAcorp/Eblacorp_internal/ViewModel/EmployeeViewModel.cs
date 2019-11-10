@@ -256,9 +256,9 @@ namespace Eblacorp_internal.ViewModel
             }
         }
 
-        private DateTime dOB;       
+        private DateTime? dOB;       
 
-        public DateTime DOB
+        public DateTime? DOB
         {
             get { return dOB; }
             set
@@ -333,9 +333,9 @@ namespace Eblacorp_internal.ViewModel
             }
         }
 
-        private DateTime passportEndDate;
+        private DateTime? passportEndDate;
 
-        public DateTime PassportEndDate
+        public DateTime? PassportEndDate
         {
             get { return passportEndDate; }
             set
@@ -424,35 +424,35 @@ namespace Eblacorp_internal.ViewModel
             }
         }
 
-        private DateTime residencyEndDate;
+        private DateTime? residencyEndDate;
 
-        public DateTime ResidencyEndDate
+        public DateTime? ResidencyEndDate
         {
             get { return residencyEndDate; }
             set
             {
-                residencyEndDate = ResidencyEndDatePicker.Date;
+                residencyEndDate = value;
                 NotifyPropertyChanged("ResidencyEndDate");
 
             }
         }
 
-        private DateTime residencyEndDatePicker;
-        public DateTime ResidencyEndDatePicker
+        private DateTime? residencyEndDatePicker;
+        public DateTime? ResidencyEndDatePicker
         {
             get { return residencyEndDatePicker; }
             set
             {
-                residencyEndDatePicker = value;
-                ResidencyEndDate = ResidencyEndDatePicker.Date;
-                NotifyPropertyChanged("ResidencyEndDate");
+                residencyEndDatePicker = residencyEndDate;
+                residencyEndDate = value;
+                NotifyPropertyChanged("ResidencyEndDatePicker");
             }
         }
 
 
-        private DateTime startDate;
+        private DateTime? startDate;
 
-        public DateTime StartDate
+        public DateTime? StartDate
         {
             get { return startDate; }
             set
@@ -524,9 +524,9 @@ namespace Eblacorp_internal.ViewModel
             }
         }
 
-        private DateTime passportIssueDate;
+        private DateTime? passportIssueDate;
 
-        public DateTime PassportIssueDate
+        public DateTime? PassportIssueDate
         {
             get { return passportIssueDate; }
             set
@@ -537,7 +537,7 @@ namespace Eblacorp_internal.ViewModel
             }
         }
 
-        private string licenseNumber;
+/*        private string licenseNumber;
 
         public string LicenseNumber
         {
@@ -548,11 +548,11 @@ namespace Eblacorp_internal.ViewModel
                 NotifyPropertyChanged("LicenseNumber");
 
             }
-        }
+        }*/
+/*
+        private DateTime? licenseEndDate;
 
-        private DateTime licenseEndDate;
-
-        public DateTime LicenseEndDate
+        public DateTime? LicenseEndDate
         {
             get { return licenseEndDate; }
             set
@@ -561,7 +561,7 @@ namespace Eblacorp_internal.ViewModel
                 NotifyPropertyChanged("LicenseEndDate");
 
             }
-        }
+        }*/
 
 
 
@@ -585,7 +585,7 @@ namespace Eblacorp_internal.ViewModel
         {
           if(  employeeDB.addEmployee(FirstName, SecondName, ThirdName, FourthName, FamilyName, LatinName, CivilNum, BirthPlace, DOB, Gender, Religion, Nationality,
                                     Career, PassportNum, PassportEndDate, PassportType, Education, MaritalStatus, Salary, declration, ResidencyNum, ResidencyEndDate, StartDate,
-                                    Duration, DurationEng, NationalityEng, CareerEng, Note, PassportIssueDate, LicenseNumber, LicenseEndDate))
+                                    Duration, DurationEng, NationalityEng, CareerEng, Note, PassportIssueDate))
             {
                 Employee.Add(new Models.EmployeeModel
                 {
@@ -635,7 +635,7 @@ namespace Eblacorp_internal.ViewModel
         {
            if( employeeDB.updateEmployee(ID, FirstName, SecondName, ThirdName, FourthName, FamilyName, LatinName, CivilNum, BirthPlace, DOB, Gender, Religion, Nationality,
                                     Career, PassportNum, PassportEndDate, PassportType, Education, MaritalStatus, Salary, declration, ResidencyNum, ResidencyEndDate, StartDate,
-                                    Duration, DurationEng, NationalityEng, CareerEng, Note, PassportIssueDate, LicenseNumber, LicenseEndDate))
+                                    Duration, DurationEng, NationalityEng, CareerEng, Note, PassportIssueDate))
             {
 
            
