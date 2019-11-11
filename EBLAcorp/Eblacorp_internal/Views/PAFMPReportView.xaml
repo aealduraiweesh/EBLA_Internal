@@ -49,7 +49,7 @@
                                     <Border Grid.Column="0" BorderThickness="1.1" BorderBrush="Black">
                                         <StackPanel Margin="5" Grid.Column="0">
                                             <TextBlock HorizontalAlignment="Center" TextDecorations="Underline" Text="Sample Form an Employment Contract in the Civil Sector"></TextBlock>
-                                            <TextBlock Margin="30 10 20 0" Text="State o Kuwait"></TextBlock>
+                                            <TextBlock Margin="30 20 20 10" Text="State o Kuwait"></TextBlock>
                                             <StackPanel Orientation="Horizontal">
                                                 <TextBlock>Public Authority of Manpower/</TextBlock>
                                                 <TextBox BorderThickness="0" TextDecorations="UnderLine" MinWidth="80" Width="auto" Text="--INSERT HERE--" Foreground="Red"></TextBox>
@@ -95,7 +95,7 @@
                                             </StackPanel>
                                             <TextBlock>(Second Party)</TextBlock>
                                             <!--PREAMBLE-->
-                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 5 0 0">Preamble</TextBlock>
+                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 5">Preamble</TextBlock>
                                             <StackPanel Orientation="Horizontal">
                                                 <TextBlock>The first party owns the facility entitled</TextBlock>
                                                 <TextBox BorderThickness="0" TextDecorations="UnderLine" MinWidth="80" Width="auto" Text="--INSERT HERE--" Foreground="Red"></TextBox>
@@ -113,12 +113,12 @@
                                             <TextBlock>acknowledged their capacity to conclude this contract; they agreed</TextBlock>
                                             <TextBlock>upon the following:</TextBlock>
                                             <!--Article One-->
-                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 5 0 0">Article One</TextBlock>
+                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 5">Article One</TextBlock>
                                             <TextBlock>The preamble above shall constitute an integral part of the present</TextBlock>
                                             <TextBlock>contract.</TextBlock>
                                             <!--Article Two "Nature of the Work-->
-                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 5 0 0">Article Two</TextBlock>
-                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">"Nature of the Work</TextBlock>
+                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 0">Article Two</TextBlock>
+                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5" >"Nature of the Work</TextBlock>
                                             <TextBlock>The first party concluded a contract with the second party to work for</TextBlock>
                                             <StackPanel Orientation="Horizontal">
                                                 <TextBlock>it in the profession of</TextBlock>
@@ -126,14 +126,14 @@
                                                 <TextBlock>in the State of Kuwait.</TextBlock>
                                             </StackPanel>
                                             <!--Article Three-->
-                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 5 0 0">Article Three</TextBlock>
-                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">"Probation Period"</TextBlock>
+                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 0">Article Three</TextBlock>
+                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5" >"Probation Period"</TextBlock>
                                             <TextBlock>The second party shall be subject to a probation period for a term 
                                             <LineBreak/>not exceeding 100 work days. Each party shall have the right to
                                          <LineBreak/> terminate the contract during the said term without notification.</TextBlock>
                                             <!--Article Four-->
-                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 5 0 0">Article Four</TextBlock>
-                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">"Lease Value"</TextBlock>
+                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 0">Article Four</TextBlock>
+                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5" >"Lease Value"</TextBlock>
                                             <TextBlock>For executing the present contract, the second party shall receive the</TextBlock>
                                             <StackPanel Orientation="Horizontal">
                                                 <TextBlock> wage of</TextBlock>
@@ -144,8 +144,8 @@
                                         <LineBreak/>term of the contract. It may not transfer the partly to daily wage
                                         <LineBreak/>without his approval.</TextBlock>
                                             <!--Article Five-->
-                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 5 0 0">Article Five</TextBlock>
-                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">"Contract Term"</TextBlock>
+                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 0">Article Five</TextBlock>
+                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5" >"Contract Term"</TextBlock>
                                             <StackPanel Orientation="Horizontal">
                                                 <TextBlock>The contract shall come into force on</TextBlock>
                                                 <TextBox BorderThickness="0" TextDecorations="UnderLine" MinWidth="80" Width="auto" Text="--INSERT HERE--" Foreground="Red"></TextBox>
@@ -153,8 +153,8 @@
                                             </StackPanel>
                                             <TextBlock> party  shall  execute his work during the entire execution term thereof.</TextBlock>
                                             <!--Article Six-->
-                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 5 0 0">Article Six</TextBlock>
-                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">"Contract Term"</TextBlock>
+                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 0">Article Six</TextBlock>
+                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5" >"Contract Term"</TextBlock>
                                             <TextBlock>The present contract has a definite term. It shall come into force on</TextBlock>
                                             <StackPanel Orientation="Horizontal">
                                                 <TextBox BorderThickness="0" TextDecorations="UnderLine" MinWidth="80" Width="auto" Text="--INSERT HERE--" Foreground="Red"></TextBox>
@@ -178,9 +178,9 @@
                                         <!--Arabic Side of Page 1-->
                                     </Border>
                                     <Border Grid.Column="1" BorderThickness="1.1" BorderBrush="Black">
-                                        <StackPanel Grid.Column="1">
+                                        <StackPanel Margin="5" Grid.Column="1">
                                             <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 5 0 0">نموذج عقد عمل استرشادي</TextBlock>
-                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">في القطاع الأهلي</TextBlock>
+                                            <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 10">في القطاع الأهلي</TextBlock>
                                             <TextBlock  HorizontalAlignment="Right" Margin="0 10 0 10">  دولةالكويت</TextBlock>
                                             <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                                                 <TextBox BorderThickness="0" TextDecorations="UnderLine" MinWidth="80" Width="auto" Text="--INSERT HERE--" Foreground="Red"></TextBox>
@@ -206,7 +206,7 @@
                                                 <TextBlock >:رقم مدني</TextBlock>
                                             </StackPanel>
                                             <TextBlock  HorizontalAlignment="Center" Margin="0 10 0 10">  " طرف أول "</TextBlock>
-                                            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                                            <StackPanel Margin="0 0 5 0" HorizontalAlignment="Right" Orientation="Horizontal">
                                                 <TextBox BorderThickness="0" TextDecorations="UnderLine" MinWidth="80" Width="auto" Text="--INSERT HERE--" Foreground="Red"></TextBox>
                                                 <TextBlock >:الاسم</TextBlock>
                                                 <TextBlock >-2</TextBlock>
@@ -236,26 +236,26 @@
                                                 <TextBlock >تعمل في مجال</TextBlock>
                                             </StackPanel>
                                             <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                                                <TextBlock >وبعد أن أقر الطرفان بأهميتهما في إبرام هذا العقد تم الاتفاق</TextBlock>
+                                                <TextBlock >وبعد أن أقر الطرفان بأهميتهما في إبرام هذا العقد تم </TextBlock>
                                                 <TextBox BorderThickness="0" TextDecorations="UnderLine" MinWidth="80" Width="auto" Text="--INSERT HERE--" Foreground="Red"></TextBox>
                                                 <TextBlock > بمهنة</TextBlock>
                                             </StackPanel>
-                                            <TextBlock  HorizontalAlignment="Right">:على  ما يلي</TextBlock>
-                                            <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">البند الأول</TextBlock>
+                                            <TextBlock  HorizontalAlignment="Right">: الاتفاق على  ما يلي</TextBlock>
+                                            <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 10 0 10">البند الأول</TextBlock>
                                             <TextBlock  HorizontalAlignment="Right">.يعتبر التمهيد السابق جزء لا يتجزأ من هذا العقد </TextBlock>
-                                            <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">البند الثاني</TextBlock>
-                                            <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">" طبيعة العمل " </TextBlock>
+                                            <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 10 0 0">البند الثاني</TextBlock>
+                                            <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5">" طبيعة العمل " </TextBlock>
                                             <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                                                 <TextBox BorderThickness="0" TextDecorations="UnderLine" MinWidth="80" Width="auto" Text="--INSERT HERE--" Foreground="Red"></TextBox>
                                                 <TextBlock FontWeight="Bold"> تعاقد الطرف الأول مع الطرف الثاني للعمل لديه بمهنة</TextBlock> 
                                             </StackPanel>
                                             <TextBlock  HorizontalAlignment="Right" FontWeight="Bold">داخل دولة الكويت</TextBlock>
-                                            <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">البند الثالث</TextBlock>
-                                            <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">"فترة التجربة"</TextBlock>
+                                            <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 10 0 0">البند الثالث</TextBlock>
+                                            <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5">"فترة التجربة"</TextBlock>
                                             <TextBlock  HorizontalAlignment="Right">يخضع الطرف الثاني لفترة تجربة لمدة لا تزيد عن 100 يوم عمل، ويحق  لكل</TextBlock>
                                             <TextBlock  HorizontalAlignment="Right">.طرف إنهاء العقد خلال تلك الفترة دون إخطار</TextBlock>
-                                            <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">البند الرابع </TextBlock>
-                                            <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">"قيمة الأجر "</TextBlock>
+                                            <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 10 0 0">البند الرابع </TextBlock>
+                                            <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5">"قيمة الأجر "</TextBlock>
                                             <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                                                 <TextBlock > دينارا</TextBlock>
                                                 <TextBox BorderThickness="0" TextDecorations="UnderLine" MinWidth="80" Width="auto" Text="--INSERT HERE--" Foreground="Red"></TextBox>
@@ -267,16 +267,16 @@
                                                 <TextBlock > يدفع في نهاية كل</TextBlock>
                                             </StackPanel>
                                             <TextBlock  HorizontalAlignment="Right">.هذا العقد، ولا يجوز نقل الطرف الثاني إلى الأجر اليومي دون موافقته</TextBlock>
-                                            <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">البند الخامس</TextBlock>
-                                            <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">" نفاذ العقد "</TextBlock>
+                                            <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 10 0 0">البند الخامس</TextBlock>
+                                            <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5">" نفاذ العقد "</TextBlock>
                                             <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                                                 <TextBlock > ويلتزم الطرف  الثاني بالقيام</TextBlock>
                                                 <TextBox BorderThickness="0" TextDecorations="UnderLine" MinWidth="80" Width="auto" Text="--INSERT HERE--" Foreground="Red"></TextBox>
                                                 <TextBlock > يبدأ نفاذ العقد اعتباراً من</TextBlock>
                                             </StackPanel>
                                             <TextBlock  HorizontalAlignment="Right"> .بأداء عمله طوال مدة نفاذه</TextBlock>
-                                            <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">البند السادس</TextBlock>
-                                            <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">" مدة العقد "</TextBlock>
+                                            <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 10 0 0">البند السادس</TextBlock>
+                                            <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5">" مدة العقد "</TextBlock>
                                             <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                                                 <TextBlock > ،ولمدة</TextBlock>
                                                 <TextBox BorderThickness="0" TextDecorations="UnderLine" MinWidth="80" Width="auto" Text="--INSERT HERE--" Foreground="Red"></TextBox>
@@ -313,63 +313,63 @@
                                             <StackPanel Margin="5">
                                                 <!--Article Seven-->
                                                 <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 5 0 0">Article Seven</TextBlock>
-                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">"Annual Leave"</TextBlock>
+                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5">"Annual Leave"</TextBlock>
                                                 <TextBlock>The second party shall have the right to a paid annual leave with 
                                 <LineBreak/>a term of 30 days. It shall   not be due on the first year save after the
                                 <LineBreak/>expiration of nine months to be calculated from the date of the 
                                 <LineBreak/>contract into force.</TextBlock>
                                                 <!--Article Eight-->
-                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 5 0 0">Article Eight</TextBlock>
-                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">"Number of Work Hours"</TextBlock>
+                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 0">Article Eight</TextBlock>
+                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5" >"Number of Work Hours"</TextBlock>
                                                 <TextBlock>The first party may not require that the second party work for a term 
                                 <LineBreak/>exceeding eight daily work hours with rest periods not less than one 
                                 <LineBreak/>except for the cases set forth in the law.</TextBlock>
                                                 <!--Article Nine-->
-                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 5 0 0">Article Nine</TextBlock>
-                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">"Ticket Value"</TextBlock>
+                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 0">Article Nine</TextBlock>
+                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5" >"Ticket Value"</TextBlock>
                                                 <TextBlock>The first party shall bear the expenses of the return of the second party 
                                 <LineBreak/>to his country the expiration of the work relationship and his final 
                                 <LineBreak/> departure from the country.</TextBlock>
                                                 <!--Article Ten-->
-                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 5 0 0">Article Ten</TextBlock>
-                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">"Insurance against Injuries and Work Maladies"</TextBlock>
+                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 0">Article Ten</TextBlock>
+                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5" >"Insurance against Injuries and Work Maladies"</TextBlock>
                                                 <TextBlock>The first party shall insure the second party against injuries and work
                                 <LineBreak/>maladies. It shall commit to the health insurance value in accordance
                                 <LineBreak/>with the law No. (1) of the year 1999.</TextBlock>
                                                 <!--Article Eleven-->
-                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 5 0 0">Article Eleven</TextBlock>
-                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">"End of Service Benefit"</TextBlock>
+                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 0">Article Eleven</TextBlock>
+                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5" >"End of Service Benefit"</TextBlock>
                                                 <TextBlock>The second party shall be due the end of service benefit as set forth
                                 <LineBreak/> the regulating laws</TextBlock>
                                                 <!--Article Twelve-->
-                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 5 0 0">Article Twelve</TextBlock>
-                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">"Applicable Law"</TextBlock>
+                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 0">Article Twelve</TextBlock>
+                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5" >"Applicable Law"</TextBlock>
                                                 <TextBlock>The provisions of the Labour code in the civil sector No. 6 of 2010 and 
                                 <LineBreak/>the decisions executing same shall apply for all matters not provided 
                                 <LineBreak/>for in the present contract. Shall be considered null every condition 
                                 <LineBreak/>agreed upon in violation of the provisions of the law, unless the same 
                                 <LineBreak/> has a better benefit for the worker.</TextBlock>
                                                 <!--Article Thirteen-->
-                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 5 0 0">Article Thirteen</TextBlock>
-                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">"Special Conditions"</TextBlock>
+                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 0">Article Thirteen</TextBlock>
+                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5" >"Special Conditions"</TextBlock>
                                                 <TextBlock>1-……………………N/A………………….
                                 <LineBreak/>2-……………………N/A………………….
                                 <LineBreak/>3-……………………N/A………………….</TextBlock>
                                                 <!--Article Fourteen-->
-                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 5 0 0">Article Fourteen</TextBlock>
-                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">"Special Conditions"</TextBlock>
+                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 0">Article Fourteen</TextBlock>
+                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5" >"Special Conditions"</TextBlock>
                                                 <TextBlock>The court of first instance and its Labour departments, in accordance 
                                 <LineBreak/>with the provisions of the law No. 46 of the year 1987, shall be
                                 <LineBreak/>competent to peruse any conflicts resulting from the execution or 
                                 <LineBreak/> interpretation of the present contract.</TextBlock>
                                                 <!--Article Fifteen-->
-                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 5 0 0">Article Fifteen</TextBlock>
-                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">"Contract Language"</TextBlock>
+                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 0">Article Fifteen</TextBlock>
+                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5" >"Contract Language"</TextBlock>
                                                 <TextBlock>The  present  contract  was  made  in  Arabic and English. The  Arabic  texts   
                                 <LineBreak/>shall in the case of any conflict between them.</TextBlock>
                                                 <!--Article Sixteen-->
-                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 5 0 0">Article Sixteen</TextBlock>
-                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">"Contract Copies"</TextBlock>
+                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 0">Article Sixteen</TextBlock>
+                                                <TextBlock FontFamily="Bold" TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5" >"Contract Copies"</TextBlock>
                                                 <TextBlock>The present contract was made in three copies, one for each party to
                                 <LineBreak/>work in accordance therewith. The third copy shall be deposited at 
                                 <LineBreak/>the Public Authority for Manpower.</TextBlock>
@@ -390,13 +390,81 @@
                                         <Border BorderThickness="1.1" BorderBrush="Black">
                                             <StackPanel Margin="5">
                                                 <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">البند السابع</TextBlock>
-                                                <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 0">"  الأجازة السنوية "</TextBlock>
-                                                <TextBlock>The second party shall have the right to a paid annual leave with 
-                                <LineBreak/>a term of 30 days. It shall   not be due on the first year save after the
-                                <LineBreak/>expiration of nine months to be calculated from the date of the 
-                                <LineBreak/>contract into force.</TextBlock>
+                                                <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5">"  الأجازة السنوية "</TextBlock>
+                                                <TextBlock  HorizontalAlignment="Right">، للطرف الثاني الحق في أجازة سنوية مدفوعة الأجر مدتها 30 يوماً </TextBlock>
+                                                <TextBlock  HorizontalAlignment="Right">  ولا يستحقها عن السنة الأولى إلا بعد انقضاء مدة تسعة أشهر</TextBlock>
+                                                <TextBlock  HorizontalAlignment="Right">تحسب من تاريخ نفاذ العقد.</TextBlock>
+
+                                                <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 0">البند الثامن</TextBlock>
+                                                <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5" >"  عدد ساعات العمل  "</TextBlock>
+                                                <TextBlock  HorizontalAlignment="Right">لا يجوز للطرف الأول تشغيل الطرف الثاني لمدة  تزيد عن ثماني ساعات عمل يومياً</TextBlock>
+                                                <TextBlock  HorizontalAlignment="Right">  ولا يستحقها عن السنة الأولى إلا بعد انقضاء مدة تسعة أشهر</TextBlock>
+                                                <TextBlock  HorizontalAlignment="Right">تحسب من تاريخ نفاذ العقد.</TextBlock>
+
+                                                <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 0">البند التاسع</TextBlock>
+                                                <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5" >"  قيمة تذكرة السفر   "</TextBlock>
+                                                <TextBlock  HorizontalAlignment="Right">يتحمل الطرف الأول مصاريف عودة الطرف الثاني إلى بلده عند انتهاء</TextBlock>
+                                                <TextBlock  HorizontalAlignment="Right"> . علاقة العمل ومغادرته نهائياً للبلاد.</TextBlock>
+
+
+                                                <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 0">البند العاشر</TextBlock>
+                                                <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5" >" التأمين ضد إصابات وأمراض العمل "</TextBlock>
+                                                <TextBlock  HorizontalAlignment="Right"> .يلتزم بقيمة التأمين الصحي طبقاً للقانون رقم (1) لسنة 1999 </TextBlock>
+
+                                                <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 0">البند الحادي عشر</TextBlock>
+                                                <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5" > " مكافأة نهاية الخدمة "</TextBlock>
+                                                <TextBlock  HorizontalAlignment="Right">يستحق الطرف الثاني مكافأة نهاية الخدمة المنصوص عليها بالقوانين المنظمة.</TextBlock>
+
+                                                <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 0">البند الثاني عشر </TextBlock>
+                                                <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5" >" القانون الواجب التطبيق "</TextBlock>
+                                                <TextBlock  HorizontalAlignment="Right">تسري أحكام قانون العمل في القطاع الأهلي رقم 6 لسنة 2010 والقرارات</TextBlock>
+                                                <TextBlock  HorizontalAlignment="Right">المنفذة له فيما لم يرد بشأنه نص في هذا العقد، ويقع باطلاً كل شرط تم الاتفاق</TextBlock>
+                                                <TextBlock  HorizontalAlignment="Right">. عليه بالمخالفة لأحكام القانون، ما لم يكن فيه ميزة أفضل للعامل</TextBlock>
+
+                                                <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 0">البند الثالث  عشر</TextBlock>
+                                                <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5" >"شروط خاصة "</TextBlock>
+                                                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                                                    <TextBlock>	لا يوجد شروط</TextBlock>
+                                                    <TextBlock>-1</TextBlock>
+                                                </StackPanel>
+                                                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                                                    <TextBlock>	لا يوجد شروط</TextBlock>
+                                                    <TextBlock>-2</TextBlock>
+                                                </StackPanel>
+                                                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                                                    <TextBlock>	لا يوجد شروط</TextBlock>
+                                                    <TextBlock>-3</TextBlock>
+                                                </StackPanel>
+
+                                                <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 0">البند الرابع  عشر</TextBlock>
+                                                <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5" >" المحكمة المختصة "</TextBlock>
+                                                <TextBlock  HorizontalAlignment="Right">تختص المحكمة الكلية ودوائرها العمالية طبقاً لأحكام القانون رقم 46 لسنة</TextBlock>
+                                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                                    <TextBlock>. بنظر كافة المنازعات الناشئة عن تطبيق أو تفسير هذا العقد</TextBlock>
+                                                    <TextBlock>،1987</TextBlock>
+                                                </StackPanel>
+
+                                                <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 0">البند الخامس  عشر</TextBlock>
+                                                <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5" >" لغة العقد "</TextBlock>
+                                                <TextBlock  HorizontalAlignment="Right">حرر هذا العقد باللغتين العربية والانجليزية  ، ويعتد بنصوص اللغة العربية</TextBlock>
+                                                <TextBlock  HorizontalAlignment="Right">عند وقوع أي تعارض بينهما .</TextBlock>
+
+                                                <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 15 0 0">البند السادس   عشر</TextBlock>
+                                                <TextBlock TextDecorations="underline" HorizontalAlignment="Center" Margin="0 0 0 5" >" نسخ العقد "</TextBlock>
+                                                <TextBlock  HorizontalAlignment="Right">حرر هذا العقد من ثلاث نسخ بيد كل طرف نسخة للعمل بموجبها والثالثة تودع</TextBlock>
+                                                <TextBlock Margin="0 0 0 6.6" HorizontalAlignment="Right">.لدى الهيئة العامة للقوى العاملة </TextBlock>
+
+                                                <TextBlock><LineBreak></LineBreak><LineBreak></LineBreak>
+                                                <LineBreak></LineBreak><LineBreak></LineBreak><LineBreak></LineBreak>
+                                                <LineBreak></LineBreak><LineBreak></LineBreak>
+                                                <LineBreak></LineBreak><LineBreak></LineBreak><LineBreak></LineBreak>
+                                                </TextBlock>
+
                                             </StackPanel>
+                                            
+                                       
                                         </Border>
+                
 
 
 
@@ -407,6 +475,24 @@
 
                                 </Grid>
 
+
+                                <Border BorderThickness="1.1" BorderBrush="Black">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock Margin="0 0 0 25" Grid.Column="0">Second Party</TextBlock>
+                                        <TextBlock Grid.Column="1">الطرف الثاني</TextBlock>
+                                        <TextBlock Grid.Column="2">First Party</TextBlock>
+                                        <TextBlock Grid.Column="3">الطرف الأول</TextBlock>
+
+                                    </Grid>
+
+                                </Border>
                             </StackPanel>
 
 
