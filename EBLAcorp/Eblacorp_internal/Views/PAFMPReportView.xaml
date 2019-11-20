@@ -36,7 +36,7 @@
             <FlowDocument x:Name="PAFMFlowDocument" FontSize="11">
                 <Paragraph>
                     <StackPanel>
-                        <Grid Margin="10" x:Name="PAFMGridPage1" Background="White">
+                        <Grid Margin="10" x:Name="PAFMGridPage1" Background="white">
                             <StackPanel Margin="5">
                                 <Image Source="/Eblacorp_internal;component/assets/kuwaitLogo.jpg" MaxWidth="30" MaxHeight="40"></Image>
                                 <TextBlock HorizontalAlignment="Center" Text="الهيئة العـــــــــامة للقـــوى العــامـلة"></TextBlock>

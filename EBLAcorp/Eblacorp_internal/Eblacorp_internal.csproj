@@ -187,5 +187,9 @@
   <ItemGroup>
     <Resource Include="assets\kuwaitLogoColor.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\kuwaitLogo2.png" />
+    <Resource Include="assets\policeBadge.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,46 +12,167 @@
     </UserControl.DataContext>
 
     <Grid>
-       
-        <StackPanel >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Button Height="40" >Print</Button>
+                <Button Height="40" Command="{Binding printButton}" >Print</Button>
             </Grid>
+        </StackPanel>
+
+        <FlowDocumentScrollViewer  Grid.Row="1">
+            <FlowDocument x:Name="PRRFlowDocument" >
+                <Paragraph  Background="White">
+                <StackPanel Margin="60 0 0 0">
+                        <Grid Background="White" x:Name="PRReportGrid">
+                            <StackPanel  x:Name="documentFlow">
+                                <Grid HorizontalAlignment="Center" x:Name="Header">
+                                <Grid.ColumnDefinitions>
+                                        <ColumnDefinition  Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition  Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                    <Image Grid.RowSpan="5" Source="/Eblacorp_internal;component/assets/kuwaitLogo2.png"  Grid.Column="8" Grid.Row="0" Height="100" Width="80"></Image>
+                                    <Image Grid.RowSpan="5" Source="/Eblacorp_internal;component/assets/policeBadge.png"  Grid.Column="0" Grid.Row="0" Height="100" Width="80"></Image>
+                                    <TextBlock Grid.Column="8" Grid.Row="5" FontSize="9" HorizontalAlignment="Center" VerticalAlignment="Center">دولت الكويت</TextBlock>
+                                    <StackPanel Grid.Row="4" Grid.RowSpan="2">
+                                        <TextBlock  FontSize="9" HorizontalAlignment="Center" VerticalAlignment="Center">وزارت الداخليه</TextBlock>
+                                        <TextBlock  FontSize="9" HorizontalAlignment="Center"  VerticalAlignment="Center">الأدارة العامة لشؤون الإقامه</TextBlock>
+                                    </StackPanel>
+
+                                    <Border Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="7" Background="Blue">
+                                    <TextBlock HorizontalAlignment="Center" >إضغط لمسح الحقول لطباعت بيانات جديده </TextBlock>
+                                    </Border>
+                                    
+                                    <ComboBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="6" Text="Choose" IsEditable="True" IsReadOnly="True" Background="LightGray"></ComboBox>
+                                    <RadioButton HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1"></RadioButton>
+                                    <RadioButton HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="3"></RadioButton>
+                                    <RadioButton HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="5"></RadioButton>
+
+                                    <Border Background="LightGray" Grid.Row="2" Grid.Column="2">
+                                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">إذن غياب</TextBlock>
+                                    </Border>
+                                    <Border  Grid.Row="2" Grid.Column="4"  Background="LightGray">
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" >إقامة</TextBlock>
+                                    </Border>
+                                    <Border Grid.Row="2" Grid.Column="6" Background="LightGray" >
+                                        <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center" >سمة دخول</TextBlock>
+                                    </Border>
 
 
-           
-                <Grid x:Name="PRReportGrid">
+                                    <ComboBox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" IsEditable="True" IsReadOnly="True" Text="--إختار النوع--" Background="LightGray"></ComboBox>
+                                    <ComboBox Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2" IsEditable="True" IsReadOnly="True" Text="--إختار النوع--" Background="LightGray"></ComboBox>
+                                    <ComboBox Grid.Row="3" Grid.Column="5" Grid.ColumnSpan="2" IsEditable="True" IsReadOnly="True" Text="--إختار النوع--" Background="LightGray"></ComboBox>
+                                    <ComboBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="6" IsEditable="True" IsReadOnly="True" Text="--- إختر نوع الإجراء ---" Background="LightGray"></ComboBox>
 
-                <StackPanel x:Name="documentFlow">
+                                    <Border  Background="LightGray" Grid.Row="1" Grid.Column="7" Grid.RowSpan="4">
+                                        <TextBlock Margin="5" VerticalAlignment="Center">نموذج الطلب</TextBlock>
+                                    </Border>
+                                </Grid>
+
+                                <Grid x:Name="midSection">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+
+                                    <Border Background="LightGray" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="14">
+                                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"  >بيانات القادم\ المقيم</TextBlock>
+                                    </Border>
+
+                                    <Border Grid.Column="0" Grid.Row="0" Grid.RowSpan="7" Grid.ColumnSpan="3">
+                                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                            <TextBlock>صوره</TextBlock>
+                                            <TextBlock Margin="0 10 0 10">4 x 6</TextBlock>
+                                            <TextBlock>خلفيه زرقاء</TextBlock>
+                                        </StackPanel>
+                                    </Border>
+
+                                    <Border Background="LightGray" Grid.Row="1" Grid.Column="13" Grid.ColumnSpan="2">
+                                        <TextBlock HorizontalAlignment="Center">رقم المدني</TextBlock>
+                                    </Border>
+                                    <TextBox Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="3"></TextBox>
+
+                                    <Border Background="LightGray" Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="2">
+                                        <TextBlock HorizontalAlignment="Center">تاريخ الميلاد</TextBlock>
+                                    </Border>
+                                    <TextBox Grid.Row="1" Grid.Column="8" Grid.ColumnSpan="5"></TextBox>
+
+
+                                    <!--<Border>
+                                        <TextBlock>رقم المدني</TextBlock>
+                                    </Border>
+
+                                    <Border>
+                                        <TextBlock>رقم المدني</TextBlock>
+                                    </Border>-->
+                                </Grid>
 
 
 
-                    <Grid x:Name="Header">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <RadioButton Content="RadioButton" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
+
+
+
+
+
+
+
+
+
+
+                        </StackPanel>
                     </Grid>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                </StackPanel>
-            </Grid>
                 
             
             
@@ -65,8 +186,12 @@
             
             
             
-        </StackPanel>  
-        
-        
+            </StackPanel>
+                </Paragraph>
+            </FlowDocument>
+
+        </FlowDocumentScrollViewer>
+
+
     </Grid>
 </UserControl>
